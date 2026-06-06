@@ -76,8 +76,6 @@ nav.scrolled.menu-open .hamburger span { background: var(--black); }
 .mobile-menu.white a::after { color: var(--black); opacity: 0.25; }
 .mobile-menu.white a:hover { color: var(--black); }
 .mobile-menu.white a:hover::after { color: var(--lime); opacity: 1; }
-.mobile-menu.white .mobile-menu-footer { color: rgba(0,0,0,0.25); }
-
 .nav-logo {
   font-size: 15px;
   font-weight: 700;
@@ -414,6 +412,10 @@ nav.scrolled.menu-open .hamburger span { background: var(--black); }
   letter-spacing: -0.03em;
   color: var(--white);
   line-height: 1;
+}
+.stat-num.infinity {
+  font-size: clamp(56px, 7vw, 88px);
+  line-height: 0.85;
 }
 .stat-label {
   font-size: 10px;
@@ -903,7 +905,8 @@ footer {
 }
 .hamburger span {
   display: block;
-  width: 100%; height: 1.5px;
+  width: 22px; height: 1.5px;
+  align-self: center;
   background: var(--white);
   transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease, background 0.3s ease;
   border-radius: 2px;
@@ -943,6 +946,7 @@ footer {
   align-items: center;
   transition: color 0.2s;
 }
+.mobile-menu a:last-child { border-bottom: none; }
 .mobile-menu a::after { content: '→'; font-size: 22px; color: var(--lime); opacity: 0.5; }
 .mobile-menu a:hover { color: var(--lime); }
 .mobile-menu a:hover::after { opacity: 1; }
@@ -956,16 +960,6 @@ footer {
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-
-.mobile-menu-footer {
-  position: absolute;
-  bottom: 40px; left: 40px;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.25);
 }
 
 </style>
@@ -997,7 +991,6 @@ footer {
   <a href="#prompting" class="mobile-link">Prompting</a>
   <a href="#tips" class="mobile-link">Tips</a>
   <a href="#resources" class="mobile-link">Resources</a>
-  <div class="mobile-menu-footer">Build With AI · Workshop</div>
 </div>
 
 <!-- HERO -->
@@ -1061,15 +1054,15 @@ footer {
     <div class="stat-label">Tools to learn</div>
   </div>
   <div class="stat-block">
-    <div class="stat-num">1</div>
-    <div class="stat-label">Day to ship</div>
+    <div class="stat-num">60</div>
+    <div class="stat-label">Min to go live</div>
   </div>
   <div class="stat-block">
     <div class="stat-num">0</div>
     <div class="stat-label">Experience needed</div>
   </div>
   <div class="stat-block">
-    <div class="stat-num">∞</div>
+    <div class="stat-num infinity">∞</div>
     <div class="stat-label">What you can build</div>
   </div>
 </div>
@@ -1303,7 +1296,7 @@ footer {
   </div>
   <div class="footer-bottom">
     <div class="footer-logo">Build With AI</div>
-    <div class="footer-copy">buildwithai.vercel.app · Made with Claude &amp; Cursor</div>
+    <div class="footer-copy">© 2026 Build With AI</div>
   </div>
 </footer>
 
