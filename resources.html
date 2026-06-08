@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#bce858">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-title" content="Build With AI">
+<title>Resources · Build With AI</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Build With AI</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="lab-1.html">Lab 01</a></li>
+    <li><a href="lab-2.html">Lab 02</a></li>
+    <li><a href="resources.html" class="active">Resources</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-link">Home</a>
+  <a href="lab-1.html" class="mobile-link">Lab 01</a>
+  <a href="lab-2.html" class="mobile-link">Lab 02</a>
+  <a href="resources.html" class="mobile-link active">Resources</a>
+</div>
+
+<header class="page-hero">
+  <div class="page-hero-content">
+    <div class="section-tag">Reference</div>
+    <h1>Keep <em>building.</em></h1>
+    <p>Tools, learning materials, and design resources to use during the workshop and beyond.</p>
+  </div>
+</header>
+
+<section id="resources" class="page-section">
+  <div class="collection-mosaic reveal">
+    <div class="res-block">
+      <div class="res-col-label">Tools</div>
+      <div class="res-items">
+        <a class="res-item" href="https://claude.ai" target="_blank" rel="noopener"><span class="res-name">Claude</span><span class="res-url">claude.ai</span></a>
+        <a class="res-item" href="https://cursor.com" target="_blank" rel="noopener"><span class="res-name">Cursor</span><span class="res-url">cursor.com</span></a>
+        <a class="res-item" href="https://github.com" target="_blank" rel="noopener"><span class="res-name">GitHub</span><span class="res-url">github.com</span></a>
+        <a class="res-item" href="https://vercel.com" target="_blank" rel="noopener"><span class="res-name">Vercel</span><span class="res-url">vercel.com</span></a>
+      </div>
+    </div>
+
+    <div class="res-block dark">
+      <div class="res-col-label">Learning</div>
+      <div class="res-items">
+        <a class="res-item" href="https://developer.mozilla.org" target="_blank" rel="noopener"><span class="res-name">MDN Web Docs</span><span class="res-url">developer.mozilla.org</span></a>
+        <a class="res-item" href="https://theodinproject.com" target="_blank" rel="noopener"><span class="res-name">The Odin Project</span><span class="res-url">theodinproject.com</span></a>
+        <a class="res-item" href="https://cs50.harvard.edu" target="_blank" rel="noopener"><span class="res-name">CS50 — Harvard</span><span class="res-url">cs50.harvard.edu</span></a>
+        <a class="res-item" href="https://promptingguide.ai" target="_blank" rel="noopener"><span class="res-name">Prompt Engineering Guide</span><span class="res-url">promptingguide.ai</span></a>
+        <a class="res-item" href="https://nextjs.org/docs" target="_blank" rel="noopener"><span class="res-name">Next.js Docs</span><span class="res-url">nextjs.org/docs</span></a>
+      </div>
+    </div>
+
+    <div class="res-block">
+      <div class="res-col-label">Design</div>
+      <div class="res-items">
+        <a class="res-item" href="https://coolors.co" target="_blank" rel="noopener"><span class="res-name">Coolors</span><span class="res-url">coolors.co</span></a>
+        <a class="res-item" href="https://fonts.google.com" target="_blank" rel="noopener"><span class="res-name">Google Fonts</span><span class="res-url">fonts.google.com</span></a>
+        <a class="res-item" href="https://heroicons.com" target="_blank" rel="noopener"><span class="res-name">Heroicons</span><span class="res-url">heroicons.com</span></a>
+        <a class="res-item" href="https://www.refactoringui.com" target="_blank" rel="noopener"><span class="res-name">Refactoring UI</span><span class="res-url">refactoringui.com</span></a>
+        <a class="res-item" href="https://ui.shadcn.com" target="_blank" rel="noopener"><span class="res-name">shadcn/ui</span><span class="res-url">ui.shadcn.com</span></a>
+        <a class="res-item" href="https://m3.material.io" target="_blank" rel="noopener"><span class="res-name">Material Design 3</span><span class="res-url">m3.material.io</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tips" class="page-section gray">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-tag">Get better results</div>
+      <h2 class="section-title">Prompting <em>tips.</em></h2>
+    </div>
+  </div>
+  <div class="tips-blocks reveal">
+    <div class="tip-block">
+      <div class="tip-num">01</div>
+      <div class="tip-divider"></div>
+      <div class="tip-title">Be specific</div>
+      <div class="tip-body">Vague prompts get vague results. Describe the layout, colors, behavior, and constraints you want. The more detail you give, the closer the first output lands.</div>
+    </div>
+    <div class="tip-block tip-block--lime">
+      <div class="tip-num">02</div>
+      <div class="tip-divider"></div>
+      <div class="tip-title">Give constraints</div>
+      <div class="tip-body">Tell it what you don't want. "No frameworks. Vanilla JS only." Constraints help the AI produce cleaner, more focused code.</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-num">03</div>
+      <div class="tip-divider"></div>
+      <div class="tip-title">Iterate</div>
+      <div class="tip-body">Your first prompt is a draft. Ask it to change one thing at a time — small edits compound fast.</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-num">04</div>
+      <div class="tip-divider"></div>
+      <div class="tip-title">Ask why</div>
+      <div class="tip-body">Don't just copy the code. Ask: "Explain what this block does." You'll understand it faster than reading docs.</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-num">05</div>
+      <div class="tip-divider"></div>
+      <div class="tip-title">Paste the error</div>
+      <div class="tip-body">If something breaks, copy the error message and paste it directly into the chat. The AI can debug its own code.</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-num">06</div>
+      <div class="tip-divider"></div>
+      <div class="tip-title">Describe the vibe</div>
+      <div class="tip-body">You don't need technical terms. Say "Make it feel more editorial and clean" or "It should feel like a luxury brand."</div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer-brand">
+    <h2>Build <em>With AI</em></h2>
+    <p>Workshop hub for going from zero to live websites with Claude, Cursor, GitHub, and Vercel.</p>
+  </div>
+  <div class="site-footer-grid">
+    <div class="site-footer-col">
+      <h4>Workshop</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lab-1.html">Lab 01 — Wordle</a></li>
+        <li><a href="lab-2.html">Lab 02 — About Me</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </div>
+    <div class="site-footer-col">
+      <h4>Tools</h4>
+      <ul>
+        <li><a href="https://claude.ai" target="_blank" rel="noopener">Claude</a></li>
+        <li><a href="https://cursor.com" target="_blank" rel="noopener">Cursor</a></li>
+        <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://vercel.com" target="_blank" rel="noopener">Vercel</a></li>
+      </ul>
+    </div>
+    <div class="site-footer-col">
+      <h4>Instructors</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/megan._.bagley/" target="_blank" rel="noopener">Meg Bagley</a></li>
+        <li><a href="https://www.instagram.com/weston.watson/" target="_blank" rel="noopener">Weston Watson</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer-bottom">
+    <span>© 2026 Build With AI</span>
+    <a href="lab-2.html#share">Submit your projects →</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

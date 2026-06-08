@@ -11,992 +11,30 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-
-:root {
-  --black: #0a0a0a;
-    --lime:  #bce858;
-  --white: #ffffff;
-  --gray:  #f2f2f2;
-  --mid:   #888;
-  --border: #e0e0e0;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  background: var(--white);
-  color: var(--black);
-  font-size: 14px;
-  line-height: 1.6;
-  cursor: none;
-}
-
-/* ── CUSTOM CURSOR ─────────────────────── */
-.cursor {
-  position: fixed;
-  width: 10px; height: 10px;
-  background: var(--lime);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s, height 0.2s, background 0.2s;
-}
-.cursor.expand {
-  width: 40px; height: 40px;
-  background: transparent;
-  border: 1.5px solid var(--lime);
-}
-
-/* ── NAV ───────────────────────────────── */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 170;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 22px 40px;
-  background: rgba(10,10,10,0.96);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid transparent;
-  transition: background 0.4s ease, border-color 0.4s ease;
-}
-nav.scrolled {
-  background: rgba(255,255,255,0.97);
-  border-color: var(--border);
-}
-nav.scrolled .nav-logo { color: var(--black); }
-nav.scrolled .nav-links a { color: var(--black); }
-nav.scrolled .hamburger span { background: var(--black); }
-nav.scrolled.menu-open .hamburger span { background: var(--black); }
-.mobile-menu.white {
-  background: var(--white);
-}
-.mobile-menu.white a {
-  color: var(--black);
-  border-bottom-color: rgba(0,0,0,0.08);
-}
-.mobile-menu.white a::after { color: var(--black); opacity: 0.25; }
-.mobile-menu.white a:hover { color: var(--black); }
-.mobile-menu.white a:hover::after { color: var(--lime); opacity: 1; }
-.nav-logo {
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--white);
-  transition: color 0.3s;
-}
-
-.nav-links {
-  display: flex;
-  gap: 36px;
-  list-style: none;
-}
-.nav-links a {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--white);
-  opacity: 0.5;
-  transition: opacity 0.2s, color 0.3s;
-}
-.nav-links a:hover { opacity: 1; }
-
-/* ── HERO ──────────────────────────────── */
-.hero {
-  position: relative;
-  height: 100vh;
-  min-height: 600px;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  padding: 0 40px 60px;
-}
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: var(--black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-/* Photo layer */
-.hero-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1800&q=80&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center 50%;
-  opacity: 0.45;
-  filter: grayscale(100%);
-}
-
-.hero-grid-lines {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
-  background-size: 80px 80px;
-}
-
-.hero-circle {
-  position: absolute;
-  width: 500px; height: 500px;
-  border: 1px solid rgba(188,232,88,0.12);
-  border-radius: 50%;
-  top: 50%; left: 60%;
-  transform: translate(-50%, -50%);
-  animation: rotate 40s linear infinite;
-}
-.hero-circle::after {
-  content: '';
-  position: absolute;
-  width: 300px; height: 300px;
-  border: 1px solid rgba(255,255,255,0.04);
-  border-radius: 50%;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-@keyframes rotate { to { transform: translate(-50%, -50%) rotate(360deg); } }
-
-.hero-content {
-  position: relative;
-  z-index: 3;
-  max-width: 900px;
-}
-
-.hero-eyebrow {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.hero-eyebrow::before {
-  content: '';
-  display: block;
-  width: 32px; height: 1px;
-  background: var(--lime);
-}
-
-.hero h1 {
-  font-size: clamp(52px, 10vw, 120px);
-  font-weight: 800;
-  line-height: 0.92;
-  letter-spacing: -0.03em;
-  color: var(--white);
-  margin-bottom: 32px;
-}
-
-.hero h1 em {
-  font-style: italic;
-  font-weight: 300;
-  letter-spacing: -0.02em;
-}
-
-.hero-bottom {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.hero-desc {
-  font-size: 13px;
-  color: rgba(255,255,255,0.5);
-  max-width: 320px;
-  line-height: 1.7;
-  font-weight: 300;
-}
-
-.hero-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--lime);
-  color: var(--black);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 2px;
-  transition: background 0.2s, color 0.2s;
-  flex-shrink: 0;
-}
-.hero-cta:hover { background: var(--white); color: var(--black); }
-.hero-cta .arrow { font-size: 14px; transition: transform 0.2s; }
-.hero-cta:hover .arrow { transform: translateX(4px); }
-
-
-
-/* ── SECTION SHARED ────────────────────── */
-.section-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 48px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border);
-}
-.section-tag {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--lime);
-  -webkit-text-stroke: 0;
-}
-.section-tag { color: var(--black); background: var(--lime); display: inline-block; padding: 3px 10px; border-radius: 2px; font-size: 9px; margin-bottom: 8px; }
-.section-title {
-  font-size: clamp(28px, 4vw, 48px);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: var(--black);
-  margin-top: 6px;
-}
-.section-title em {
-  font-style: italic;
-  font-weight: 300;
-}
-.view-more {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--black);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  opacity: 0.5;
-  transition: opacity 0.2s;
-  flex-shrink: 0;
-}
-.view-more:hover { opacity: 1; }
-
-/* ── TOOLS (EDITORIAL GRID) ────────────── */
-#tools { padding: 80px 40px; }
-
-.tools-editorial {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 2px;
-  background: var(--border);
-}
-
-.tool-block {
-  background: var(--white);
-  padding: 48px 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  transition: background 0.25s;
-  position: relative;
-  overflow: hidden;
-}
-.tool-block:hover { background: var(--gray); }
-
-.tool-block.featured {
-  grid-column: 1;
-  grid-row: 1 / 3;
-  background: var(--black);
-  color: var(--white);
-  padding: 56px 48px;
-  justify-content: flex-end;
-  min-height: 480px;
-}
-.tool-block.featured:hover { background: #111; }
-
-.tool-block.featured .tool-num { color: rgba(255,255,255,0.25); }
-.tool-block.featured .tool-name { color: var(--white); }
-.tool-block.featured .tool-desc { color: rgba(255,255,255,0.5); }
-.tool-block.featured .tool-link { color: rgba(255,255,255,0.4); border-color: rgba(255,255,255,0.15); }
-.tool-block.featured .tool-link:hover { color: var(--lime); border-color: var(--lime); }
-
-/* Big background number */
-.tool-block.featured::before {
-  content: '01';
-  position: absolute;
-  top: 40px; right: 40px;
-  font-size: 120px;
-  font-weight: 800;
-  line-height: 1;
-  color: rgba(255,255,255,0.04);
-  letter-spacing: -0.05em;
-}
-
-.tool-num {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  color: var(--mid);
-  font-family: 'Montserrat', monospace;
-}
-.tool-name {
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--black);
-  line-height: 1;
-}
-.tool-name em { font-style: italic; font-weight: 300; }
-.tool-desc {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.65;
-  font-weight: 300;
-  max-width: 340px;
-}
-.tool-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--black);
-  text-decoration: none;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 4px;
-  width: fit-content;
-  transition: border-color 0.2s, color 0.2s;
-  margin-top: auto;
-}
-.tool-link:hover { border-color: var(--lime); color: var(--black); }
-
-/* ── STATS ─────────────────────────────── */
-.stats-row {
-  background: var(--black);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid #1a1a1a;
-}
-
-.stat-block {
-  padding: 52px 40px;
-  border-right: 1px solid #1a1a1a;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.stat-block:last-child { border-right: none; }
-
-.stat-num {
-  font-size: clamp(36px, 4vw, 56px);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--white);
-  line-height: 1;
-}
-.stat-num.infinity {
-  font-size: clamp(56px, 7vw, 88px);
-  line-height: 0.85;
-}
-.stat-label {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
-}
-
-/* ── INSTALL STEPS ─────────────────────── */
-#install { padding: 80px 40px; background: var(--gray); }
-
-.steps-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2px;
-  background: var(--border);
-}
-
-.step-block {
-  background: var(--white);
-  padding: 48px 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  transition: background 0.2s;
-}
-.step-block:hover { background: #f8f8f8; }
-
-.step-block.full-width {
-  grid-column: 1 / -1;
-  background: var(--black);
-  color: var(--white);
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 48px;
-}
-
-.step-index {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  color: var(--mid);
-}
-.step-block.full-width .step-index { color: rgba(255,255,255,0.3); flex-shrink: 0; padding-top: 4px; }
-
-.step-heading {
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  color: var(--black);
-}
-.step-block.full-width .step-heading { color: var(--white); font-size: 20px; }
-
-.step-body {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.7;
-  font-weight: 300;
-}
-.step-block.full-width .step-body { color: rgba(255,255,255,0.5); }
-
-.code-pill {
-  display: inline-block;
-  background: var(--gray);
-  color: var(--black);
-  font-family: 'Montserrat', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 10px 18px;
-  border-radius: 2px;
-  width: fit-content;
-  letter-spacing: 0.03em;
-  margin-top: 4px;
-}
-.step-block.full-width .code-pill {
-  background: rgba(255,255,255,0.1);
-  color: var(--white);
-}
-
-.step-links {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: 4px;
-}
-.step-links a {
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--black);
-  text-decoration: none;
-  letter-spacing: 0.05em;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 6px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: border-color 0.2s;
-}
-.step-links a:hover { border-color: var(--lime); }
-.step-links a::after { content: '→'; color: var(--lime); opacity: 0.8; }
-
-/* ── PROMPTING ─────────────────────────── */
-#prompting { padding: 80px 40px; }
-
-.formula-blocks {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  background: var(--border);
-  margin-bottom: 2px;
-}
-
-.formula-block {
-  padding: 48px 36px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.formula-block:nth-child(1) { background: var(--black); }
-.formula-block:nth-child(2) { background: var(--white); }
-.formula-block:nth-child(3) { background: var(--gray); }
-
-.formula-part-label {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-.formula-block:nth-child(1) .formula-part-label { color: rgba(255,255,255,0.3); }
-.formula-block:nth-child(2) .formula-part-label { color: var(--mid); }
-.formula-block:nth-child(3) .formula-part-label { color: var(--mid); }
-
-.formula-name {
-  font-size: 36px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1;
-}
-.formula-block:nth-child(1) .formula-name { color: var(--white); }
-.formula-block:nth-child(2) .formula-name { color: var(--black); }
-.formula-block:nth-child(3) .formula-name { color: var(--black); }
-
-.formula-desc {
-  font-size: 13px;
-  font-weight: 300;
-  line-height: 1.6;
-}
-.formula-block:nth-child(1) .formula-desc { color: rgba(255,255,255,0.5); }
-.formula-block:nth-child(2) .formula-desc { color: #555; }
-.formula-block:nth-child(3) .formula-desc { color: #555; }
-
-.formula-eg {
-  font-size: 11px;
-  font-weight: 500;
-  font-style: italic;
-  margin-top: auto;
-  padding-top: 16px;
-  border-top: 1px solid;
-}
-.formula-block:nth-child(1) .formula-eg { color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.08); }
-.formula-block:nth-child(2) .formula-eg { color: #999; border-color: var(--border); }
-.formula-block:nth-child(3) .formula-eg { color: #999; border-color: #ddd; }
-
-.prompt-example {
-  background: var(--black);
-  padding: 48px 40px;
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 40px;
-  align-items: start;
-}
-
-.prompt-eg-label {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
-  padding-top: 4px;
-  line-height: 1.6;
-}
-
-.prompt-eg-text {
-  font-size: 15px;
-  font-weight: 300;
-  color: var(--white);
-  line-height: 1.8;
-  letter-spacing: 0.01em;
-}
-
-.prompt-eg-text strong {
-  font-weight: 700;
-  color: var(--white);
-}
-
-/* ── TIPS ──────────────────────────────── */
-#tips { padding: 80px 40px; background: var(--gray); }
-
-.tips-blocks {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  background: var(--border);
-}
-
-.tip-block {
-  background: var(--white);
-  padding: 40px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  transition: background 0.2s;
-  position: relative;
-}
-.tip-block:hover { background: var(--black); }
-.tip-block:hover .tip-num,
-.tip-block:hover .tip-title,
-.tip-block:hover .tip-body { color: var(--white); }
-.tip-block:hover .tip-body { color: rgba(255,255,255,0.5); }
-.tip-block:hover .tip-divider { background: var(--lime); }
-
-.tip-num {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  color: var(--mid);
-  transition: color 0.2s;
-}
-
-.tip-divider {
-  width: 24px; height: 1px;
-  background: var(--border);
-  transition: background 0.2s;
-}
-
-.tip-title {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: var(--black);
-  transition: color 0.2s;
-  line-height: 1.2;
-}
-
-.tip-body {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.65;
-  font-weight: 300;
-  transition: color 0.2s;
-}
-
-/* ── COLLECTION / RESOURCES ────────────── */
-#resources { padding: 80px 40px; }
-
-.collection-mosaic {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
-  gap: 2px;
-  background: var(--border);
-}
-
-.res-block {
-  background: var(--white);
-  padding: 40px 36px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  min-height: 240px;
-  transition: background 0.2s;
-}
-.res-block:hover { background: var(--gray); }
-
-.res-block.dark {
-  background: var(--black);
-  grid-column: 2;
-  grid-row: 1 / 3;
-}
-.res-block.dark:hover { background: #111; }
-
-.res-col-label {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--mid);
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--border);
-}
-.res-block.dark .res-col-label {
-  color: rgba(255,255,255,0.25);
-  border-color: rgba(255,255,255,0.08);
-}
-
-.res-items { display: flex; flex-direction: column; gap: 0; }
-
-.res-item {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border);
-  transition: padding-left 0.25s ease;
-  text-decoration: none;
-  cursor: pointer;
-}
-.res-item:last-child { border-bottom: none; }
-.res-item:hover { padding-left: 8px; }
-
-.res-block.dark .res-item { border-color: rgba(255,255,255,0.06); }
-
-.res-name {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--black);
-  letter-spacing: -0.01em;
-}
-.res-block.dark .res-name { color: var(--white); }
-
-.res-url {
-  font-size: 11px;
-  color: var(--mid);
-  font-weight: 300;
-  letter-spacing: 0.03em;
-}
-.res-block.dark .res-url { color: rgba(255,255,255,0.3); }
-
-/* ── FOOTER ────────────────────────────── */
-footer {
-  background: var(--black);
-  padding: 80px 40px 48px;
-}
-
-.footer-top {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 40px;
-  padding-bottom: 60px;
-  border-bottom: 1px solid #1a1a1a;
-  margin-bottom: 40px;
-  align-items: end;
-}
-
-.footer-headline {
-  font-size: clamp(32px, 5vw, 64px);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.0;
-  color: var(--white);
-}
-.footer-headline em {
-  font-style: italic;
-  font-weight: 300;
-}
-
-.footer-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid rgba(255,255,255,0.2);
-  color: var(--white);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 14px 24px;
-  border-radius: 2px;
-  transition: background 0.2s, border-color 0.2s;
-  white-space: nowrap;
-  align-self: flex-end;
-}
-.footer-cta:hover { background: var(--lime); color: var(--black); border-color: var(--lime); }
-
-.footer-cols {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-}
-
-.footer-col-title {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.25);
-  margin-bottom: 20px;
-}
-
-.footer-col-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-col-links a {
-  font-size: 13px;
-  font-weight: 400;
-  color: rgba(255,255,255,0.45);
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  transition: color 0.2s;
-}
-.footer-col-links a:hover { color: var(--white); }
-
-.footer-bottom {
-  margin-top: 48px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 24px;
-  border-top: 1px solid #1a1a1a;
-}
-
-.footer-logo {
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--white);
-}
-
-.footer-copy {
-  font-size: 11px;
-  color: rgba(255,255,255,0.2);
-  letter-spacing: 0.05em;
-}
-
-/* ── SCROLL REVEALS ────────────────────── */
-.reveal {
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ── RESPONSIVE ────────────────────────── */
-@media (max-width: 860px) {
-  nav { padding: 18px 24px; }
-  .nav-links { display: none; }
-  .hamburger { display: flex !important; }
-  .hero { padding: 0 24px 48px; min-height: 100svh; }
-  .hero h1 { font-size: 52px; }
-  .hero-bg::before {
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
-    opacity: 0.5;
-  }
-  .hero-grid-lines { background-size: 48px 48px; }
-  #tools, #install, #prompting, #tips, #resources { padding: 60px 24px; }
-  .tools-editorial { grid-template-columns: 1fr; }
-  .tool-block.featured { grid-row: auto; min-height: 360px; }
-  .stats-row { grid-template-columns: repeat(2, 1fr); }
-  .steps-grid { grid-template-columns: 1fr; }
-  .step-block.full-width { flex-direction: column; gap: 20px; }
-  .formula-blocks { grid-template-columns: 1fr; }
-  .prompt-example { grid-template-columns: 1fr; gap: 16px; }
-  .tips-blocks { grid-template-columns: 1fr 1fr; }
-  .collection-mosaic { grid-template-columns: 1fr; }
-  .res-block.dark { grid-column: auto; grid-row: auto; }
-  .footer-top { grid-template-columns: 1fr; }
-  .footer-cols { grid-template-columns: repeat(2, 1fr); }
-  footer { padding: 60px 24px 40px; }
-}
-
-/* ── HAMBURGER & MOBILE MENU ───────────────────────────── */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 6px;
-  z-index: 200;
-  flex-shrink: 0;
-}
-.hamburger span {
-  display: block;
-  width: 22px; height: 1.5px;
-  align-self: center;
-  background: var(--white);
-  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease, background 0.3s ease;
-  border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
-  transform-origin: center;
-}
-.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); background: var(--lime); }
-.hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); background: var(--lime); }
-
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: var(--black);
-  z-index: 160;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 40px;
-  gap: 0;
-}
-.mobile-menu.open { display: flex; }
-
-.mobile-menu a {
-  font-size: clamp(32px, 9vw, 52px);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--white);
-  text-decoration: none;
-  line-height: 1.1;
-  padding: 16px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: color 0.2s;
-}
-.mobile-menu a:last-child { border-bottom: none; }
-.mobile-menu a::after { content: '→'; font-size: 22px; color: var(--lime); opacity: 0.5; }
-.mobile-menu a:hover { color: var(--lime); }
-.mobile-menu a:hover::after { opacity: 1; }
-
-.mobile-menu a:nth-child(1) { animation: slideUp 0.4s ease 0.05s both; }
-.mobile-menu a:nth-child(2) { animation: slideUp 0.4s ease 0.1s both; }
-.mobile-menu a:nth-child(3) { animation: slideUp 0.4s ease 0.15s both; }
-.mobile-menu a:nth-child(4) { animation: slideUp 0.4s ease 0.2s both; }
-.mobile-menu a:nth-child(5) { animation: slideUp 0.4s ease 0.25s both; }
-
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- CURSOR -->
 <div class="cursor" id="cursor"></div>
 
-<!-- NAV -->
 <nav id="nav">
-  <a href="#" class="nav-logo">Build With AI</a>
+  <a href="index.html" class="nav-logo">Build With AI</a>
   <ul class="nav-links">
-    <li><a href="#tools">Tools</a></li>
-    <li><a href="#install">Install</a></li>
-    <li><a href="#prompting">Prompting</a></li>
-    <li><a href="#tips">Tips</a></li>
-    <li><a href="#resources">Resources</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="lab-1.html">Lab 01</a></li>
+    <li><a href="lab-2.html">Lab 02</a></li>
+    <li><a href="resources.html">Resources</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#tools" class="mobile-link">Tools</a>
-  <a href="#install" class="mobile-link">Install</a>
-  <a href="#prompting" class="mobile-link">Prompting</a>
-  <a href="#tips" class="mobile-link">Tips</a>
-  <a href="#resources" class="mobile-link">Resources</a>
+  <a href="index.html" class="mobile-link active">Home</a>
+  <a href="lab-1.html" class="mobile-link">Lab 01</a>
+  <a href="lab-2.html" class="mobile-link">Lab 02</a>
+  <a href="resources.html" class="mobile-link">Resources</a>
 </div>
 
 <!-- HERO -->
@@ -1009,47 +47,63 @@ footer {
     <div class="hero-eyebrow">Workshop · AI Website Creation 101</div>
     <h1>Build<br><em>With AI.</em></h1>
     <div class="hero-bottom">
-      <p class="hero-desc">Everything you need to go from zero to a live website. Tools, setup steps, prompting tips, and resources — all in one place.</p>
-      <a href="#tools" class="hero-cta">Get Started <span class="arrow">→</span></a>
+      <p class="hero-desc">Go from zero to two live websites in one session. Set up your tools, learn to prompt, build Wordle, then ship a personal site.</p>
+      <a href="#install" class="hero-cta">Get Started <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
 
-<!-- TOOLS -->
-<section id="tools">
+<!-- AGENDA -->
+<section id="agenda">
   <div class="section-header reveal">
     <div>
-      <div class="section-tag">What you'll use</div>
-      <h2 class="section-title">The four <em>tools.</em></h2>
+      <div class="section-tag">Today's plan</div>
+      <h2 class="section-title">Workshop <em>agenda.</em></h2>
     </div>
-    <a href="#install" class="view-more">Install Guide →</a>
+    <a href="lab-1.html" class="view-more">Start Lab 01 →</a>
   </div>
 
-  <div class="tools-editorial reveal">
-    <div class="tool-block featured">
-      <div class="tool-num">01 — Featured</div>
-      <div class="tool-name">Claude</div>
-      <div class="tool-desc">Your AI brain. Answers questions, writes code, debugs errors, explains anything. The best AI assistant for writing and coding tasks. Talk to it like you'd talk to a senior developer.</div>
-      <a href="https://claude.ai" target="_blank" class="tool-link">claude.ai →</a>
-    </div>
-    <div class="tool-block">
-      <div class="tool-num">02</div>
-      <div class="tool-name"><em>Cursor</em></div>
-      <div class="tool-desc">A code editor with AI built right in. It knows your files and writes code directly where it needs to go. Think VS Code — but the AI reads your whole project.</div>
-      <a href="https://cursor.com" target="_blank" class="tool-link">cursor.com →</a>
-    </div>
-    <div class="tool-block">
-      <div class="tool-num">03</div>
-      <div class="tool-name">GitHub</div>
-      <div class="tool-desc">Where your code lives. Version control, backups, and the bridge to deployment. Free, universal, and what every developer uses.</div>
-      <a href="https://github.com" target="_blank" class="tool-link">github.com →</a>
-    </div>
-    <div class="tool-block">
-      <div class="tool-num">04</div>
-      <div class="tool-name"><em>Vercel</em></div>
-      <div class="tool-desc">Where your website goes live. Connect your GitHub repo, click deploy — your site is public on the internet in under a minute. Free tier, no credit card.</div>
-      <a href="https://vercel.com" target="_blank" class="tool-link">vercel.com →</a>
-    </div>
+  <div class="agenda-grid reveal">
+    <a href="#install" class="agenda-item featured">
+      <div class="agenda-time">00</div>
+      <div>
+        <div class="agenda-title">Setup &amp; Install</div>
+        <div class="agenda-desc">Connect to WiFi, create accounts, download Cursor, and open your first file. Get all four tools running before we build.</div>
+        <span class="agenda-link">Jump to install ↓</span>
+      </div>
+    </a>
+    <a href="lab-1.html" class="agenda-item">
+      <div class="agenda-time">01</div>
+      <div>
+        <div class="agenda-title">Prompting + Build Lab 01</div>
+        <div class="agenda-desc">Learn the prompt formula, then build and deploy a playable Wordle clone. Add your own flair and push it live.</div>
+        <span class="agenda-link">Go to Lab 01 →</span>
+      </div>
+    </a>
+    <a href="lab-2.html" class="agenda-item">
+      <div class="agenda-time">02</div>
+      <div>
+        <div class="agenda-title">Design + Build Lab 02</div>
+        <div class="agenda-desc">Learn design principles, then build a multi-page About Me site with Next.js. Polish it and deploy to Vercel.</div>
+        <span class="agenda-link">Go to Lab 02 →</span>
+      </div>
+    </a>
+    <a href="lab-1.html#share" class="agenda-item">
+      <div class="agenda-time">03</div>
+      <div>
+        <div class="agenda-title">Showcase &amp; Share</div>
+        <div class="agenda-desc">Submit your Wordle link from Lab 01. You'll share your About Me site separately on Lab 02.</div>
+        <span class="agenda-link">Submit Lab 01 →</span>
+      </div>
+    </a>
+    <a href="resources.html" class="agenda-item agenda-item--lime">
+      <div class="agenda-time">04</div>
+      <div>
+        <div class="agenda-title">Keep Building</div>
+        <div class="agenda-desc">Today's just the start. You have the tools, the prompts, and the workflow — use them to build whatever you want next. Portfolio, app, game, tool for a friend. The AI doesn't stop when the workshop ends.</div>
+        <span class="agenda-link">Explore resources →</span>
+      </div>
+    </a>
   </div>
 </section>
 
@@ -1064,8 +118,8 @@ footer {
     <div class="stat-label">Min to go live</div>
   </div>
   <div class="stat-block">
-    <div class="stat-num">0</div>
-    <div class="stat-label">Experience needed</div>
+    <div class="stat-num">2</div>
+    <div class="stat-label">Sites you'll ship</div>
   </div>
   <div class="stat-block">
     <div class="stat-num infinity">∞</div>
@@ -1074,290 +128,125 @@ footer {
 </div>
 
 <!-- INSTALL -->
-<section id="install">
-  <div class="container-inner">
-    <div class="section-header reveal" style="padding: 0 0 20px; border-bottom: 1px solid #d8d8d8; margin-bottom: 48px;">
+<section id="install" class="page-section gray">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-tag">Before we build</div>
+      <h2 class="section-title"><em>Install</em> guide.</h2>
+    </div>
+  </div>
+  <div class="steps-grid reveal">
+
+    <div class="step-block full-width">
+      <div class="step-index">Step 01</div>
       <div>
-        <div class="section-tag">Step by step</div>
-        <h2 class="section-title"><em>Install</em> guide.</h2>
-      </div>
-    </div>
-    <div class="steps-grid reveal">
-
-      <div class="step-block full-width">
-        <div class="step-index">Step 01</div>
-        <div>
-          <div class="step-heading">Connect to WiFi first.</div>
-          <div class="step-body">Join the workshop network before creating any accounts or downloading anything.</div>
-          <div style="display:flex; gap:16px; margin-top:16px; flex-wrap:wrap;">
-            <div class="code-pill">Network: Liahona</div>
-            <div class="code-pill">Password: alma3738</div>
-          </div>
+        <div class="step-heading">Connect to WiFi first.</div>
+        <div class="step-body">Join the workshop network before creating any accounts or downloading anything.</div>
+        <div style="display:flex; gap:16px; margin-top:16px; flex-wrap:wrap;">
+          <div class="code-pill">Network: Liahona</div>
+          <div class="code-pill">Password: alma3738</div>
         </div>
       </div>
-
-      <div class="step-block">
-        <div class="step-index">Step 02</div>
-        <div class="step-heading">Create your accounts.</div>
-        <div class="step-body">Open each link and sign up. Use the same email for all three — it'll make things simpler later.</div>
-        <div class="step-links">
-          <a href="https://claude.ai" target="_blank">claude.ai</a>
-          <a href="https://github.com/login" target="_blank">github.com/login</a>
-          <a href="https://vercel.com/signup" target="_blank">vercel.com/signup</a>
-        </div>
-      </div>
-
-      <div class="step-block">
-        <div class="step-index">Step 03</div>
-        <div class="step-heading">Download Cursor.</div>
-        <div class="step-body">Go to cursor.com/download and install for your OS. Takes about 2 minutes. Once installed, sign in with your GitHub account when prompted.</div>
-        <div class="step-links">
-          <a href="https://cursor.com/download" target="_blank">cursor.com/download</a>
-        </div>
-      </div>
-
-      <div class="step-block">
-        <div class="step-index">Step 04</div>
-        <div class="step-heading">Create your first file.</div>
-        <div class="step-body">Open Cursor. Click New File and name it <span style="font-family:monospace; background:#f0f0f0; padding:2px 8px; border-radius:3px; font-size:12px;">index.html</span>. Open the chat panel on the right — that's where you'll talk to the AI.</div>
-      </div>
-
-      <div class="step-block">
-        <div class="step-index">Step 05</div>
-        <div class="step-heading">You're ready.</div>
-        <div class="step-body">All four tools are free. No credit card required anywhere. If anything isn't working, raise your hand and we'll sort it out.</div>
-      </div>
-
     </div>
+
+    <div class="step-block">
+      <div class="step-index">Step 02</div>
+      <div class="step-heading">Create your accounts.</div>
+      <div class="step-body">Open each link and sign up. Use the same email for all three — it'll make things simpler later.</div>
+      <div class="step-links">
+        <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>
+        <a href="https://github.com/login" target="_blank" rel="noopener">github.com/login</a>
+        <a href="https://vercel.com/signup" target="_blank" rel="noopener">vercel.com/signup</a>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-index">Step 03</div>
+      <div class="step-heading">Download Cursor.</div>
+      <div class="step-body">Go to cursor.com/download and install for your OS. Takes about 2 minutes. Once installed, sign in with your GitHub account when prompted.</div>
+      <div class="step-links">
+        <a href="https://cursor.com/download" target="_blank" rel="noopener">cursor.com/download</a>
+      </div>
+    </div>
+
+    <div class="step-block step-block--lime">
+      <div class="step-index">Step 04</div>
+      <div class="step-heading">Create your first project.</div>
+      <div class="step-body">Open Cursor → <strong>Open Project</strong> and create a new folder for your work (e.g. <span style="font-family:monospace; background:#f0f0f0; padding:2px 8px; border-radius:3px; font-size:12px;">my-wordle</span>). Open the chat panel on the right — that's where you'll talk to the AI.</div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-index">Step 05</div>
+      <div class="step-heading">You're ready.</div>
+      <div class="step-body">All four tools are free. No credit card required anywhere. If anything isn't working, raise your hand and we'll sort it out. Then head to <a href="lab-1.html" style="color:inherit; font-weight:600;">Lab 01</a>.</div>
+    </div>
+
   </div>
 </section>
 
-<!-- PROMPTING -->
-<section id="prompting">
+<!-- INSTRUCTORS -->
+<section id="instructors">
   <div class="section-header reveal">
     <div>
-      <div class="section-tag">Talk to the AI</div>
-      <h2 class="section-title">How to <em>prompt.</em></h2>
+      <div class="section-tag">Your guides</div>
+      <h2 class="section-title">Meet your <em>instructors.</em></h2>
     </div>
   </div>
-  <div class="formula-blocks reveal">
-    <div class="formula-block">
-      <div class="formula-part-label">Part 01</div>
-      <div class="formula-name">Role</div>
-      <div class="formula-desc">Tell the AI who it is. Give it a persona that fits the task.</div>
-      <div class="formula-eg">"You are an expert web developer."</div>
+
+  <div class="instructors-grid reveal">
+    <div class="instructor-card dark">
+      <div class="instructor-role">Instructor</div>
+      <div class="instructor-name">Meg <em>Bagley</em></div>
+      <div class="instructor-bio">Designer and builder who helps people ship creative projects with AI. Ask me about design, layout, and making your site look polished.</div>
+      <a href="https://www.instagram.com/megan._.bagley/" target="_blank" rel="noopener" class="instructor-link">@megan._.bagley →</a>
     </div>
-    <div class="formula-block">
-      <div class="formula-part-label">Part 02</div>
-      <div class="formula-name">Task</div>
-      <div class="formula-desc">Tell it exactly what to build or do. Be direct and specific.</div>
-      <div class="formula-eg">"Build me a personal website."</div>
-    </div>
-    <div class="formula-block">
-      <div class="formula-part-label">Part 03</div>
-      <div class="formula-name">Context</div>
-      <div class="formula-desc">Give it the details, constraints, and requirements it needs.</div>
-      <div class="formula-eg">"Dark theme, single page. No frameworks."</div>
-    </div>
-  </div>
-  <div class="prompt-example reveal">
-    <div class="prompt-eg-label">Full example prompt — copy &amp; fill in the blanks</div>
-    <div class="prompt-eg-text">
-      <strong>You are an expert web developer.</strong> Build me a personal about-me website as a single index.html file. My name is <strong>[YOUR NAME]</strong>. I am <strong>[ONE SENTENCE ABOUT YOU]</strong>. Use a dark theme with clean, modern typography. Include a hero section with my name and tagline, a short about section, a skills section, and a footer with my email address. <strong>No frameworks. Vanilla HTML, CSS, and JavaScript only.</strong> Make it something I'd actually want to show someone.
+    <div class="instructor-card">
+      <div class="instructor-role">Instructor</div>
+      <div class="instructor-name">Weston <em>Watson</em></div>
+      <div class="instructor-bio">Developer focused on getting beginners from zero to deployed. Ask me about prompting, GitHub, Vercel, and debugging when things break.</div>
+      <a href="https://www.instagram.com/weston.watson/" target="_blank" rel="noopener" class="instructor-link">@weston.watson →</a>
     </div>
   </div>
 </section>
 
-<!-- TIPS -->
-<section id="tips">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-tag">Get better results</div>
-      <h2 class="section-title">Tips &amp; <em>tricks.</em></h2>
-    </div>
+<footer class="site-footer">
+  <div class="site-footer-brand">
+    <h2>Build <em>With AI</em></h2>
+    <p>Workshop hub for going from zero to live websites with Claude, Cursor, GitHub, and Vercel.</p>
   </div>
-  <div class="tips-blocks reveal">
-    <div class="tip-block">
-      <div class="tip-num">01</div>
-      <div class="tip-divider"></div>
-      <div class="tip-title">Be specific</div>
-      <div class="tip-body">Vague prompts get vague results. Describe the layout, colors, behavior, and constraints you want. The more detail you give, the closer the first output lands.</div>
-    </div>
-    <div class="tip-block">
-      <div class="tip-num">02</div>
-      <div class="tip-divider"></div>
-      <div class="tip-title">Give constraints</div>
-      <div class="tip-body">Tell it what you don't want. "No frameworks. Vanilla JS only." Constraints help the AI produce cleaner, more focused code that's easier to understand.</div>
-    </div>
-    <div class="tip-block">
-      <div class="tip-num">03</div>
-      <div class="tip-divider"></div>
-      <div class="tip-title">Iterate</div>
-      <div class="tip-body">Your first prompt is a draft. Ask it to change one thing at a time — "Make the hero section taller" or "Change the font to something more editorial." Small edits compound fast.</div>
-    </div>
-    <div class="tip-block">
-      <div class="tip-num">04</div>
-      <div class="tip-divider"></div>
-      <div class="tip-title">Ask why</div>
-      <div class="tip-body">Don't just copy the code. Ask: "Explain what this block does." You'll understand it faster than reading docs, and you'll know how to change it next time.</div>
-    </div>
-    <div class="tip-block">
-      <div class="tip-num">05</div>
-      <div class="tip-divider"></div>
-      <div class="tip-title">Paste the error</div>
-      <div class="tip-body">If something breaks, copy the error message and paste it directly into the chat: "I got this error — fix it." The AI can debug its own code faster than you can Google it.</div>
-    </div>
-    <div class="tip-block">
-      <div class="tip-num">06</div>
-      <div class="tip-divider"></div>
-      <div class="tip-title">Describe the vibe</div>
-      <div class="tip-body">You don't need to know technical terms. Say "Make it feel more editorial and clean" or "It should feel like a luxury brand." The AI understands aesthetic direction.</div>
-    </div>
-  </div>
-</section>
-
-<!-- RESOURCES -->
-<section id="resources">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-tag">Keep building</div>
-      <h2 class="section-title">Resources.</h2>
-    </div>
-  </div>
-  <div class="collection-mosaic reveal">
-    <div class="res-block">
-      <div class="res-col-label">Tools</div>
-      <div class="res-items">
-        <a class="res-item" href="https://claude.ai" target="_blank" rel="noopener"><span class="res-name">Claude</span><span class="res-url">claude.ai</span></a>
-        <a class="res-item" href="https://cursor.com" target="_blank" rel="noopener"><span class="res-name">Cursor</span><span class="res-url">cursor.com</span></a>
-        <a class="res-item" href="https://github.com" target="_blank" rel="noopener"><span class="res-name">GitHub</span><span class="res-url">github.com</span></a>
-        <a class="res-item" href="https://vercel.com" target="_blank" rel="noopener"><span class="res-name">Vercel</span><span class="res-url">vercel.com</span></a>
-      </div>
-    </div>
-
-    <div class="res-block dark">
-      <div class="res-col-label">Learning</div>
-      <div class="res-items">
-        <a class="res-item" href="https://developer.mozilla.org" target="_blank" rel="noopener"><span class="res-name">MDN Web Docs</span><span class="res-url">developer.mozilla.org</span></a>
-        <a class="res-item" href="https://theodinproject.com" target="_blank" rel="noopener"><span class="res-name">The Odin Project</span><span class="res-url">theodinproject.com</span></a>
-        <a class="res-item" href="https://cs50.harvard.edu" target="_blank" rel="noopener"><span class="res-name">CS50 — Harvard</span><span class="res-url">cs50.harvard.edu</span></a>
-        <a class="res-item" href="https://promptingguide.ai" target="_blank" rel="noopener"><span class="res-name">Prompt Engineering Guide</span><span class="res-url">promptingguide.ai</span></a>
-      </div>
-    </div>
-
-    <div class="res-block">
-      <div class="res-col-label">Design</div>
-      <div class="res-items">
-        <a class="res-item" href="https://coolors.co" target="_blank" rel="noopener"><span class="res-name">Coolors</span><span class="res-url">coolors.co</span></a>
-        <a class="res-item" href="https://fonts.google.com" target="_blank" rel="noopener"><span class="res-name">Google Fonts</span><span class="res-url">fonts.google.com</span></a>
-        <a class="res-item" href="https://heroicons.com" target="_blank" rel="noopener"><span class="res-name">Heroicons</span><span class="res-url">heroicons.com</span></a>
-        <a class="res-item" href="https://www.refactoringui.com" target="_blank" rel="noopener"><span class="res-name">Refactoring UI</span><span class="res-url">refactoringui.com</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-top">
-    <div class="footer-headline">Start building.<br><em>Ship something real.</em></div>
-    <a href="#tools" class="footer-cta">Get Started →</a>
-  </div>
-  <div class="footer-cols">
-    <div>
-      <div class="footer-col-title">Navigate</div>
-      <ul class="footer-col-links">
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#install">Install Guide</a></li>
-        <li><a href="#prompting">How to Prompt</a></li>
-        <li><a href="#tips">Tips &amp; Tricks</a></li>
-        <li><a href="#resources">Resources</a></li>
+  <div class="site-footer-grid">
+    <div class="site-footer-col">
+      <h4>Workshop</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lab-1.html">Lab 01 — Wordle</a></li>
+        <li><a href="lab-2.html">Lab 02 — About Me</a></li>
+        <li><a href="resources.html">Resources</a></li>
       </ul>
     </div>
-    <div>
-      <div class="footer-col-title">Tools</div>
-      <ul class="footer-col-links">
-        <li><a href="https://claude.ai" target="_blank">Claude</a></li>
-        <li><a href="https://cursor.com" target="_blank">Cursor</a></li>
-        <li><a href="https://github.com" target="_blank">GitHub</a></li>
-        <li><a href="https://vercel.com" target="_blank">Vercel</a></li>
+    <div class="site-footer-col">
+      <h4>Tools</h4>
+      <ul>
+        <li><a href="https://claude.ai" target="_blank" rel="noopener">Claude</a></li>
+        <li><a href="https://cursor.com" target="_blank" rel="noopener">Cursor</a></li>
+        <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://vercel.com" target="_blank" rel="noopener">Vercel</a></li>
       </ul>
     </div>
-    <div>
-      <div class="footer-col-title">Learning</div>
-      <ul class="footer-col-links">
-        <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
-        <li><a href="https://theodinproject.com" target="_blank">The Odin Project</a></li>
-        <li><a href="https://cs50.harvard.edu" target="_blank">CS50</a></li>
-        <li><a href="https://promptingguide.ai" target="_blank">Prompt Guide</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-col-title">Instructors</div>
-      <ul class="footer-col-links">
+    <div class="site-footer-col">
+      <h4>Instructors</h4>
+      <ul>
         <li><a href="https://www.instagram.com/megan._.bagley/" target="_blank" rel="noopener">Meg Bagley</a></li>
         <li><a href="https://www.instagram.com/weston.watson/" target="_blank" rel="noopener">Weston Watson</a></li>
       </ul>
     </div>
   </div>
-  <div class="footer-bottom">
-    <div class="footer-logo">Build With AI</div>
-    <div class="footer-copy">© 2026 Build With AI</div>
+  <div class="site-footer-bottom">
+    <span>© 2026 Build With AI</span>
+    <a href="lab-2.html#share">Submit your projects →</a>
   </div>
 </footer>
 
-<script>
-  // Custom cursor
-  const cursor = document.getElementById('cursor');
-  document.addEventListener('mousemove', e => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-  });
-  document.querySelectorAll('a, button, .tool-block, .tip-block').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('expand'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('expand'));
-  });
-
-  // Nav scroll — swap to white after hero
-  const nav = document.getElementById('nav');
-  const heroSection = document.querySelector('.hero');
-  function updateNav() {
-    const heroBottom = heroSection ? heroSection.offsetHeight : window.innerHeight;
-    nav.classList.toggle('scrolled', window.scrollY > heroBottom - 80);
-  }
-  window.addEventListener('scroll', updateNav, { passive: true });
-  updateNav();
-
-  // Scroll reveals
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
-  reveals.forEach(el => observer.observe(el));
-
-  // Hamburger menu
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('open', isOpen);
-    nav.classList.toggle('menu-open', isOpen);
-    // Match menu bg to current nav state
-    mobileMenu.classList.toggle('white', nav.classList.contains('scrolled'));
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-  });
-  document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
-</script>
+<script src="main.js"></script>
 </body>
 </html>
