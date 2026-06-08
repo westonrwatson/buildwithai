@@ -58,11 +58,33 @@ body {
   border-color: var(--black);
 }
 
-.lime-surface ::selection {
+:is(
+  .lime-surface,
+  .page-hero--lime,
+  .step-block--lime,
+  .tip-block--lime,
+  .flair-card--lime,
+  .agenda-item--lime,
+  #build-01 .build-phase:nth-child(1),
+  #build-02 .prompt-example,
+  body:has(.page-hero--lime) nav:not(.scrolled)
+) ::selection,
+:is(.section-tag, .share-submit, .hero-cta)::selection {
   background: var(--black);
   color: var(--lime);
 }
-.lime-surface ::-moz-selection {
+:is(
+  .lime-surface,
+  .page-hero--lime,
+  .step-block--lime,
+  .tip-block--lime,
+  .flair-card--lime,
+  .agenda-item--lime,
+  #build-01 .build-phase:nth-child(1),
+  #build-02 .prompt-example,
+  body:has(.page-hero--lime) nav:not(.scrolled)
+) ::-moz-selection,
+:is(.section-tag, .share-submit, .hero-cta)::-moz-selection {
   background: var(--black);
   color: var(--lime);
 }

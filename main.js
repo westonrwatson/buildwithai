@@ -3,9 +3,18 @@ const canUseCustomCursor = window.matchMedia('(hover: hover) and (pointer: fine)
 if (canUseCustomCursor) {
   const cursor = document.getElementById('cursor');
   if (cursor) {
+    const LIME = { r: 188, g: 232, b: 88 };
+
+    function isLimeColor(color) {
+      const match = color?.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+      if (!match) return false;
+      return +match[1] === LIME.r && +match[2] === LIME.g && +match[3] === LIME.b;
+    }
+
     function isLimeSurface(el) {
       while (el && el !== document.documentElement) {
         if (el.classList?.contains('lime-surface')) return true;
+        if (isLimeColor(getComputedStyle(el).backgroundColor)) return true;
         el = el.parentElement;
       }
       return false;
