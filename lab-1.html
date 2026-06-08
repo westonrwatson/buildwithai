@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-i18n-title="title.lab1">
 
 <div class="cursor" id="cursor"></div>
 
@@ -20,39 +20,39 @@
   <a href="index.html" class="nav-logo">Build With AI</a>
   <div class="nav-right">
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="lab-1.html" class="active">Lab 01</a></li>
-      <li><a href="lab-2.html">Lab 02</a></li>
-      <li><a href="resources.html">Resources</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="lab-1.html" class="active" data-i18n="nav.lab1">Lab 01</a></li>
+      <li><a href="lab-2.html" data-i18n="nav.lab2">Lab 02</a></li>
+      <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
     </ul>
-    <div class="lang-toggle lang-toggle--desktop" role="group" aria-label="Language">
+    <div class="lang-toggle lang-toggle--desktop" role="group" data-i18n-aria-label="nav.aria_lang" aria-label="Language">
       <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" class="lang-btn" data-lang="ro" aria-pressed="false">RO</button>
       <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
     </div>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Open menu">
+  <button class="hamburger" id="hamburger" data-i18n-aria-label="nav.aria_menu" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <div class="lang-toggle mobile-lang-toggle" role="group" aria-label="Language">
+  <div class="lang-toggle mobile-lang-toggle" role="group" data-i18n-aria-label="nav.aria_lang" aria-label="Language">
     <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
     <button type="button" class="lang-btn" data-lang="ro" aria-pressed="false">RO</button>
     <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
   </div>
-  <a href="index.html" class="mobile-link">Home</a>
-  <a href="lab-1.html" class="mobile-link active">Lab 01</a>
-  <a href="lab-2.html" class="mobile-link">Lab 02</a>
-  <a href="resources.html" class="mobile-link">Resources</a>
+  <a href="index.html" class="mobile-link" data-i18n="nav.home">Home</a>
+  <a href="lab-1.html" class="mobile-link active" data-i18n="nav.lab1">Lab 01</a>
+  <a href="lab-2.html" class="mobile-link" data-i18n="nav.lab2">Lab 02</a>
+  <a href="resources.html" class="mobile-link" data-i18n="nav.resources">Resources</a>
 </div>
 
 <header class="page-hero page-hero--lime lime-surface">
   <div class="page-hero-content">
-    <div class="section-tag">Build Lab 01</div>
-    <h1>Ship your first <em>game.</em></h1>
-    <p>Learn to prompt, build a Wordle clone, add your own flair, and deploy it live on Vercel.</p>
+    <div class="section-tag" data-i18n="lab1.hero.tag">Build Lab 01</div>
+    <h1 data-i18n-html="lab1.hero.title_html">Ship your first <em>game.</em></h1>
+    <p data-i18n="lab1.hero.desc">Learn to prompt, build a Wordle clone, add your own flair, and deploy it live on Vercel.</p>
   </div>
 </header>
 
@@ -60,34 +60,34 @@
 <section id="prompting" class="page-section">
   <div class="section-header reveal">
     <div>
-      <div class="section-tag">Talk to the AI</div>
-      <h2 class="section-title">How to <em>prompt.</em></h2>
+      <div class="section-tag" data-i18n="lab1.prompting.tag">Talk to the AI</div>
+      <h2 class="section-title" data-i18n-html="lab1.prompting.title_html">How to <em>prompt.</em></h2>
     </div>
   </div>
   <div class="formula-blocks reveal">
     <div class="formula-block">
-      <div class="formula-part-label">Part 01</div>
-      <div class="formula-name">Role</div>
-      <div class="formula-desc">Tell the AI who it is. Give it a persona that fits the task.</div>
-      <div class="formula-eg">"You are an expert web developer."</div>
+      <div class="formula-part-label" data-i18n="lab1.prompting.formula01.label">Part 01</div>
+      <div class="formula-name" data-i18n="lab1.prompting.formula01.name">Role</div>
+      <div class="formula-desc" data-i18n="lab1.prompting.formula01.desc">Tell the AI who it is. Give it a persona that fits the task.</div>
+      <div class="formula-eg" data-i18n="lab1.prompting.formula01.eg">"You are an expert web developer."</div>
     </div>
     <div class="formula-block">
-      <div class="formula-part-label">Part 02</div>
-      <div class="formula-name">Task</div>
-      <div class="formula-desc">Tell it exactly what to build or do. Be direct and specific.</div>
-      <div class="formula-eg">"Build me a Wordle clone."</div>
+      <div class="formula-part-label" data-i18n="lab1.prompting.formula02.label">Part 02</div>
+      <div class="formula-name" data-i18n="lab1.prompting.formula02.name">Task</div>
+      <div class="formula-desc" data-i18n="lab1.prompting.formula02.desc">Tell it exactly what to build or do. Be direct and specific.</div>
+      <div class="formula-eg" data-i18n="lab1.prompting.formula02.eg">"Build me a Wordle clone."</div>
     </div>
     <div class="formula-block">
-      <div class="formula-part-label">Part 03</div>
-      <div class="formula-name">Context</div>
-      <div class="formula-desc">Give it the details, constraints, and requirements it needs.</div>
-      <div class="formula-eg">"Single index.html. No frameworks."</div>
+      <div class="formula-part-label" data-i18n="lab1.prompting.formula03.label">Part 03</div>
+      <div class="formula-name" data-i18n="lab1.prompting.formula03.name">Context</div>
+      <div class="formula-desc" data-i18n="lab1.prompting.formula03.desc">Give it the details, constraints, and requirements it needs.</div>
+      <div class="formula-eg" data-i18n="lab1.prompting.formula03.eg">"Single index.html. No frameworks."</div>
     </div>
   </div>
 
   <div class="section-header reveal" style="margin-top: 48px; margin-bottom: 32px; padding-bottom: 16px;">
     <div>
-      <h2 class="section-title" style="font-size: clamp(22px, 3vw, 32px);">Prompting <em>tips.</em></h2>
+      <h2 class="section-title" style="font-size: clamp(22px, 3vw, 32px);" data-i18n-html="lab1.prompting.tips_title_html">Prompting <em>tips.</em></h2>
     </div>
   </div>
 
@@ -95,38 +95,38 @@
     <div class="tip-block">
       <div class="tip-num">01</div>
       <div class="tip-divider"></div>
-      <div class="tip-title">Be specific</div>
-      <div class="tip-body">Vague prompts get vague results. Describe the layout, colors, behavior, and constraints you want. The more detail you give, the closer the first output lands.</div>
+      <div class="tip-title" data-i18n="tips.01.title">Be specific</div>
+      <div class="tip-body" data-i18n="tips.01.body">Vague prompts get vague results. Describe the layout, colors, behavior, and constraints you want. The more detail you give, the closer the first output lands.</div>
     </div>
     <div class="tip-block tip-block--lime">
       <div class="tip-num">02</div>
       <div class="tip-divider"></div>
-      <div class="tip-title">Give constraints</div>
-      <div class="tip-body">Tell it what you don't want. "No frameworks. Vanilla JS only." Constraints help the AI produce cleaner, more focused code.</div>
+      <div class="tip-title" data-i18n="tips.02.title">Give constraints</div>
+      <div class="tip-body" data-i18n="tips.02.body">Tell it what you don't want. "No frameworks. Vanilla JS only." Constraints help the AI produce cleaner, more focused code.</div>
     </div>
     <div class="tip-block">
       <div class="tip-num">03</div>
       <div class="tip-divider"></div>
-      <div class="tip-title">Iterate</div>
-      <div class="tip-body">Your first prompt is a draft. Ask it to change one thing at a time — small edits compound fast.</div>
+      <div class="tip-title" data-i18n="tips.03.title">Iterate</div>
+      <div class="tip-body" data-i18n="tips.03.body">Your first prompt is a draft. Ask it to change one thing at a time — small edits compound fast.</div>
     </div>
     <div class="tip-block">
       <div class="tip-num">04</div>
       <div class="tip-divider"></div>
-      <div class="tip-title">Ask why</div>
-      <div class="tip-body">Don't just copy the code. Ask: "Explain what this block does." You'll understand it faster than reading docs.</div>
+      <div class="tip-title" data-i18n="tips.04.title">Ask why</div>
+      <div class="tip-body" data-i18n="tips.04.body">Don't just copy the code. Ask: "Explain what this block does." You'll understand it faster than reading docs.</div>
     </div>
     <div class="tip-block">
       <div class="tip-num">05</div>
       <div class="tip-divider"></div>
-      <div class="tip-title">Paste the error</div>
-      <div class="tip-body">If something breaks, copy the error message and paste it directly into the chat. The AI can debug its own code.</div>
+      <div class="tip-title" data-i18n="tips.05.title">Paste the error</div>
+      <div class="tip-body" data-i18n="tips.05.body">If something breaks, copy the error message and paste it directly into the chat. The AI can debug its own code.</div>
     </div>
     <div class="tip-block">
       <div class="tip-num">06</div>
       <div class="tip-divider"></div>
-      <div class="tip-title">Describe the vibe</div>
-      <div class="tip-body">You don't need technical terms. Say "Make it feel more editorial and clean" or "It should feel like a luxury brand."</div>
+      <div class="tip-title" data-i18n="tips.06.title">Describe the vibe</div>
+      <div class="tip-body" data-i18n="tips.06.body">You don't need technical terms. Say "Make it feel more editorial and clean" or "It should feel like a luxury brand."</div>
     </div>
   </div>
 </section>
@@ -135,85 +135,86 @@
 <section id="build-01" class="page-section gray">
   <div class="section-header reveal">
     <div>
-      <div class="section-tag">The build</div>
-      <h2 class="section-title">Wordle <em>clone.</em></h2>
+      <div class="section-tag" data-i18n="lab1.build.tag">The build</div>
+      <h2 class="section-title" data-i18n-html="lab1.build.title_html">Wordle <em>clone.</em></h2>
     </div>
   </div>
 
   <div class="build-phases reveal">
     <div class="build-phase">
-      <div class="build-phase-label">Phase 01</div>
-      <div class="build-phase-title">Generate it.</div>
-      <div class="build-phase-body">Paste the starter prompt into Cursor. Let the AI build a complete, playable Wordle clone in a single <span style="font-family:monospace;">index.html</span> file. Test it locally before moving on.</div>
+      <div class="build-phase-label" data-i18n="lab1.build.phase01.label">Phase 01</div>
+      <div class="build-phase-title" data-i18n="lab1.build.phase01.title">Generate it.</div>
+      <div class="build-phase-body" data-i18n-html="lab1.build.phase01.body_html">Paste the starter prompt into Cursor. Let the AI build a complete, playable Wordle clone in a single <span style="font-family:monospace;">index.html</span> file. Test it locally before moving on.</div>
     </div>
     <div class="build-phase">
-      <div class="build-phase-label">Phase 02</div>
-      <div class="build-phase-title">Make it yours.</div>
-      <div class="build-phase-body">Pick at least two customizations below and prompt the AI to apply them. Iterate one change at a time until it feels like <em>your</em> version.</div>
+      <div class="build-phase-label" data-i18n="lab1.build.phase02.label">Phase 02</div>
+      <div class="build-phase-title" data-i18n="lab1.build.phase02.title">Make it yours.</div>
+      <div class="build-phase-body" data-i18n-html="lab1.build.phase02.body_html">Pick at least two customizations below and prompt the AI to apply them. Iterate one change at a time until it feels like <em>your</em> version.</div>
     </div>
     <div class="build-phase">
-      <div class="build-phase-label">Phase 03</div>
-      <div class="build-phase-title">Ship it.</div>
-      <div class="build-phase-body">Push to GitHub, connect to Vercel, and get a live URL. Save the link — you'll submit it after Lab 02.</div>
+      <div class="build-phase-label" data-i18n="lab1.build.phase03.label">Phase 03</div>
+      <div class="build-phase-title" data-i18n="lab1.build.phase03.title">Ship it.</div>
+      <div class="build-phase-body" data-i18n="lab1.build.phase03.body">Push to GitHub, connect to Vercel, and get a live URL. Save the link — you'll submit it after Lab 02.</div>
     </div>
   </div>
 
   <div class="prompt-example reveal">
-    <div class="prompt-eg-label">Starter prompt — copy &amp; paste this first</div>
-    <div class="prompt-eg-text">
+    <div class="prompt-eg-label" data-i18n="lab1.prompt.label">Starter prompt — copy &amp; paste this first</div>
+    <p class="prompt-note" data-i18n="lab1.prompt.note">Copy this prompt in English — AI tools work best with English prompts.</p>
+    <div class="prompt-eg-text" data-i18n-html="lab1.prompt.starter_html">
       <strong>You are an expert web developer.</strong> Build a fully playable Wordle clone as a single index.html file. Include: 6 guesses per game, 5-letter words only, a built-in word list of at least 50 common words, an on-screen keyboard, tile flip animations, color feedback (green = correct spot, yellow = wrong spot, gray = not in word), win and lose states with a Play Again button, and a clean modern UI. <strong>Vanilla HTML, CSS, and JavaScript only — no frameworks, no external libraries.</strong> Make it responsive and work on mobile.
     </div>
   </div>
 
   <div class="section-header reveal" style="margin-top: 48px; margin-bottom: 32px; padding-bottom: 16px;">
     <div>
-      <div class="section-tag">Phase 02</div>
-      <h2 class="section-title" style="font-size: clamp(22px, 3vw, 32px);">Add your <em>flair.</em></h2>
+      <div class="section-tag" data-i18n="lab1.flair.tag">Phase 02</div>
+      <h2 class="section-title" style="font-size: clamp(22px, 3vw, 32px);" data-i18n-html="lab1.flair.title_html">Add your <em>flair.</em></h2>
     </div>
   </div>
 
   <div class="flair-grid reveal">
     <div class="flair-card">
-      <div class="flair-name">Custom theme</div>
-      <div class="flair-prompt">"Switch to a dark theme with [YOUR COLOR] as the accent. Update the keyboard and tiles to match."</div>
+      <div class="flair-name" data-i18n="lab1.flair.theme.name">Custom theme</div>
+      <div class="flair-prompt" data-i18n="lab1.flair.theme.prompt">"Switch to a dark theme with [YOUR COLOR] as the accent. Update the keyboard and tiles to match."</div>
     </div>
     <div class="flair-card">
-      <div class="flair-name">Rename it</div>
-      <div class="flair-prompt">"Change the title to [YOUR NAME]'s Wordle and add a short tagline under it."</div>
+      <div class="flair-name" data-i18n="lab1.flair.rename.name">Rename it</div>
+      <div class="flair-prompt" data-i18n="lab1.flair.rename.prompt">"Change the title to [YOUR NAME]'s Wordle and add a short tagline under it."</div>
     </div>
     <div class="flair-card">
-      <div class="flair-name">Tile animations</div>
-      <div class="flair-prompt">"Add a satisfying flip animation when each row of tiles is revealed."</div>
+      <div class="flair-name" data-i18n="lab1.flair.animations.name">Tile animations</div>
+      <div class="flair-prompt" data-i18n="lab1.flair.animations.prompt">"Add a satisfying flip animation when each row of tiles is revealed."</div>
     </div>
     <div class="flair-card">
-      <div class="flair-name">Win streak stats</div>
-      <div class="flair-prompt">"Add a stats panel showing games played, win %, and current streak. Persist stats in localStorage."</div>
+      <div class="flair-name" data-i18n="lab1.flair.stats.name">Win streak stats</div>
+      <div class="flair-prompt" data-i18n="lab1.flair.stats.prompt">"Add a stats panel showing games played, win %, and current streak. Persist stats in localStorage."</div>
     </div>
     <div class="flair-card">
-      <div class="flair-name">Hard mode</div>
-      <div class="flair-prompt">"Add a hard mode toggle — revealed hints must be used in subsequent guesses."</div>
+      <div class="flair-name" data-i18n="lab1.flair.hardmode.name">Hard mode</div>
+      <div class="flair-prompt" data-i18n="lab1.flair.hardmode.prompt">"Add a hard mode toggle — revealed hints must be used in subsequent guesses."</div>
     </div>
     <div class="flair-card flair-card--lime">
-      <div class="flair-name">Custom word list</div>
-      <div class="flair-prompt">"Replace the word list with themed words — sports, food, or inside jokes with friends."</div>
+      <div class="flair-name" data-i18n="lab1.flair.wordlist.name">Custom word list</div>
+      <div class="flair-prompt" data-i18n="lab1.flair.wordlist.prompt">"Replace the word list with themed words — sports, food, or inside jokes with friends."</div>
     </div>
   </div>
 
   <div class="section-header reveal" style="margin-top: 48px; margin-bottom: 32px; padding-bottom: 16px;">
     <div>
-      <div class="section-tag">Phase 03</div>
-      <h2 class="section-title" style="font-size: clamp(22px, 3vw, 32px);">Push &amp; <em>deploy.</em></h2>
+      <div class="section-tag" data-i18n="lab1.deploy.tag">Phase 03</div>
+      <h2 class="section-title" style="font-size: clamp(22px, 3vw, 32px);" data-i18n-html="lab1.deploy.title_html">Push &amp; <em>deploy.</em></h2>
     </div>
   </div>
 
   <div class="deploy-steps reveal">
     <div class="deploy-step">
-      <strong>01 — Push to GitHub</strong>
-      <p>In Cursor, ask the AI: "Help me push this project to a new GitHub repo." Or use Source Control → Initialize Repository → Publish to GitHub. Name it <span style="font-family:monospace;">my-wordle</span>.</p>
+      <strong data-i18n="lab1.deploy.step01.title">01 — Push to GitHub</strong>
+      <p data-i18n-html="lab1.deploy.step01.body_html">In Cursor, ask the AI: "Help me push this project to a new GitHub repo." Or use Source Control → Initialize Repository → Publish to GitHub. Name it <span style="font-family:monospace;">my-wordle</span>.</p>
     </div>
     <div class="deploy-step">
-      <strong>02 — Deploy on Vercel</strong>
-      <p>Go to vercel.com → Add New Project → Import your GitHub repo → Deploy. Copy your live URL when it's done.</p>
+      <strong data-i18n="lab1.deploy.step02.title">02 — Deploy on Vercel</strong>
+      <p data-i18n="lab1.deploy.step02.body">Go to vercel.com → Add New Project → Import your GitHub repo → Deploy. Copy your live URL when it's done.</p>
     </div>
   </div>
 </section>
@@ -222,40 +223,40 @@
 <section id="share" class="share-callout">
   <div class="share-panel reveal">
     <div>
-      <h3>Done with Lab 01? <em>Share it.</em></h3>
-      <p>Once your Wordle is live on Vercel, submit your link below. Finished early? Head to <a href="lab-2.html" style="color: var(--lime);">Lab 02 →</a></p>
+      <h3 data-i18n-html="lab1.share.title_html">Done with Lab 01? <em>Share it.</em></h3>
+      <p data-i18n-html="lab1.share.desc_html">Once your Wordle is live on Vercel, submit your link below. Finished early? Head to <a href="lab-2.html" style="color: var(--lime);">Lab 02 →</a></p>
     </div>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScwI9HYtEaoEm6GmVNJrUmxpbOzEyf44yIDBHu_xsxbb-Xvlw/viewform?usp=sharing" target="_blank" rel="noopener" class="share-submit">Submit Lab 01 →</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScwI9HYtEaoEm6GmVNJrUmxpbOzEyf44yIDBHu_xsxbb-Xvlw/viewform?usp=sharing" target="_blank" rel="noopener" class="share-submit" data-i18n="lab1.share.submit">Submit Lab 01 →</a>
   </div>
   <div class="share-checklist reveal">
     <div class="share-item">
-      <strong>Lab 01 — Wordle URL</strong>
-      <span>Your live Vercel link for this project</span>
+      <strong data-i18n="lab1.share.checklist.url.title">Lab 01 — Wordle URL</strong>
+      <span data-i18n="lab1.share.checklist.url.desc">Your live Vercel link for this project</span>
     </div>
     <div class="share-item">
-      <strong>Your name</strong>
-      <span>So we know whose project we're looking at</span>
+      <strong data-i18n="lab1.share.checklist.name.title">Your name</strong>
+      <span data-i18n="lab1.share.checklist.name.desc">So we know whose project we're looking at</span>
     </div>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="site-footer-brand">
-    <h2>Build <em>With AI</em></h2>
-    <p>Workshop hub for going from zero to live websites with Claude, Cursor, GitHub, and Vercel.</p>
+    <h2 data-i18n-html="footer.brand_title_html">Build <em>With AI</em></h2>
+    <p data-i18n="footer.brand_desc">Workshop hub for going from zero to live websites with Claude, Cursor, GitHub, and Vercel.</p>
   </div>
   <div class="site-footer-grid">
     <div class="site-footer-col">
-      <h4>Workshop</h4>
+      <h4 data-i18n="footer.col_workshop">Workshop</h4>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="lab-1.html">Lab 01 — Wordle</a></li>
-        <li><a href="lab-2.html">Lab 02 — About Me</a></li>
-        <li><a href="resources.html">Resources</a></li>
+        <li><a href="index.html" data-i18n="footer.link_home">Home</a></li>
+        <li><a href="lab-1.html" data-i18n="footer.link_lab1">Lab 01 — Wordle</a></li>
+        <li><a href="lab-2.html" data-i18n="footer.link_lab2">Lab 02 — About Me</a></li>
+        <li><a href="resources.html" data-i18n="footer.link_resources">Resources</a></li>
       </ul>
     </div>
     <div class="site-footer-col">
-      <h4>Tools</h4>
+      <h4 data-i18n="footer.col_tools">Tools</h4>
       <ul>
         <li><a href="https://claude.ai" target="_blank" rel="noopener">Claude</a></li>
         <li><a href="https://cursor.com" target="_blank" rel="noopener">Cursor</a></li>
@@ -264,7 +265,7 @@
       </ul>
     </div>
     <div class="site-footer-col">
-      <h4>Instructors</h4>
+      <h4 data-i18n="footer.col_instructors">Instructors</h4>
       <ul>
         <li><a href="https://www.instagram.com/megan._.bagley/" target="_blank" rel="noopener">Meg Bagley</a></li>
         <li><a href="https://www.instagram.com/weston.watson/" target="_blank" rel="noopener">Weston Watson</a></li>
@@ -272,11 +273,12 @@
     </div>
   </div>
   <div class="site-footer-bottom">
-    <span>© 2026 Build With AI</span>
-    <a href="lab-2.html">Next: Lab 02 →</a>
+    <span data-i18n="footer.copyright">© 2026 Build With AI</span>
+    <a href="lab-2.html" data-i18n="footer.next_lab2">Next: Lab 02 →</a>
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

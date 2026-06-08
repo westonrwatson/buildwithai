@@ -744,6 +744,14 @@ nav.scrolled .lang-btn.active {
   line-height: 1.6;
 }
 
+.prompt-note {
+  grid-column: 2;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.55);
+  margin: -8px 0 12px;
+}
+
 .prompt-eg-text {
   font-size: 15px;
   font-weight: 300;
@@ -759,6 +767,7 @@ nav.scrolled .lang-btn.active {
 
 #build-02 .prompt-example { background: var(--lime); }
 #build-02 .prompt-eg-label { color: rgba(0, 0, 0, 0.4); }
+#build-02 .prompt-note { color: rgba(0, 0, 0, 0.45); }
 #build-02 .prompt-eg-text,
 #build-02 .prompt-eg-text strong { color: var(--black); }
 

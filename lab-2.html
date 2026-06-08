@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-i18n-title="title.lab2">
 
 <div class="cursor" id="cursor"></div>
 
@@ -20,39 +20,39 @@
   <a href="index.html" class="nav-logo">Build With AI</a>
   <div class="nav-right">
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="lab-1.html">Lab 01</a></li>
-      <li><a href="lab-2.html" class="active">Lab 02</a></li>
-      <li><a href="resources.html">Resources</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="lab-1.html" data-i18n="nav.lab1">Lab 01</a></li>
+      <li><a href="lab-2.html" class="active" data-i18n="nav.lab2">Lab 02</a></li>
+      <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
     </ul>
-    <div class="lang-toggle lang-toggle--desktop" role="group" aria-label="Language">
+    <div class="lang-toggle lang-toggle--desktop" role="group" data-i18n-aria-label="nav.aria_lang" aria-label="Language">
       <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" class="lang-btn" data-lang="ro" aria-pressed="false">RO</button>
       <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
     </div>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Open menu">
+  <button class="hamburger" id="hamburger" data-i18n-aria-label="nav.aria_menu" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <div class="lang-toggle mobile-lang-toggle" role="group" aria-label="Language">
+  <div class="lang-toggle mobile-lang-toggle" role="group" data-i18n-aria-label="nav.aria_lang" aria-label="Language">
     <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
     <button type="button" class="lang-btn" data-lang="ro" aria-pressed="false">RO</button>
     <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
   </div>
-  <a href="index.html" class="mobile-link">Home</a>
-  <a href="lab-1.html" class="mobile-link">Lab 01</a>
-  <a href="lab-2.html" class="mobile-link active">Lab 02</a>
-  <a href="resources.html" class="mobile-link">Resources</a>
+  <a href="index.html" class="mobile-link" data-i18n="nav.home">Home</a>
+  <a href="lab-1.html" class="mobile-link" data-i18n="nav.lab1">Lab 01</a>
+  <a href="lab-2.html" class="mobile-link active" data-i18n="nav.lab2">Lab 02</a>
+  <a href="resources.html" class="mobile-link" data-i18n="nav.resources">Resources</a>
 </div>
 
 <header class="page-hero">
   <div class="page-hero-content">
-    <div class="section-tag">Build Lab 02</div>
-    <h1>Your <em>about me</em> site.</h1>
-    <p>Apply design principles, build a multi-page Next.js site, polish it, and deploy something you'd put on a resume.</p>
+    <div class="section-tag" data-i18n="lab2.hero.tag">Build Lab 02</div>
+    <h1 data-i18n-html="lab2.hero.title_html">Your <em>about me</em> site.</h1>
+    <p data-i18n="lab2.hero.desc">Apply design principles, build a multi-page Next.js site, polish it, and deploy something you'd put on a resume.</p>
   </div>
 </header>
 
@@ -60,47 +60,47 @@
 <section id="design" class="page-section gray">
   <div class="section-header reveal">
     <div>
-      <div class="section-tag">Before you build</div>
-      <h2 class="section-title">Design <em>principles.</em></h2>
+      <div class="section-tag" data-i18n="lab2.design.tag">Before you build</div>
+      <h2 class="section-title" data-i18n-html="lab2.design.title_html">Design <em>principles.</em></h2>
     </div>
   </div>
 
   <div class="tips-blocks reveal">
     <div class="tip-block">
-      <div class="tip-num">Color</div>
+      <div class="tip-num" data-i18n="lab2.design.color.num">Color</div>
       <div class="tip-divider"></div>
-      <div class="tip-title">Start with a palette</div>
-      <div class="tip-body">Use the 60-30-10 rule: 60% neutral background, 30% secondary, 10% accent. Generate palettes at <a href="https://coolors.co" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">Coolors</a>. Check contrast at <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">WebAIM</a>.</div>
+      <div class="tip-title" data-i18n="lab2.design.color.title">Start with a palette</div>
+      <div class="tip-body" data-i18n-html="lab2.design.color.body_html">Use the 60-30-10 rule: 60% neutral background, 30% secondary, 10% accent. Generate palettes at <a href="https://coolors.co" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">Coolors</a>. Check contrast at <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">WebAIM</a>.</div>
     </div>
     <div class="tip-block">
-      <div class="tip-num">Type</div>
+      <div class="tip-num" data-i18n="lab2.design.type.num">Type</div>
       <div class="tip-divider"></div>
-      <div class="tip-title">Two fonts max</div>
-      <div class="tip-body">One for headings, one for body. Browse pairings at <a href="https://fonts.google.com" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">Google Fonts</a>. Tell the AI: "Use [Font A] for headings and [Font B] for body text."</div>
+      <div class="tip-title" data-i18n="lab2.design.type.title">Two fonts max</div>
+      <div class="tip-body" data-i18n-html="lab2.design.type.body_html">One for headings, one for body. Browse pairings at <a href="https://fonts.google.com" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">Google Fonts</a>. Tell the AI: "Use [Font A] for headings and [Font B] for body text."</div>
     </div>
     <div class="tip-block">
-      <div class="tip-num">Components</div>
+      <div class="tip-num" data-i18n="lab2.design.components.num">Components</div>
       <div class="tip-divider"></div>
-      <div class="tip-title">Don't reinvent buttons</div>
-      <div class="tip-body">For Next.js projects, use pre-built libraries. Start with <a href="https://ui.shadcn.com" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">shadcn/ui</a> or <a href="https://m3.material.io" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">Material Design 3</a>. Prompt: "Use shadcn/ui for buttons, cards, and navigation."</div>
+      <div class="tip-title" data-i18n="lab2.design.components.title">Don't reinvent buttons</div>
+      <div class="tip-body" data-i18n-html="lab2.design.components.body_html">For Next.js projects, use pre-built libraries. Start with <a href="https://ui.shadcn.com" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">shadcn/ui</a> or <a href="https://m3.material.io" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">Material Design 3</a>. Prompt: "Use shadcn/ui for buttons, cards, and navigation."</div>
     </div>
     <div class="tip-block">
-      <div class="tip-num">Space</div>
+      <div class="tip-num" data-i18n="lab2.design.space.num">Space</div>
       <div class="tip-divider"></div>
-      <div class="tip-title">Whitespace is design</div>
-      <div class="tip-body">Cramped layouts feel amateur. Ask for "generous padding" and "consistent 8px spacing scale." When in doubt: "Make it feel more spacious and editorial."</div>
+      <div class="tip-title" data-i18n="lab2.design.space.title">Whitespace is design</div>
+      <div class="tip-body" data-i18n="lab2.design.space.body">Cramped layouts feel amateur. Ask for "generous padding" and "consistent 8px spacing scale." When in doubt: "Make it feel more spacious and editorial."</div>
     </div>
     <div class="tip-block">
-      <div class="tip-num">Hierarchy</div>
+      <div class="tip-num" data-i18n="lab2.design.hierarchy.num">Hierarchy</div>
       <div class="tip-divider"></div>
-      <div class="tip-title">Guide the eye</div>
-      <div class="tip-body">The biggest, boldest element should be what matters most. Use size, weight, and color — not more colors — to show importance. One clear focal point per section.</div>
+      <div class="tip-title" data-i18n="lab2.design.hierarchy.title">Guide the eye</div>
+      <div class="tip-body" data-i18n="lab2.design.hierarchy.body">The biggest, boldest element should be what matters most. Use size, weight, and color — not more colors — to show importance. One clear focal point per section.</div>
     </div>
     <div class="tip-block">
-      <div class="tip-num">Vibe</div>
+      <div class="tip-num" data-i18n="lab2.design.vibe.num">Vibe</div>
       <div class="tip-divider"></div>
-      <div class="tip-title">Describe the feeling</div>
-      <div class="tip-body">Say "minimal and clean like Apple," "bold and playful like Spotify," or "warm and personal like a letter." The AI understands aesthetic references.</div>
+      <div class="tip-title" data-i18n="lab2.design.vibe.title">Describe the feeling</div>
+      <div class="tip-body" data-i18n="lab2.design.vibe.body">Say "minimal and clean like Apple," "bold and playful like Spotify," or "warm and personal like a letter." The AI understands aesthetic references.</div>
     </div>
   </div>
 </section>
@@ -109,79 +109,80 @@
 <section id="build-02" class="page-section">
   <div class="section-header reveal">
     <div>
-      <div class="section-tag">The build</div>
-      <h2 class="section-title">About me <em>site.</em></h2>
+      <div class="section-tag" data-i18n="lab2.build.tag">The build</div>
+      <h2 class="section-title" data-i18n-html="lab2.build.title_html">About me <em>site.</em></h2>
     </div>
   </div>
 
   <div class="build-phases reveal">
     <div class="build-phase">
-      <div class="build-phase-label">Stack</div>
-      <div class="build-phase-title">Next.js + React.</div>
-      <div class="build-phase-body">A multi-page site using the Next.js App Router. This is your capstone — apply the Design Kit and make it something you're proud to share.</div>
+      <div class="build-phase-label" data-i18n="lab2.build.stack.label">Stack</div>
+      <div class="build-phase-title" data-i18n="lab2.build.stack.title">Next.js + React.</div>
+      <div class="build-phase-body" data-i18n="lab2.build.stack.body">A multi-page site using the Next.js App Router. This is your capstone — apply the Design Kit and make it something you're proud to share.</div>
     </div>
     <div class="build-phase">
-      <div class="build-phase-label">Goal</div>
-      <div class="build-phase-title">Look professional.</div>
-      <div class="build-phase-body">Focus on polish: consistent spacing, a cohesive color palette, smooth navigation, and content that actually represents you.</div>
+      <div class="build-phase-label" data-i18n="lab2.build.goal.label">Goal</div>
+      <div class="build-phase-title" data-i18n="lab2.build.goal.title">Look professional.</div>
+      <div class="build-phase-body" data-i18n="lab2.build.goal.body">Focus on polish: consistent spacing, a cohesive color palette, smooth navigation, and content that actually represents you.</div>
     </div>
     <div class="build-phase">
-      <div class="build-phase-label">Outcome</div>
-      <div class="build-phase-title">Deploy &amp; share.</div>
-      <div class="build-phase-body">Push to GitHub, deploy on Vercel, and submit your live link. This is the site you can put on a resume or send to friends.</div>
+      <div class="build-phase-label" data-i18n="lab2.build.outcome.label">Outcome</div>
+      <div class="build-phase-title" data-i18n="lab2.build.outcome.title">Deploy &amp; share.</div>
+      <div class="build-phase-body" data-i18n="lab2.build.outcome.body">Push to GitHub, deploy on Vercel, and submit your live link. This is the site you can put on a resume or send to friends.</div>
     </div>
   </div>
 
   <div class="criteria-grid reveal">
     <div class="criteria-block dark">
-      <div class="criteria-heading">Required — your site must have</div>
+      <div class="criteria-heading" data-i18n="lab2.criteria.required.heading">Required — your site must have</div>
       <ul class="criteria-list">
-        <li>At least 3 pages using Next.js App Router (e.g. Home, About, Projects)</li>
-        <li>Home page with your name, a tagline, and a clear hero section</li>
-        <li>About page with a short bio — who you are, what you're into</li>
-        <li>A projects or interests page with at least 3 items</li>
-        <li>Working navigation that links every page together</li>
-        <li>Contact info — email, social link, or contact form</li>
-        <li>Deployed live on Vercel with a public URL</li>
+        <li data-i18n="lab2.criteria.required.01">At least 3 pages using Next.js App Router (e.g. Home, About, Projects)</li>
+        <li data-i18n="lab2.criteria.required.02">Home page with your name, a tagline, and a clear hero section</li>
+        <li data-i18n="lab2.criteria.required.03">About page with a short bio — who you are, what you're into</li>
+        <li data-i18n="lab2.criteria.required.04">A projects or interests page with at least 3 items</li>
+        <li data-i18n="lab2.criteria.required.05">Working navigation that links every page together</li>
+        <li data-i18n="lab2.criteria.required.06">Contact info — email, social link, or contact form</li>
+        <li data-i18n="lab2.criteria.required.07">Deployed live on Vercel with a public URL</li>
       </ul>
     </div>
     <div class="criteria-block">
-      <div class="criteria-heading">Make it yours — pick 3+</div>
+      <div class="criteria-heading" data-i18n="lab2.criteria.optional.heading">Make it yours — pick 3+</div>
       <ul class="criteria-list">
-        <li>Custom color palette and font pairing from Google Fonts</li>
-        <li>A unique layout — asymmetric, full-bleed images, or card-based</li>
-        <li>A hobbies, music, or favorites section that shows personality</li>
-        <li>Subtle animations — fade-ins, hover effects, page transitions</li>
-        <li>A personal logo, monogram, or custom favicon</li>
-        <li>Dark mode or a theme toggle</li>
-        <li>Responsive design that looks great on phone and desktop</li>
+        <li data-i18n="lab2.criteria.optional.01">Custom color palette and font pairing from Google Fonts</li>
+        <li data-i18n="lab2.criteria.optional.02">A unique layout — asymmetric, full-bleed images, or card-based</li>
+        <li data-i18n="lab2.criteria.optional.03">A hobbies, music, or favorites section that shows personality</li>
+        <li data-i18n="lab2.criteria.optional.04">Subtle animations — fade-ins, hover effects, page transitions</li>
+        <li data-i18n="lab2.criteria.optional.05">A personal logo, monogram, or custom favicon</li>
+        <li data-i18n="lab2.criteria.optional.06">Dark mode or a theme toggle</li>
+        <li data-i18n="lab2.criteria.optional.07">Responsive design that looks great on phone and desktop</li>
       </ul>
     </div>
   </div>
 
   <div class="prompt-example reveal" style="margin-top: 2px;">
-    <div class="prompt-eg-label">Starter prompt — copy &amp; customize the brackets</div>
-    <div class="prompt-eg-text">
+    <div class="prompt-eg-label" data-i18n="lab2.prompt.label">Starter prompt — copy &amp; customize the brackets</div>
+    <p class="prompt-note" data-i18n="lab2.prompt.note">Copy this prompt in English — AI tools work best with English prompts.</p>
+    <div class="prompt-eg-text" data-i18n-html="lab2.prompt.starter_html">
       <strong>You are an expert Next.js developer.</strong> Create a multi-page personal about-me website using Next.js 14+ with the App Router and React. Pages: Home, About, and Projects. My name is <strong>[YOUR NAME]</strong>. I'm <strong>[ONE SENTENCE ABOUT YOU]</strong>. Style: <strong>[DESCRIBE YOUR VIBE — e.g. "minimal dark theme with lime accents"]</strong>. Use <strong>[FONT NAME]</strong> from Google Fonts. Home: hero with name, tagline, and a CTA button. About: bio paragraph and 3 things I'm passionate about. Projects: 3 project cards with title, description, and tech tags. Add a shared navigation bar and footer on every page. Use <strong>shadcn/ui</strong> for buttons and cards. Make it polished, responsive, and deployable to Vercel.
     </div>
   </div>
 
   <div class="deploy-steps reveal">
     <div class="deploy-step">
-      <strong>01 — Scaffold the project</strong>
-      <p>Ask Cursor: "Create a new Next.js project with App Router and Tailwind CSS." Open the folder, run the dev server, and confirm it loads at localhost:3000.</p>
+      <strong data-i18n="lab2.deploy.step01.title">01 — Scaffold the project</strong>
+      <p data-i18n="lab2.deploy.step01.body">Ask Cursor: "Create a new Next.js project with App Router and Tailwind CSS." Open the folder, run the dev server, and confirm it loads at localhost:3000.</p>
     </div>
     <div class="deploy-step">
-      <strong>02 — Iterate &amp; polish</strong>
-      <p>Build page by page. Use the Design Kit principles — fix one thing at a time. Preview on your phone. Ask the AI to explain anything you don't understand.</p>
+      <strong data-i18n="lab2.deploy.step02.title">02 — Iterate &amp; polish</strong>
+      <p data-i18n="lab2.deploy.step02.body">Build page by page. Use the Design Kit principles — fix one thing at a time. Preview on your phone. Ask the AI to explain anything you don't understand.</p>
     </div>
     <div class="deploy-step">
-      <strong>03 — Push to GitHub</strong>
-      <p>Publish to a new repo (e.g. <span style="font-family:monospace;">about-me</span>). Make sure <span style="font-family:monospace;">.gitignore</span> excludes <span style="font-family:monospace;">node_modules</span>.</p>
+      <strong data-i18n="lab2.deploy.step03.title">03 — Push to GitHub</strong>
+      <p data-i18n-html="lab2.deploy.step03.body_html">Publish to a new repo (e.g. <span style="font-family:monospace;">about-me</span>). Make sure <span style="font-family:monospace;">.gitignore</span> excludes <span style="font-family:monospace;">node_modules</span>.</p>
     </div>
     <div class="deploy-step">
-      <strong>04 — Deploy on Vercel</strong>
-      <p>Import the repo on Vercel. It auto-detects Next.js. Hit deploy — your site goes live in under a minute. Copy the URL for the showcase below.</p>
+      <strong data-i18n="lab2.deploy.step04.title">04 — Deploy on Vercel</strong>
+      <p data-i18n="lab2.deploy.step04.body">Import the repo on Vercel. It auto-detects Next.js. Hit deploy — your site goes live in under a minute. Copy the URL for the showcase below.</p>
     </div>
   </div>
 </section>
@@ -190,44 +191,44 @@
 <section id="share" class="share-callout">
   <div class="share-panel reveal">
     <div>
-      <h3>Done with Lab 02? <em>Share it.</em></h3>
-      <p>Submit your live About Me site URL. Already shared your Wordle on Lab 01? You're all set — just send this one.</p>
+      <h3 data-i18n-html="lab2.share.title_html">Done with Lab 02? <em>Share it.</em></h3>
+      <p data-i18n="lab2.share.desc">Submit your live About Me site URL. Already shared your Wordle on Lab 01? You're all set — just send this one.</p>
     </div>
-    <a href="https://forms.gle/cTUNnAHh6zawQZBQA" target="_blank" rel="noopener" class="share-submit">Submit Lab 02 →</a>
+    <a href="https://forms.gle/cTUNnAHh6zawQZBQA" target="_blank" rel="noopener" class="share-submit" data-i18n="lab2.share.submit">Submit Lab 02 →</a>
   </div>
   <div class="share-checklist reveal">
     <div class="share-item">
-      <strong>Lab 02 — About Me URL</strong>
-      <span>Your live Vercel link for your personal site</span>
+      <strong data-i18n="lab2.share.checklist.url.title">Lab 02 — About Me URL</strong>
+      <span data-i18n="lab2.share.checklist.url.desc">Your live Vercel link for your personal site</span>
     </div>
     <div class="share-item">
-      <strong>Your name</strong>
-      <span>So we know whose projects we're looking at</span>
+      <strong data-i18n="lab2.share.checklist.name.title">Your name</strong>
+      <span data-i18n="lab2.share.checklist.name.desc">So we know whose projects we're looking at</span>
     </div>
     <div class="share-item share-item--full">
-      <strong>One thing you learned</strong>
-      <span>Optional — what surprised you or clicked for you today</span>
+      <strong data-i18n="lab2.share.checklist.learned.title">One thing you learned</strong>
+      <span data-i18n="lab2.share.checklist.learned.desc">Optional — what surprised you or clicked for you today</span>
     </div>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="site-footer-brand">
-    <h2>Build <em>With AI</em></h2>
-    <p>Workshop hub for going from zero to live websites with Claude, Cursor, GitHub, and Vercel.</p>
+    <h2 data-i18n-html="footer.brand_title_html">Build <em>With AI</em></h2>
+    <p data-i18n="footer.brand_desc">Workshop hub for going from zero to live websites with Claude, Cursor, GitHub, and Vercel.</p>
   </div>
   <div class="site-footer-grid">
     <div class="site-footer-col">
-      <h4>Workshop</h4>
+      <h4 data-i18n="footer.col_workshop">Workshop</h4>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="lab-1.html">Lab 01 — Wordle</a></li>
-        <li><a href="lab-2.html">Lab 02 — About Me</a></li>
-        <li><a href="resources.html">Resources</a></li>
+        <li><a href="index.html" data-i18n="footer.link_home">Home</a></li>
+        <li><a href="lab-1.html" data-i18n="footer.link_lab1">Lab 01 — Wordle</a></li>
+        <li><a href="lab-2.html" data-i18n="footer.link_lab2">Lab 02 — About Me</a></li>
+        <li><a href="resources.html" data-i18n="footer.link_resources">Resources</a></li>
       </ul>
     </div>
     <div class="site-footer-col">
-      <h4>Tools</h4>
+      <h4 data-i18n="footer.col_tools">Tools</h4>
       <ul>
         <li><a href="https://claude.ai" target="_blank" rel="noopener">Claude</a></li>
         <li><a href="https://cursor.com" target="_blank" rel="noopener">Cursor</a></li>
@@ -236,7 +237,7 @@
       </ul>
     </div>
     <div class="site-footer-col">
-      <h4>Instructors</h4>
+      <h4 data-i18n="footer.col_instructors">Instructors</h4>
       <ul>
         <li><a href="https://www.instagram.com/megan._.bagley/" target="_blank" rel="noopener">Meg Bagley</a></li>
         <li><a href="https://www.instagram.com/weston.watson/" target="_blank" rel="noopener">Weston Watson</a></li>
@@ -244,11 +245,12 @@
     </div>
   </div>
   <div class="site-footer-bottom">
-    <span>© 2026 Build With AI</span>
-    <a href="resources.html">Resources →</a>
+    <span data-i18n="footer.copyright">© 2026 Build With AI</span>
+    <a href="resources.html" data-i18n="footer.resources_link">Resources →</a>
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

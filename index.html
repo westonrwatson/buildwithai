@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-i18n-title="title.index">
 
 <div class="cursor" id="cursor"></div>
 
@@ -21,32 +21,32 @@
   <a href="index.html" class="nav-logo">Build With AI</a>
   <div class="nav-right">
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="lab-1.html">Lab 01</a></li>
-      <li><a href="lab-2.html">Lab 02</a></li>
-      <li><a href="resources.html">Resources</a></li>
+      <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+      <li><a href="lab-1.html" data-i18n="nav.lab1">Lab 01</a></li>
+      <li><a href="lab-2.html" data-i18n="nav.lab2">Lab 02</a></li>
+      <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
     </ul>
-    <div class="lang-toggle lang-toggle--desktop" role="group" aria-label="Language">
+    <div class="lang-toggle lang-toggle--desktop" role="group" data-i18n-aria-label="nav.aria_lang" aria-label="Language">
       <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" class="lang-btn" data-lang="ro" aria-pressed="false">RO</button>
       <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
     </div>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Open menu">
+  <button class="hamburger" id="hamburger" data-i18n-aria-label="nav.aria_menu" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <div class="lang-toggle mobile-lang-toggle" role="group" aria-label="Language">
+  <div class="lang-toggle mobile-lang-toggle" role="group" data-i18n-aria-label="nav.aria_lang" aria-label="Language">
     <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
     <button type="button" class="lang-btn" data-lang="ro" aria-pressed="false">RO</button>
     <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
   </div>
-  <a href="index.html" class="mobile-link active">Home</a>
-  <a href="lab-1.html" class="mobile-link">Lab 01</a>
-  <a href="lab-2.html" class="mobile-link">Lab 02</a>
-  <a href="resources.html" class="mobile-link">Resources</a>
+  <a href="index.html" class="mobile-link active" data-i18n="nav.home">Home</a>
+  <a href="lab-1.html" class="mobile-link" data-i18n="nav.lab1">Lab 01</a>
+  <a href="lab-2.html" class="mobile-link" data-i18n="nav.lab2">Lab 02</a>
+  <a href="resources.html" class="mobile-link" data-i18n="nav.resources">Resources</a>
 </div>
 
 <!-- HERO -->
@@ -56,11 +56,11 @@
     <div class="hero-circle"></div>
   </div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Workshop · AI Website Creation 101</div>
-    <h1>Build<br><em>With AI.</em></h1>
+    <div class="hero-eyebrow" data-i18n="index.hero.eyebrow">Workshop · AI Website Creation 101</div>
+    <h1 data-i18n-html="index.hero.title_html">Build<br><em>With AI.</em></h1>
     <div class="hero-bottom">
-      <p class="hero-desc">Go from zero to two live websites in one session. Set up your tools, learn to prompt, build Wordle, then ship a personal site.</p>
-      <a href="#install" class="hero-cta">Get Started <span class="arrow">→</span></a>
+      <p class="hero-desc" data-i18n="index.hero.desc">Go from zero to two live websites in one session. Set up your tools, learn to prompt, build Wordle, then ship a personal site.</p>
+      <a href="#install" class="hero-cta"><span data-i18n="index.hero.cta">Get Started</span> <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -69,51 +69,51 @@
 <section id="agenda">
   <div class="section-header reveal">
     <div>
-      <div class="section-tag">Today's plan</div>
-      <h2 class="section-title">Workshop <em>agenda.</em></h2>
+      <div class="section-tag" data-i18n="index.agenda.tag">Today's plan</div>
+      <h2 class="section-title" data-i18n-html="index.agenda.title_html">Workshop <em>agenda.</em></h2>
     </div>
-    <a href="lab-1.html" class="view-more">Start Lab 01 →</a>
+    <a href="lab-1.html" class="view-more" data-i18n="index.agenda.view_more">Start Lab 01 →</a>
   </div>
 
   <div class="agenda-grid reveal">
     <a href="#install" class="agenda-item featured">
       <div class="agenda-time">00</div>
       <div>
-        <div class="agenda-title">Setup &amp; Install</div>
-        <div class="agenda-desc">Connect to WiFi, create accounts, download Cursor, and open your first file. Get all four tools running before we build.</div>
-        <span class="agenda-link">Jump to install ↓</span>
+        <div class="agenda-title" data-i18n="index.agenda.00.title">Setup &amp; Install</div>
+        <div class="agenda-desc" data-i18n="index.agenda.00.desc">Connect to WiFi, create accounts, download Cursor, and open your first file. Get all four tools running before we build.</div>
+        <span class="agenda-link" data-i18n="index.agenda.00.link">Jump to install ↓</span>
       </div>
     </a>
     <a href="lab-1.html" class="agenda-item">
       <div class="agenda-time">01</div>
       <div>
-        <div class="agenda-title">Prompting + Build Lab 01</div>
-        <div class="agenda-desc">Learn the prompt formula, then build and deploy a playable Wordle clone. Add your own flair and push it live.</div>
-        <span class="agenda-link">Go to Lab 01 →</span>
+        <div class="agenda-title" data-i18n="index.agenda.01.title">Prompting + Build Lab 01</div>
+        <div class="agenda-desc" data-i18n="index.agenda.01.desc">Learn the prompt formula, then build and deploy a playable Wordle clone. Add your own flair and push it live.</div>
+        <span class="agenda-link" data-i18n="index.agenda.01.link">Go to Lab 01 →</span>
       </div>
     </a>
     <a href="lab-2.html" class="agenda-item">
       <div class="agenda-time">02</div>
       <div>
-        <div class="agenda-title">Design + Build Lab 02</div>
-        <div class="agenda-desc">Learn design principles, then build a multi-page About Me site with Next.js. Polish it and deploy to Vercel.</div>
-        <span class="agenda-link">Go to Lab 02 →</span>
+        <div class="agenda-title" data-i18n="index.agenda.02.title">Design + Build Lab 02</div>
+        <div class="agenda-desc" data-i18n="index.agenda.02.desc">Learn design principles, then build a multi-page About Me site with Next.js. Polish it and deploy to Vercel.</div>
+        <span class="agenda-link" data-i18n="index.agenda.02.link">Go to Lab 02 →</span>
       </div>
     </a>
     <a href="lab-1.html#share" class="agenda-item">
       <div class="agenda-time">03</div>
       <div>
-        <div class="agenda-title">Showcase &amp; Share</div>
-        <div class="agenda-desc">Submit your Wordle link from Lab 01. You'll share your About Me site separately on Lab 02.</div>
-        <span class="agenda-link">Submit Lab 01 →</span>
+        <div class="agenda-title" data-i18n="index.agenda.03.title">Showcase &amp; Share</div>
+        <div class="agenda-desc" data-i18n="index.agenda.03.desc">Submit your Wordle link from Lab 01. You'll share your About Me site separately on Lab 02.</div>
+        <span class="agenda-link" data-i18n="index.agenda.03.link">Submit Lab 01 →</span>
       </div>
     </a>
     <a href="resources.html" class="agenda-item agenda-item--lime">
       <div class="agenda-time">04</div>
       <div>
-        <div class="agenda-title">Keep Building</div>
-        <div class="agenda-desc">Today's just the start. You have the tools, the prompts, and the workflow — use them to build whatever you want next. Portfolio, app, game, tool for a friend. The AI doesn't stop when the workshop ends.</div>
-        <span class="agenda-link">Explore resources →</span>
+        <div class="agenda-title" data-i18n="index.agenda.04.title">Keep Building</div>
+        <div class="agenda-desc" data-i18n="index.agenda.04.desc">Today's just the start. You have the tools, the prompts, and the workflow — use them to build whatever you want next. Portfolio, app, game, tool for a friend. The AI doesn't stop when the workshop ends.</div>
+        <span class="agenda-link" data-i18n="index.agenda.04.link">Explore resources →</span>
       </div>
     </a>
   </div>
@@ -122,20 +122,20 @@
 <!-- STATS -->
 <div class="stats-row reveal">
   <div class="stat-block">
-    <div class="stat-num">4</div>
-    <div class="stat-label">Tools to learn</div>
+    <div class="stat-num" data-i18n="index.stats.tools_num">4</div>
+    <div class="stat-label" data-i18n="index.stats.tools_label">Tools to learn</div>
   </div>
   <div class="stat-block">
-    <div class="stat-num">60</div>
-    <div class="stat-label">Min to go live</div>
+    <div class="stat-num" data-i18n="index.stats.time_num">60</div>
+    <div class="stat-label" data-i18n="index.stats.time_label">Min to go live</div>
   </div>
   <div class="stat-block">
-    <div class="stat-num">2</div>
-    <div class="stat-label">Sites you'll ship</div>
+    <div class="stat-num" data-i18n="index.stats.sites_num">2</div>
+    <div class="stat-label" data-i18n="index.stats.sites_label">Sites you'll ship</div>
   </div>
   <div class="stat-block">
-    <div class="stat-num infinity">∞</div>
-    <div class="stat-label">What you can build</div>
+    <div class="stat-num infinity" data-i18n="index.stats.infinity">∞</div>
+    <div class="stat-label" data-i18n="index.stats.build_label">What you can build</div>
   </div>
 </div>
 
@@ -143,28 +143,28 @@
 <section id="install" class="page-section gray">
   <div class="section-header reveal">
     <div>
-      <div class="section-tag">Before we build</div>
-      <h2 class="section-title"><em>Install</em> guide.</h2>
+      <div class="section-tag" data-i18n="index.install.tag">Before we build</div>
+      <h2 class="section-title" data-i18n-html="index.install.title_html"><em>Install</em> guide.</h2>
     </div>
   </div>
   <div class="steps-grid reveal">
 
     <div class="step-block full-width">
-      <div class="step-index">Step 01</div>
+      <div class="step-index" data-i18n="index.install.step01.index">Step 01</div>
       <div>
-        <div class="step-heading">Connect to WiFi first.</div>
-        <div class="step-body">Join the workshop network before creating any accounts or downloading anything.</div>
+        <div class="step-heading" data-i18n="index.install.step01.heading">Connect to WiFi first.</div>
+        <div class="step-body" data-i18n="index.install.step01.body">Join the workshop network before creating any accounts or downloading anything.</div>
         <div style="display:flex; gap:16px; margin-top:16px; flex-wrap:wrap;">
-          <div class="code-pill">Network: Liahona</div>
-          <div class="code-pill">Password: alma3738</div>
+          <div class="code-pill" data-i18n="index.install.step01.network">Network: Liahona</div>
+          <div class="code-pill" data-i18n="index.install.step01.password">Password: alma3738</div>
         </div>
       </div>
     </div>
 
     <div class="step-block">
-      <div class="step-index">Step 02</div>
-      <div class="step-heading">Create your accounts.</div>
-      <div class="step-body">Open each link and sign up. Use the same email for all three — it'll make things simpler later.</div>
+      <div class="step-index" data-i18n="index.install.step02.index">Step 02</div>
+      <div class="step-heading" data-i18n="index.install.step02.heading">Create your accounts.</div>
+      <div class="step-body" data-i18n="index.install.step02.body">Open each link and sign up. Use the same email for all three — it'll make things simpler later.</div>
       <div class="step-links">
         <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>
         <a href="https://github.com/login" target="_blank" rel="noopener">github.com/login</a>
@@ -173,24 +173,24 @@
     </div>
 
     <div class="step-block">
-      <div class="step-index">Step 03</div>
-      <div class="step-heading">Download Cursor.</div>
-      <div class="step-body">Go to cursor.com/download and install for your OS. Takes about 2 minutes. Once installed, sign in with your GitHub account when prompted.</div>
+      <div class="step-index" data-i18n="index.install.step03.index">Step 03</div>
+      <div class="step-heading" data-i18n="index.install.step03.heading">Download Cursor.</div>
+      <div class="step-body" data-i18n="index.install.step03.body">Go to cursor.com/download and install for your OS. Takes about 2 minutes. Once installed, sign in with your GitHub account when prompted.</div>
       <div class="step-links">
         <a href="https://cursor.com/download" target="_blank" rel="noopener">cursor.com/download</a>
       </div>
     </div>
 
     <div class="step-block step-block--lime">
-      <div class="step-index">Step 04</div>
-      <div class="step-heading">Create your first project.</div>
-      <div class="step-body">Open Cursor → <strong>Open Project</strong> and create a new folder for your work (e.g. <span style="font-family:monospace; background:#f0f0f0; padding:2px 8px; border-radius:3px; font-size:12px;">my-wordle</span>). Open the chat panel on the right — that's where you'll talk to the AI.</div>
+      <div class="step-index" data-i18n="index.install.step04.index">Step 04</div>
+      <div class="step-heading" data-i18n="index.install.step04.heading">Create your first project.</div>
+      <div class="step-body" data-i18n-html="index.install.step04.body_html">Open Cursor → <strong>Open Project</strong> and create a new folder for your work (e.g. <span style="font-family:monospace; background:#f0f0f0; padding:2px 8px; border-radius:3px; font-size:12px;">my-wordle</span>). Open the chat panel on the right — that's where you'll talk to the AI.</div>
     </div>
 
     <div class="step-block">
-      <div class="step-index">Step 05</div>
-      <div class="step-heading">You're ready.</div>
-      <div class="step-body">All four tools are free. No credit card required anywhere. If anything isn't working, raise your hand and we'll sort it out. Then head to <a href="lab-1.html" style="color:inherit; font-weight:600;">Lab 01</a>.</div>
+      <div class="step-index" data-i18n="index.install.step05.index">Step 05</div>
+      <div class="step-heading" data-i18n="index.install.step05.heading">You're ready.</div>
+      <div class="step-body" data-i18n-html="index.install.step05.body_html">All four tools are free. No credit card required anywhere. If anything isn't working, raise your hand and we'll sort it out. Then head to <a href="lab-1.html" style="color:inherit; font-weight:600;">Lab 01</a>.</div>
     </div>
 
   </div>
@@ -200,44 +200,44 @@
 <section id="instructors">
   <div class="section-header reveal">
     <div>
-      <div class="section-tag">Your guides</div>
-      <h2 class="section-title">Meet your <em>instructors.</em></h2>
+      <div class="section-tag" data-i18n="index.instructors.tag">Your guides</div>
+      <h2 class="section-title" data-i18n-html="index.instructors.title_html">Meet your <em>instructors.</em></h2>
     </div>
   </div>
 
   <div class="instructors-grid reveal">
     <div class="instructor-card dark">
-      <div class="instructor-role">Instructor</div>
-      <div class="instructor-name">Meg <em>Bagley</em></div>
-      <div class="instructor-bio">Designer and builder who helps people ship creative projects with AI. Ask me about design, layout, and making your site look polished.</div>
-      <a href="https://www.instagram.com/megan._.bagley/" target="_blank" rel="noopener" class="instructor-link">@megan._.bagley →</a>
+      <div class="instructor-role" data-i18n="index.instructors.role">Instructor</div>
+      <div class="instructor-name" data-i18n-html="index.instructors.meg.name_html">Meg <em>Bagley</em></div>
+      <div class="instructor-bio" data-i18n="index.instructors.meg.bio">Designer and builder who helps people ship creative projects with AI. Ask me about design, layout, and making your site look polished.</div>
+      <a href="https://www.instagram.com/megan._.bagley/" target="_blank" rel="noopener" class="instructor-link" data-i18n="index.instructors.meg.link">@megan._.bagley →</a>
     </div>
     <div class="instructor-card">
-      <div class="instructor-role">Instructor</div>
-      <div class="instructor-name">Weston <em>Watson</em></div>
-      <div class="instructor-bio">Developer focused on getting beginners from zero to deployed. Ask me about prompting, GitHub, Vercel, and debugging when things break.</div>
-      <a href="https://www.instagram.com/weston.watson/" target="_blank" rel="noopener" class="instructor-link">@weston.watson →</a>
+      <div class="instructor-role" data-i18n="index.instructors.role">Instructor</div>
+      <div class="instructor-name" data-i18n-html="index.instructors.weston.name_html">Weston <em>Watson</em></div>
+      <div class="instructor-bio" data-i18n="index.instructors.weston.bio">Developer focused on getting beginners from zero to deployed. Ask me about prompting, GitHub, Vercel, and debugging when things break.</div>
+      <a href="https://www.instagram.com/weston.watson/" target="_blank" rel="noopener" class="instructor-link" data-i18n="index.instructors.weston.link">@weston.watson →</a>
     </div>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="site-footer-brand">
-    <h2>Build <em>With AI</em></h2>
-    <p>Workshop hub for going from zero to live websites with Claude, Cursor, GitHub, and Vercel.</p>
+    <h2 data-i18n-html="footer.brand_title_html">Build <em>With AI</em></h2>
+    <p data-i18n="footer.brand_desc">Workshop hub for going from zero to live websites with Claude, Cursor, GitHub, and Vercel.</p>
   </div>
   <div class="site-footer-grid">
     <div class="site-footer-col">
-      <h4>Workshop</h4>
+      <h4 data-i18n="footer.col_workshop">Workshop</h4>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="lab-1.html">Lab 01 — Wordle</a></li>
-        <li><a href="lab-2.html">Lab 02 — About Me</a></li>
-        <li><a href="resources.html">Resources</a></li>
+        <li><a href="index.html" data-i18n="footer.link_home">Home</a></li>
+        <li><a href="lab-1.html" data-i18n="footer.link_lab1">Lab 01 — Wordle</a></li>
+        <li><a href="lab-2.html" data-i18n="footer.link_lab2">Lab 02 — About Me</a></li>
+        <li><a href="resources.html" data-i18n="footer.link_resources">Resources</a></li>
       </ul>
     </div>
     <div class="site-footer-col">
-      <h4>Tools</h4>
+      <h4 data-i18n="footer.col_tools">Tools</h4>
       <ul>
         <li><a href="https://claude.ai" target="_blank" rel="noopener">Claude</a></li>
         <li><a href="https://cursor.com" target="_blank" rel="noopener">Cursor</a></li>
@@ -246,7 +246,7 @@
       </ul>
     </div>
     <div class="site-footer-col">
-      <h4>Instructors</h4>
+      <h4 data-i18n="footer.col_instructors">Instructors</h4>
       <ul>
         <li><a href="https://www.instagram.com/megan._.bagley/" target="_blank" rel="noopener">Meg Bagley</a></li>
         <li><a href="https://www.instagram.com/weston.watson/" target="_blank" rel="noopener">Weston Watson</a></li>
@@ -254,11 +254,12 @@
     </div>
   </div>
   <div class="site-footer-bottom">
-    <span>© 2026 Build With AI</span>
-    <a href="lab-2.html#share">Submit your projects →</a>
+    <span data-i18n="footer.copyright">© 2026 Build With AI</span>
+    <a href="lab-2.html#share" data-i18n="footer.submit_projects">Submit your projects →</a>
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

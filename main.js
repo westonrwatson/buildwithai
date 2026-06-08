@@ -59,9 +59,32 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.08 });
 reveals.forEach(el => observer.observe(el));
 
-// Language toggle — placeholder; translations not wired up yet
+// Language toggle + i18n
 const LANG_KEY = 'bwa-lang';
 const langButtons = document.querySelectorAll('.lang-btn');
+
+function applyTranslations(lang) {
+  const dict = window.BWA_I18N?.[lang];
+  if (!dict) return;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const val = dict[el.getAttribute('data-i18n')];
+    if (val != null) el.textContent = val;
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const val = dict[el.getAttribute('data-i18n-html')];
+    if (val != null) el.innerHTML = val;
+  });
+
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+    const val = dict[el.getAttribute('data-i18n-aria-label')];
+    if (val != null) el.setAttribute('aria-label', val);
+  });
+
+  const titleKey = document.body.dataset.i18nTitle;
+  if (titleKey && dict[titleKey]) document.title = dict[titleKey];
+}
 
 function setLanguage(lang) {
   document.documentElement.lang = lang;
@@ -71,6 +94,7 @@ function setLanguage(lang) {
     btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
   });
   localStorage.setItem(LANG_KEY, lang);
+  applyTranslations(lang);
 }
 
 const savedLang = localStorage.getItem(LANG_KEY) || 'en';
