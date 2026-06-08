@@ -289,33 +289,33 @@ window.BWA_I18N = {
 
   ro: {
     // Page titles
-    "title.index": "Build With AI",
-    "title.lab1": "Lab 01 — Wordle · Build With AI",
-    "title.lab2": "Lab 02 — About Me · Build With AI",
-    "title.resources": "Resurse · Build With AI",
+    "title.index": "Construiește Cu AI",
+    "title.lab1": "Laborator 01 — Wordle · Construiește Cu AI",
+    "title.lab2": "Laborator 02 — About Me · Construiește Cu AI",
+    "title.resources": "Resurse · Construiește Cu AI",
 
     // Navigation
-    "nav.logo": "Build With AI",
+    "nav.logo": "Construiește Cu AI",
     "nav.home": "Acasă",
-    "nav.lab1": "Lab 01",
-    "nav.lab2": "Lab 02",
+    "nav.lab1": "Laborator 01",
+    "nav.lab2": "Laborator 02",
     "nav.resources": "Resurse",
     "nav.aria_menu": "Deschide meniul",
     "nav.aria_lang": "Limbă",
 
     // Footer (shared)
-    "footer.brand_title_html": "Build <em>With AI</em>",
+    "footer.brand_title_html": "Construiește <em>Cu AI</em>",
     "footer.brand_desc": "Hub-ul atelierului pentru a trece de la zero la site-uri live cu Claude, Cursor, GitHub și Vercel.",
     "footer.col_workshop": "Atelier",
     "footer.col_tools": "Instrumente",
     "footer.col_instructors": "Instructori",
     "footer.link_home": "Acasă",
-    "footer.link_lab1": "Lab 01 — Wordle",
-    "footer.link_lab2": "Lab 02 — About Me",
+    "footer.link_lab1": "Laborator 01 — Wordle",
+    "footer.link_lab2": "Laborator 02 — About Me",
     "footer.link_resources": "Resurse",
-    "footer.copyright": "© 2026 Build With AI",
+    "footer.copyright": "© 2026 Construiește Cu AI",
     "footer.submit_projects": "Trimite proiectele →",
-    "footer.next_lab2": "Următorul: Lab 02 →",
+    "footer.next_lab2": "Următorul: Laborator 02 →",
     "footer.resources_link": "Resurse →",
 
     // Shared prompting tips
@@ -336,26 +336,26 @@ window.BWA_I18N = {
 
     // Index — hero
     "index.hero.eyebrow": "Atelier · Crearea de site-uri cu AI 101",
-    "index.hero.title_html": "Build<br><em>With AI.</em>",
+    "index.hero.title_html": "Construiește<br><em>Cu AI.</em>",
     "index.hero.desc": "De la zero la două site-uri live într-o singură sesiune. Configurează instrumentele, învață să scrii prompturi, construiește Wordle, apoi lansează un site personal.",
     "index.hero.cta": "Începe",
 
     // Index — agenda
     "index.agenda.tag": "Planul de azi",
     "index.agenda.title_html": "Agenda <em>atelierului.</em>",
-    "index.agenda.view_more": "Începe Lab 01 →",
+    "index.agenda.view_more": "Începe Laborator 01 →",
     "index.agenda.00.title": "Configurare & Instalare",
     "index.agenda.00.desc": "Conectează-te la WiFi, creează conturi, descarcă Cursor și deschide primul fișier. Pornește toate cele patru instrumente înainte să construim.",
     "index.agenda.00.link": "Sari la instalare ↓",
-    "index.agenda.01.title": "Prompting + Lab 01",
+    "index.agenda.01.title": "Prompting + Laborator 01",
     "index.agenda.01.desc": "Învață formula de prompt, apoi construiește și lansează un clone Wordle jucabil. Adaugă stilul tău și publică-l online.",
-    "index.agenda.01.link": "Mergi la Lab 01 →",
-    "index.agenda.02.title": "Design + Lab 02",
+    "index.agenda.01.link": "Mergi la Laborator 01 →",
+    "index.agenda.02.title": "Design + Laborator 02",
     "index.agenda.02.desc": "Învață principii de design, apoi construiește un site About Me cu mai multe pagini folosind Next.js. Finisează-l și lansează-l pe Vercel.",
-    "index.agenda.02.link": "Mergi la Lab 02 →",
+    "index.agenda.02.link": "Mergi la Laborator 02 →",
     "index.agenda.03.title": "Prezentare & Share",
-    "index.agenda.03.desc": "Trimite linkul Wordle de la Lab 01. Site-ul About Me îl vei trimite separat la Lab 02.",
-    "index.agenda.03.link": "Trimite Lab 01 →",
+    "index.agenda.03.desc": "Trimite linkul Wordle de la Laborator 01. Site-ul About Me îl vei trimite separat la Laborator 02.",
+    "index.agenda.03.link": "Trimite Laborator 01 →",
     "index.agenda.04.title": "Continuă să construiești",
     "index.agenda.04.desc": "Azi e doar începutul. Ai instrumentele, prompturile și fluxul de lucru — folosește-le pentru ce vrei tu: portofoliu, aplicație, joc, tool pentru un prieten. AI-ul nu se oprește când se termină atelierul.",
     "index.agenda.04.link": "Explorează resursele →",
@@ -389,7 +389,7 @@ window.BWA_I18N = {
     "index.install.step04.body_html": "Deschide Cursor → <strong>Open Project</strong> și creează un folder nou pentru munca ta (ex. <span style=\"font-family:monospace; background:#f0f0f0; padding:2px 8px; border-radius:3px; font-size:12px;\">my-wordle</span>). Deschide panoul de chat din dreapta — acolo vorbești cu AI-ul.",
     "index.install.step05.index": "Pasul 05",
     "index.install.step05.heading": "Ești gata.",
-    "index.install.step05.body_html": "Toate cele patru instrumente sunt gratuite. Nu ai nevoie de card nicăieri. Dacă ceva nu merge, ridică mâna și rezolvăm. Apoi mergi la <a href=\"lab-1.html\" style=\"color:inherit; font-weight:600;\">Lab 01</a>.",
+    "index.install.step05.body_html": "Toate cele patru instrumente sunt gratuite. Nu ai nevoie de card nicăieri. Dacă ceva nu merge, ridică mâna și rezolvăm. Apoi mergi la <a href=\"lab-1.html\" style=\"color:inherit; font-weight:600;\">Laborator 01</a>.",
 
     // Index — instructors
     "index.instructors.tag": "Ghidurile tale",
@@ -403,7 +403,7 @@ window.BWA_I18N = {
     "index.instructors.weston.link": "@weston.watson →",
 
     // Lab 1 — hero
-    "lab1.hero.tag": "Lab 01",
+    "lab1.hero.tag": "Laborator 01",
     "lab1.hero.title_html": "Lansează primul tău <em>joc.</em>",
     "lab1.hero.desc": "Învață să scrii prompturi, construiește un clone Wordle, adaugă stilul tău și lansează-l live pe Vercel.",
 
@@ -435,7 +435,7 @@ window.BWA_I18N = {
     "lab1.build.phase02.body_html": "Alege cel puțin două personalizări de mai jos și cere AI-ului să le aplice. Iterează câte o schimbare o dată până se simte ca <em>versiunea ta</em>.",
     "lab1.build.phase03.label": "Faza 03",
     "lab1.build.phase03.title": "Lansează-l.",
-    "lab1.build.phase03.body": "Push pe GitHub, conectează la Vercel și obține un URL live. Salvează linkul — îl vei trimite după Lab 02.",
+    "lab1.build.phase03.body": "Push pe GitHub, conectează la Vercel și obține un URL live. Salvează linkul — îl vei trimite după Laborator 02.",
     "lab1.prompt.label": "Prompt de start — copiază și lipește asta prima dată",
     "lab1.prompt.note": "Copiază acest prompt în engleză — instrumentele AI funcționează cel mai bine cu prompturi în engleză.",
     "lab1.prompt.starter_html": "<strong>You are an expert web developer.</strong> Build a fully playable Wordle clone as a single index.html file. Include: 6 guesses per game, 5-letter words only, a built-in word list of at least 50 common words, an on-screen keyboard, tile flip animations, color feedback (green = correct spot, yellow = wrong spot, gray = not in word), win and lose states with a Play Again button, and a clean modern UI. <strong>Vanilla HTML, CSS, and JavaScript only — no frameworks, no external libraries.</strong> Make it responsive and work on mobile.",
@@ -465,16 +465,16 @@ window.BWA_I18N = {
     "lab1.deploy.step02.body": "Mergi la vercel.com → Add New Project → Import your GitHub repo → Deploy. Copiază URL-ul live când e gata.",
 
     // Lab 1 — share
-    "lab1.share.title_html": "Ai terminat Lab 01? <em>Trimite-l.</em>",
-    "lab1.share.desc_html": "Când Wordle-ul tău e live pe Vercel, trimite linkul mai jos. Ai terminat devreme? Mergi la <a href=\"lab-2.html\" style=\"color: var(--lime);\">Lab 02 →</a>",
-    "lab1.share.submit": "Trimite Lab 01 →",
-    "lab1.share.checklist.url.title": "Lab 01 — URL Wordle",
+    "lab1.share.title_html": "Ai terminat Laborator 01? <em>Trimite-l.</em>",
+    "lab1.share.desc_html": "Când Wordle-ul tău e live pe Vercel, trimite linkul mai jos. Ai terminat devreme? Mergi la <a href=\"lab-2.html\" style=\"color: var(--lime);\">Laborator 02 →</a>",
+    "lab1.share.submit": "Trimite Laborator 01 →",
+    "lab1.share.checklist.url.title": "Laborator 01 — URL Wordle",
     "lab1.share.checklist.url.desc": "Linkul tău Vercel live pentru acest proiect",
     "lab1.share.checklist.name.title": "Numele tău",
     "lab1.share.checklist.name.desc": "Ca să știm al cui proiect e",
 
     // Lab 2 — hero
-    "lab2.hero.tag": "Lab 02",
+    "lab2.hero.tag": "Laborator 02",
     "lab2.hero.title_html": "Site-ul tău <em>about me.</em>",
     "lab2.hero.desc": "Aplică principii de design, construiește un site Next.js cu mai multe pagini, finisează-l și lansează ceva pe care l-ai pune pe CV.",
 
@@ -541,10 +541,10 @@ window.BWA_I18N = {
     "lab2.deploy.step04.body": "Importă repo-ul pe Vercel. Detectează automat Next.js. Apasă deploy — site-ul tău e live în mai puțin de un minut. Copiază URL-ul pentru secțiunea de mai jos.",
 
     // Lab 2 — share
-    "lab2.share.title_html": "Ai terminat Lab 02? <em>Trimite-l.</em>",
-    "lab2.share.desc": "Trimite URL-ul live al site-ului About Me. Ai trimis deja Wordle-ul la Lab 01? Ești gata — trimite doar pe ăsta.",
-    "lab2.share.submit": "Trimite Lab 02 →",
-    "lab2.share.checklist.url.title": "Lab 02 — URL About Me",
+    "lab2.share.title_html": "Ai terminat Laborator 02? <em>Trimite-l.</em>",
+    "lab2.share.desc": "Trimite URL-ul live al site-ului About Me. Ai trimis deja Wordle-ul la Laborator 01? Ești gata — trimite doar pe ăsta.",
+    "lab2.share.submit": "Trimite Laborator 02 →",
+    "lab2.share.checklist.url.title": "Laborator 02 — URL About Me",
     "lab2.share.checklist.url.desc": "Linkul tău Vercel live pentru site-ul personal",
     "lab2.share.checklist.name.title": "Numele tău",
     "lab2.share.checklist.name.desc": "Ca să știm al cui proiect e",
@@ -577,33 +577,33 @@ window.BWA_I18N = {
 
   ru: {
     // Page titles
-    "title.index": "Build With AI",
-    "title.lab1": "Lab 01 — Wordle · Build With AI",
-    "title.lab2": "Lab 02 — About Me · Build With AI",
-    "title.resources": "Ресурсы · Build With AI",
+    "title.index": "Создавай с AI",
+    "title.lab1": "Лаборатория 01 — Wordle · Создавай с AI",
+    "title.lab2": "Лаборатория 02 — About Me · Создавай с AI",
+    "title.resources": "Ресурсы · Создавай с AI",
 
     // Navigation
-    "nav.logo": "Build With AI",
+    "nav.logo": "Создавай с AI",
     "nav.home": "Главная",
-    "nav.lab1": "Lab 01",
-    "nav.lab2": "Lab 02",
+    "nav.lab1": "Лаборатория 01",
+    "nav.lab2": "Лаборатория 02",
     "nav.resources": "Ресурсы",
     "nav.aria_menu": "Открыть меню",
     "nav.aria_lang": "Язык",
 
     // Footer (shared)
-    "footer.brand_title_html": "Build <em>With AI</em>",
+    "footer.brand_title_html": "Создавай <em>с AI</em>",
     "footer.brand_desc": "Хаб мастер-класса: от нуля до живых сайтов с Claude, Cursor, GitHub и Vercel.",
     "footer.col_workshop": "Мастер-класс",
     "footer.col_tools": "Инструменты",
     "footer.col_instructors": "Инструкторы",
     "footer.link_home": "Главная",
-    "footer.link_lab1": "Lab 01 — Wordle",
-    "footer.link_lab2": "Lab 02 — About Me",
+    "footer.link_lab1": "Лаборатория 01 — Wordle",
+    "footer.link_lab2": "Лаборатория 02 — About Me",
     "footer.link_resources": "Ресурсы",
-    "footer.copyright": "© 2026 Build With AI",
+    "footer.copyright": "© 2026 Создавай с AI",
     "footer.submit_projects": "Отправить проекты →",
-    "footer.next_lab2": "Далее: Lab 02 →",
+    "footer.next_lab2": "Далее: Лаборатория 02 →",
     "footer.resources_link": "Ресурсы →",
 
     // Shared prompting tips
@@ -624,26 +624,26 @@ window.BWA_I18N = {
 
     // Index — hero
     "index.hero.eyebrow": "Мастер-класс · Создание сайтов с AI 101",
-    "index.hero.title_html": "Build<br><em>With AI.</em>",
+    "index.hero.title_html": "Создавай<br><em>с AI.</em>",
     "index.hero.desc": "От нуля до двух живых сайтов за одну сессию. Настрой инструменты, научись писать промпты, собери Wordle и запусти личный сайт.",
     "index.hero.cta": "Начать",
 
     // Index — agenda
     "index.agenda.tag": "План на сегодня",
     "index.agenda.title_html": "Программа <em>мастер-класса.</em>",
-    "index.agenda.view_more": "Начать Lab 01 →",
+    "index.agenda.view_more": "Начать Лабораторию 01 →",
     "index.agenda.00.title": "Настройка и установка",
     "index.agenda.00.desc": "Подключись к WiFi, создай аккаунты, скачай Cursor и открой первый файл. Запусти все четыре инструмента до начала работы.",
     "index.agenda.00.link": "К установке ↓",
-    "index.agenda.01.title": "Промпты + Lab 01",
+    "index.agenda.01.title": "Промпты + Лаборатория 01",
     "index.agenda.01.desc": "Выучи формулу промпта, затем собери и запусти играбельный клон Wordle. Добавь свой стиль и опубликуй онлайн.",
-    "index.agenda.01.link": "Перейти к Lab 01 →",
-    "index.agenda.02.title": "Дизайн + Lab 02",
+    "index.agenda.01.link": "Перейти к Лаборатории 01 →",
+    "index.agenda.02.title": "Дизайн + Лаборатория 02",
     "index.agenda.02.desc": "Изучи принципы дизайна, затем собери многостраничный сайт About Me на Next.js. Отполируй и задеploy на Vercel.",
-    "index.agenda.02.link": "Перейти к Lab 02 →",
+    "index.agenda.02.link": "Перейти к Лаборатории 02 →",
     "index.agenda.03.title": "Показ и отправка",
-    "index.agenda.03.desc": "Отправь ссылку на Wordle из Lab 01. Сайт About Me отправишь отдельно в Lab 02.",
-    "index.agenda.03.link": "Отправить Lab 01 →",
+    "index.agenda.03.desc": "Отправь ссылку на Wordle из Лаборатории 01. Сайт About Me отправишь отдельно в Лаборатории 02.",
+    "index.agenda.03.link": "Отправить Лабораторию 01 →",
     "index.agenda.04.title": "Продолжай строить",
     "index.agenda.04.desc": "Сегодня — только начало. У тебя есть инструменты, промпты и workflow — используй их для чего угодно: портфолио, приложение, игра, инструмент для друга. AI не останавливается, когда заканчивается мастер-класс.",
     "index.agenda.04.link": "Смотреть ресурсы →",
@@ -677,7 +677,7 @@ window.BWA_I18N = {
     "index.install.step04.body_html": "Открой Cursor → <strong>Open Project</strong> и создай новую папку для работы (например <span style=\"font-family:monospace; background:#f0f0f0; padding:2px 8px; border-radius:3px; font-size:12px;\">my-wordle</span>). Открой панель чата справа — там ты общаешься с AI.",
     "index.install.step05.index": "Шаг 05",
     "index.install.step05.heading": "Ты готов.",
-    "index.install.step05.body_html": "Все четыре инструмента бесплатны. Карта нигде не нужна. Если что-то не работает — подними руку, разберёмся. Затем переходи к <a href=\"lab-1.html\" style=\"color:inherit; font-weight:600;\">Lab 01</a>.",
+    "index.install.step05.body_html": "Все четыре инструмента бесплатны. Карта нигде не нужна. Если что-то не работает — подними руку, разберёмся. Затем переходи к <a href=\"lab-1.html\" style=\"color:inherit; font-weight:600;\">Лаборатории 01</a>.",
 
     // Index — instructors
     "index.instructors.tag": "Твои гиды",
@@ -691,7 +691,7 @@ window.BWA_I18N = {
     "index.instructors.weston.link": "@weston.watson →",
 
     // Lab 1 — hero
-    "lab1.hero.tag": "Lab 01",
+    "lab1.hero.tag": "Лаборатория 01",
     "lab1.hero.title_html": "Запусти свою первую <em>игру.</em>",
     "lab1.hero.desc": "Научись писать промпты, собери клон Wordle, добавь свой стиль и запусти его live на Vercel.",
 
@@ -723,7 +723,7 @@ window.BWA_I18N = {
     "lab1.build.phase02.body_html": "Выбери минимум две кастомизации ниже и попроси AI их применить. Меняй по одной вещи за раз, пока не почувствуешь, что это <em>твоя</em> версия.",
     "lab1.build.phase03.label": "Фаза 03",
     "lab1.build.phase03.title": "Запусти.",
-    "lab1.build.phase03.body": "Push на GitHub, подключи к Vercel и получи live URL. Сохрани ссылку — отправишь её после Lab 02.",
+    "lab1.build.phase03.body": "Push на GitHub, подключи к Vercel и получи live URL. Сохрани ссылку — отправишь её после Лаборатории 02.",
     "lab1.prompt.label": "Стартовый промпт — скопируй и вставь первым",
     "lab1.prompt.note": "Копируй этот промпт на английском — AI-инструменты лучше работают с английскими промптами.",
     "lab1.prompt.starter_html": "<strong>You are an expert web developer.</strong> Build a fully playable Wordle clone as a single index.html file. Include: 6 guesses per game, 5-letter words only, a built-in word list of at least 50 common words, an on-screen keyboard, tile flip animations, color feedback (green = correct spot, yellow = wrong spot, gray = not in word), win and lose states with a Play Again button, and a clean modern UI. <strong>Vanilla HTML, CSS, and JavaScript only — no frameworks, no external libraries.</strong> Make it responsive and work on mobile.",
@@ -753,16 +753,16 @@ window.BWA_I18N = {
     "lab1.deploy.step02.body": "Перейди на vercel.com → Add New Project → Import your GitHub repo → Deploy. Скопируй live URL, когда готово.",
 
     // Lab 1 — share
-    "lab1.share.title_html": "Закончил Lab 01? <em>Отправь.</em>",
-    "lab1.share.desc_html": "Когда Wordle live на Vercel, отправь ссылку ниже. Закончил раньше? Переходи к <a href=\"lab-2.html\" style=\"color: var(--lime);\">Lab 02 →</a>",
-    "lab1.share.submit": "Отправить Lab 01 →",
-    "lab1.share.checklist.url.title": "Lab 01 — URL Wordle",
+    "lab1.share.title_html": "Закончил Лабораторию 01? <em>Отправь.</em>",
+    "lab1.share.desc_html": "Когда Wordle live на Vercel, отправь ссылку ниже. Закончил раньше? Переходи к <a href=\"lab-2.html\" style=\"color: var(--lime);\">Лаборатории 02 →</a>",
+    "lab1.share.submit": "Отправить Лабораторию 01 →",
+    "lab1.share.checklist.url.title": "Лаборатория 01 — URL Wordle",
     "lab1.share.checklist.url.desc": "Твоя live-ссылка Vercel для этого проекта",
     "lab1.share.checklist.name.title": "Твоё имя",
     "lab1.share.checklist.name.desc": "Чтобы мы знали, чей это проект",
 
     // Lab 2 — hero
-    "lab2.hero.tag": "Lab 02",
+    "lab2.hero.tag": "Лаборатория 02",
     "lab2.hero.title_html": "Твой сайт <em>about me.</em>",
     "lab2.hero.desc": "Примени принципы дизайна, собери многостраничный сайт на Next.js, отполируй и запусти то, что можно добавить в резюме.",
 
@@ -829,10 +829,10 @@ window.BWA_I18N = {
     "lab2.deploy.step04.body": "Импортируй repo на Vercel. Next.js определяется автоматически. Нажми deploy — сайт live меньше чем за минуту. Скопируй URL для секции ниже.",
 
     // Lab 2 — share
-    "lab2.share.title_html": "Закончил Lab 02? <em>Отправь.</em>",
-    "lab2.share.desc": "Отправь live URL сайта About Me. Уже отправил Wordle в Lab 01? Всё готово — отправь только этот.",
-    "lab2.share.submit": "Отправить Lab 02 →",
-    "lab2.share.checklist.url.title": "Lab 02 — URL About Me",
+    "lab2.share.title_html": "Закончил Лабораторию 02? <em>Отправь.</em>",
+    "lab2.share.desc": "Отправь live URL сайта About Me. Уже отправил Wordle в Лаборатории 01? Всё готово — отправь только этот.",
+    "lab2.share.submit": "Отправить Лабораторию 02 →",
+    "lab2.share.checklist.url.title": "Лаборатория 02 — URL About Me",
     "lab2.share.checklist.url.desc": "Твоя live-ссылка Vercel для личного сайта",
     "lab2.share.checklist.name.title": "Твоё имя",
     "lab2.share.checklist.name.desc": "Чтобы мы знали, чьи это проекты",
