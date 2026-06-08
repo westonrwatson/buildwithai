@@ -59,6 +59,27 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.08 });
 reveals.forEach(el => observer.observe(el));
 
+// Language toggle — placeholder; translations not wired up yet
+const LANG_KEY = 'bwa-lang';
+const langButtons = document.querySelectorAll('.lang-btn');
+
+function setLanguage(lang) {
+  document.documentElement.lang = lang;
+  langButtons.forEach(btn => {
+    const isActive = btn.dataset.lang === lang;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  });
+  localStorage.setItem(LANG_KEY, lang);
+}
+
+const savedLang = localStorage.getItem(LANG_KEY) || 'en';
+if (['en', 'ro', 'ru'].includes(savedLang)) setLanguage(savedLang);
+
+langButtons.forEach(btn => {
+  btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+});
+
 // Hamburger menu
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
