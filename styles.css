@@ -55,6 +55,7 @@ body {
   background: var(--black);
 }
 .cursor.on-lime.expand {
+  background: transparent;
   border-color: var(--black);
 }
 
