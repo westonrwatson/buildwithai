@@ -17,6 +17,10 @@ html {
   --font-xs: 12px;
   --font-sm: 16px;
   --font-base: 16px;
+  --section-pad-y: 80px;
+  --section-pad-x: 40px;
+  --block-pad-y: 40px;
+  --block-pad-x: 32px;
 }
 
 body {
@@ -49,7 +53,10 @@ body {
   transition: width 0.2s, height 0.2s, background 0.2s;
 }
 @media (hover: hover) and (pointer: fine) {
-  body { cursor: none; }
+  body,
+  a, button, input, select, textarea, label, summary {
+    cursor: none;
+  }
   .cursor { display: block; }
 }
 .cursor.expand {
@@ -64,6 +71,13 @@ body {
   background: transparent;
   border-color: var(--black);
 }
+.cursor.on-dark {
+  background: var(--lime);
+}
+.cursor.on-dark.expand {
+  background: transparent;
+  border-color: var(--lime);
+}
 
 :is(
   .lime-surface,
@@ -72,7 +86,6 @@ body {
   .tip-block--lime,
   .flair-card--lime,
   .agenda-item--lime,
-  #build-01 .build-phase:nth-child(1),
   #build-02 .prompt-example,
   body:has(.page-hero--lime) nav:not(.scrolled)
 ) ::selection,
@@ -87,13 +100,73 @@ body {
   .tip-block--lime,
   .flair-card--lime,
   .agenda-item--lime,
-  #build-01 .build-phase:nth-child(1),
   #build-02 .prompt-example,
   body:has(.page-hero--lime) nav:not(.scrolled)
 ) ::-moz-selection,
 :is(.section-tag, .share-submit, .hero-cta)::-moz-selection {
   background: var(--black);
   color: var(--lime);
+}
+:is(.dark-surface, .share-panel, .criteria-block.dark, .ai-pipeline, .formula-block:nth-child(1)) ::selection {
+  background: var(--lime);
+  color: var(--black);
+}
+:is(.dark-surface, .share-panel, .criteria-block.dark, .ai-pipeline, .formula-block:nth-child(1)) ::-moz-selection {
+  background: var(--lime);
+  color: var(--black);
+}
+
+/* ── CONTENT LINKS ─────────────────────── */
+.build-phase-body a,
+.build-detail-subtitle a,
+.step-body a,
+.tip-body a,
+.ai-workshop-note a,
+.deploy-step-list a {
+  color: var(--black);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s, opacity 0.2s;
+}
+.build-phase-body a:hover,
+.build-detail-subtitle a:hover,
+.step-body a:hover,
+.tip-body a:hover,
+.ai-workshop-note a:hover,
+.deploy-step-list a:hover {
+  color: var(--text-muted);
+}
+.step-block.full-width .step-body a {
+  color: var(--lime);
+}
+.step-block.full-width .step-body a:hover {
+  opacity: 0.85;
+  color: var(--lime);
+}
+.step-block--lime .step-body a {
+  color: var(--black);
+}
+.tip-block:hover .tip-body a {
+  color: var(--lime);
+}
+.tip-block:hover .tip-body a:hover {
+  opacity: 0.85;
+  color: var(--lime);
+}
+.share-panel p a,
+.criteria-block.dark a,
+.formula-block:nth-child(1) a {
+  color: var(--lime);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+.share-panel p a:hover,
+.criteria-block.dark a:hover,
+.formula-block:nth-child(1) a:hover {
+  opacity: 0.85;
 }
 
 /* ── NAV ───────────────────────────────── */
@@ -104,7 +177,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 40px;
+  padding: 22px var(--section-pad-x);
   background: transparent;
   backdrop-filter: none;
   border-bottom: 1px solid transparent;
@@ -252,7 +325,7 @@ nav.scrolled .lang-btn.active {
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-  padding: 0 40px 60px;
+  padding: 0 var(--section-pad-x) 60px;
 }
 .hero::after {
   content: '';
@@ -393,6 +466,11 @@ nav.scrolled .lang-btn.active {
 
 
 /* ── SECTION SHARED ────────────────────── */
+.page-section {
+  padding: var(--section-pad-y) var(--section-pad-x);
+}
+.page-section.gray { background: var(--gray); }
+
 .section-header {
   display: flex;
   align-items: baseline;
@@ -433,7 +511,7 @@ nav.scrolled .lang-btn.active {
 
 .ai-workshop-note {
   margin-top: 2px;
-  padding: 24px 40px;
+  padding: 24px var(--block-pad-x);
   background: var(--white);
   font-size: var(--font-sm);
   line-height: 1.7;
@@ -458,8 +536,6 @@ nav.scrolled .lang-btn.active {
 .view-more:hover { opacity: 1; }
 
 /* ── TOOLS (EDITORIAL GRID) ────────────── */
-#tools { padding: 80px 40px; }
-
 .tools-editorial {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -558,7 +634,7 @@ nav.scrolled .lang-btn.active {
 }
 
 .stat-block {
-  padding: 52px 40px;
+  padding: 52px var(--section-pad-x);
   border-right: 1px solid #1a1a1a;
   display: flex;
   flex-direction: column;
@@ -586,8 +662,6 @@ nav.scrolled .lang-btn.active {
 }
 
 /* ── INSTALL STEPS ─────────────────────── */
-#install { padding: 80px 40px; background: var(--gray); }
-
 .steps-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -700,7 +774,7 @@ nav.scrolled .lang-btn.active {
 }
 .ai-flow-card {
   background: var(--white);
-  padding: 36px 32px;
+  padding: var(--block-pad-y) var(--block-pad-x);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -809,17 +883,16 @@ nav.scrolled .lang-btn.active {
   padding: 0;
 }
 .ai-flow-bullets li {
-  position: relative;
-  padding-left: 18px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
   font-size: var(--font-sm);
   line-height: 1.65;
   font-weight: 400;
 }
 .ai-flow-bullets li::before {
   content: '→';
-  position: absolute;
-  left: 0;
-  top: 0;
+  flex-shrink: 0;
   color: var(--lime);
   font-weight: 600;
 }
@@ -909,8 +982,6 @@ nav.scrolled .lang-btn.active {
 }
 
 /* ── PROMPTING ─────────────────────────── */
-#prompting { padding: 80px 40px; }
-
 .formula-blocks {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1027,6 +1098,14 @@ nav.scrolled .lang-btn.active {
   color: var(--white);
 }
 
+#build-01 .prompt-example {
+  background: var(--white);
+}
+#build-01 .prompt-eg-label { color: var(--mid); }
+#build-01 .prompt-note { color: var(--text-body); }
+#build-01 .prompt-eg-text,
+#build-01 .prompt-eg-text strong { color: var(--black); }
+
 #build-02 .prompt-example { background: var(--lime); }
 #build-02 .prompt-eg-label { color: rgba(0, 0, 0, 0.4); }
 #build-02 .prompt-note { color: rgba(0, 0, 0, 0.72); }
@@ -1034,9 +1113,6 @@ nav.scrolled .lang-btn.active {
 #build-02 .prompt-eg-text strong { color: var(--black); }
 
 /* ── BUILD LAB ─────────────────────────── */
-#build-01, #build-02 { padding: 80px 40px; }
-#build-02 { background: var(--gray); }
-
 .build-phases {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1046,16 +1122,11 @@ nav.scrolled .lang-btn.active {
 }
 .build-phase {
   background: var(--white);
-  padding: 40px 32px;
+  padding: var(--block-pad-y) var(--block-pad-x);
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
-#build-01 .build-phase:nth-child(1) { background: var(--lime); color: var(--black); }
-#build-01 .build-phase:nth-child(1) .build-phase-label { color: rgba(0, 0, 0, 0.4); }
-#build-01 .build-phase:nth-child(1) .build-phase-title { color: var(--black); }
-#build-01 .build-phase:nth-child(1) .build-phase-body { color: rgba(0, 0, 0, 0.75); }
-
 .build-phase-label {
   font-size: var(--font-xs);
   font-weight: 600;
@@ -1253,11 +1324,9 @@ nav.scrolled .lang-btn.active {
   letter-spacing: 0.08em;
   color: var(--mid);
 }
-.deploy-step-list a {
-  color: var(--black);
-  font-weight: 500;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+.deploy-step-list a:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 2px;
 }
 .deploy-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -1272,8 +1341,6 @@ nav.scrolled .lang-btn.active {
 }
 
 /* ── DESIGN KIT ────────────────────────── */
-#design { padding: 80px 40px; background: var(--gray); }
-
 .criteria-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1327,12 +1394,9 @@ nav.scrolled .lang-btn.active {
   flex-shrink: 0;
 }
 
-/* ── SHOWCASE ──────────────────────────── */
-#showcase { padding: 80px 40px; }
-
 .share-panel {
   background: var(--black);
-  padding: 56px 48px;
+  padding: var(--block-pad-y) var(--block-pad-x);
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 40px;
@@ -1385,7 +1449,7 @@ nav.scrolled .lang-btn.active {
 }
 .share-item {
   background: var(--white);
-  padding: 28px 32px;
+  padding: 28px var(--block-pad-x);
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -1403,9 +1467,6 @@ nav.scrolled .lang-btn.active {
 .share-item--full {
   grid-column: 1 / -1;
 }
-
-/* ── TIPS ──────────────────────────────── */
-#tips { padding: 80px 40px; background: var(--gray); }
 
 .tips-blocks {
   display: grid;
@@ -1469,8 +1530,6 @@ nav.scrolled .lang-btn.active {
 }
 
 /* ── COLLECTION / RESOURCES ────────────── */
-#resources { padding: 80px 40px; }
-
 .collection-mosaic {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1547,7 +1606,7 @@ nav.scrolled .lang-btn.active {
 /* ── FOOTER ────────────────────────────── */
 footer {
   background: var(--black);
-  padding: 80px 40px 48px;
+  padding: var(--section-pad-y) var(--section-pad-x) 48px;
 }
 
 .footer-top {
@@ -1658,7 +1717,7 @@ footer {
 
 /* ── RESPONSIVE ────────────────────────── */
 @media (max-width: 860px) {
-  nav { padding: 18px 24px; }
+  nav { padding: 18px var(--section-pad-x); }
   .nav-links { display: none; }
   .lang-toggle--desktop { display: none; }
   .mobile-lang-toggle {
@@ -1667,7 +1726,13 @@ footer {
     margin-bottom: 8px;
   }
   .hamburger { display: flex !important; }
-  .hero { padding: 0 24px 48px; min-height: 100svh; }
+  :root {
+    --section-pad-y: 60px;
+    --section-pad-x: 24px;
+    --block-pad-y: 28px;
+    --block-pad-x: 24px;
+  }
+  .hero { padding: 0 var(--section-pad-x) 48px; min-height: 100svh; }
   .hero h1 { font-size: 52px; }
   .hero-bg::before {
     background-attachment: scroll;
@@ -1676,8 +1741,7 @@ footer {
     opacity: 0.5;
   }
   .hero-grid-lines { background-size: 48px 48px; }
-  .page-section, #tools, #install, #prompting, #build-01, #design, #build-02, #showcase, #tips, #resources, #agenda, #instructors { padding: 60px 24px; }
-  .page-hero { padding: 120px 24px 48px; }
+  .page-hero { padding: 120px var(--section-pad-x) 48px; }
   .instructors-grid { grid-template-columns: 1fr; }
   .agenda-grid { grid-template-columns: 1fr; }
   .site-footer-grid { grid-template-columns: 1fr 1fr; }
@@ -1715,7 +1779,6 @@ footer {
   .res-block.dark { grid-column: auto; grid-row: auto; }
   .footer-top { grid-template-columns: 1fr; }
   .footer-cols { grid-template-columns: repeat(2, 1fr); }
-  footer { padding: 60px 24px 40px; }
 }
 
 /* ── HAMBURGER & MOBILE MENU ───────────────────────────── */
@@ -1795,7 +1858,7 @@ footer {
 /* ── INNER PAGE HERO ───────────────────── */
 .page-hero {
   position: relative;
-  padding: 160px 40px 64px;
+  padding: 160px var(--section-pad-x) 64px;
   background: var(--black);
   overflow: hidden;
 }
@@ -1861,12 +1924,7 @@ body:has(.page-hero--lime) nav:not(.scrolled) .hamburger span {
 .page-hero--lime h1 em { color: var(--black); }
 .page-hero--lime p { color: var(--black); opacity: 0.65; }
 
-.page-section { padding: 80px 40px; }
-.page-section.gray { background: var(--gray); }
-
 /* ── AGENDA ────────────────────────────── */
-#agenda { padding: 80px 40px; }
-
 .agenda-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1937,8 +1995,6 @@ a.agenda-item.agenda-item--lime:hover { background: var(--lime); filter: brightn
 }
 
 /* ── INSTRUCTORS ───────────────────────── */
-#instructors { padding: 80px 40px; background: var(--gray); }
-
 .instructors-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1998,7 +2054,7 @@ a.agenda-item.agenda-item--lime:hover { background: var(--lime); filter: brightn
 /* ── SITE FOOTER ───────────────────────── */
 .site-footer {
   background: var(--black);
-  padding: 64px 40px 40px;
+  padding: var(--section-pad-y) var(--section-pad-x) 40px;
   border-top: 1px solid #1a1a1a;
 }
 .site-footer-brand {
@@ -2063,6 +2119,3 @@ a.agenda-item.agenda-item--lime:hover { background: var(--lime); filter: brightn
   text-decoration: none;
 }
 .site-footer-bottom a:hover { color: var(--lime); }
-
-.share-callout { padding: 80px 40px; background: var(--gray); }
-

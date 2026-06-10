@@ -4,31 +4,49 @@ if (canUseCustomCursor) {
   const cursor = document.getElementById('cursor');
   if (cursor) {
     const LIME = { r: 188, g: 232, b: 88 };
+    const BLACK = { r: 10, g: 10, b: 10 };
+
+    function parseRgb(color) {
+      const match = color?.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+      if (!match) return null;
+      return { r: +match[1], g: +match[2], b: +match[3] };
+    }
 
     function isLimeColor(color) {
-      const match = color?.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
-      if (!match) return false;
-      return +match[1] === LIME.r && +match[2] === LIME.g && +match[3] === LIME.b;
+      const rgb = parseRgb(color);
+      if (!rgb) return false;
+      return rgb.r === LIME.r && rgb.g === LIME.g && rgb.b === LIME.b;
     }
 
-    function isLimeSurface(el) {
+    function isDarkColor(color) {
+      const rgb = parseRgb(color);
+      if (!rgb) return false;
+      return rgb.r === BLACK.r && rgb.g === BLACK.g && rgb.b === BLACK.b;
+    }
+
+    function surfaceType(el) {
       while (el && el !== document.documentElement) {
-        if (el.classList?.contains('lime-surface')) return true;
-        if (isLimeColor(getComputedStyle(el).backgroundColor)) return true;
+        if (el.classList?.contains('lime-surface')) return 'lime';
+        if (el.classList?.contains('dark-surface')) return 'dark';
+        const bg = getComputedStyle(el).backgroundColor;
+        if (isLimeColor(bg)) return 'lime';
+        if (isDarkColor(bg)) return 'dark';
         el = el.parentElement;
       }
-      return false;
+      return 'light';
     }
+
+    const interactiveSelector = 'a, button, input, select, textarea, label[for], [role="button"]';
 
     document.addEventListener('mousemove', e => {
       cursor.style.left = e.clientX + 'px';
       cursor.style.top = e.clientY + 'px';
       const target = document.elementFromPoint(e.clientX, e.clientY);
-      cursor.classList.toggle('on-lime', isLimeSurface(target));
-    });
-    document.querySelectorAll('a, button').forEach(el => {
-      el.addEventListener('mouseenter', () => cursor.classList.add('expand'));
-      el.addEventListener('mouseleave', () => cursor.classList.remove('expand'));
+      if (!target) return;
+      const surface = surfaceType(target);
+      cursor.classList.toggle('on-lime', surface === 'lime');
+      cursor.classList.toggle('on-dark', surface === 'dark');
+      cursor.classList.toggle('expand', !!target.closest(interactiveSelector));
     });
   }
 }
