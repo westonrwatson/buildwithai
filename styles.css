@@ -1034,7 +1034,7 @@ nav.scrolled .lang-btn.active {
 #build-02 .prompt-eg-text strong { color: var(--black); }
 
 /* ── BUILD LAB ─────────────────────────── */
-#build-01, #build-02 { padding: 80px 40px; }
+#build-01, #build-02, #deploy { padding: 80px 40px; }
 #build-02 { background: var(--gray); }
 
 .build-phases {
@@ -1619,7 +1619,7 @@ footer {
     opacity: 0.5;
   }
   .hero-grid-lines { background-size: 48px 48px; }
-  .page-section, #tools, #install, #prompting, #build-01, #design, #build-02, #showcase, #tips, #resources, #agenda, #instructors { padding: 60px 24px; }
+  .page-section, #tools, #install, #prompting, #build-01, #design, #build-02, #deploy, #showcase, #tips, #resources, #agenda, #instructors { padding: 60px 24px; }
   .page-hero { padding: 120px 24px 48px; }
   .instructors-grid { grid-template-columns: 1fr; }
   .agenda-grid { grid-template-columns: 1fr; }
