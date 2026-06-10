@@ -132,54 +132,86 @@
     </div>
   </div>
 
-  <div class="criteria-grid reveal">
-    <div class="criteria-block dark">
-      <div class="criteria-heading" data-i18n="lab2.criteria.required.heading">Required — your site must have</div>
-      <ul class="criteria-list">
-        <li data-i18n="lab2.criteria.required.01">At least 3 pages using Next.js App Router (e.g. Home, About, Projects)</li>
-        <li data-i18n="lab2.criteria.required.02">Home page with your name, a tagline, and a clear hero section</li>
-        <li data-i18n="lab2.criteria.required.03">About page with a short bio — who you are, what you're into</li>
-        <li data-i18n="lab2.criteria.required.04">A projects or interests page with at least 3 items</li>
-        <li data-i18n="lab2.criteria.required.05">Working navigation that links every page together</li>
-        <li data-i18n="lab2.criteria.required.06">Contact info — email, social link, or contact form</li>
-        <li data-i18n="lab2.criteria.required.07">Deployed live on Vercel with a public URL</li>
-      </ul>
+  <div class="build-detail reveal">
+    <div class="build-detail-head">
+      <div class="section-tag" data-i18n="lab2.build.phase01.label">Phase 01</div>
+      <h2 class="build-detail-title" data-i18n-html="lab2.build.phase01.title_html">Build in <em>Cursor.</em></h2>
+      <p class="build-detail-subtitle" data-i18n="lab2.build.phase01.detail_intro">One prompt sets up your whole site. Fill in the brackets, paste it once, and let Cursor build.</p>
     </div>
-    <div class="criteria-block">
-      <div class="criteria-heading" data-i18n="lab2.criteria.optional.heading">Make it yours — pick 3+</div>
-      <ul class="criteria-list">
-        <li data-i18n="lab2.criteria.optional.01">Custom color palette and font pairing from Google Fonts</li>
-        <li data-i18n="lab2.criteria.optional.02">A unique layout — asymmetric, full-bleed images, or card-based</li>
-        <li data-i18n="lab2.criteria.optional.03">A hobbies, music, or favorites section that shows personality</li>
-        <li data-i18n="lab2.criteria.optional.04">Subtle animations — fade-ins, hover effects, page transitions</li>
-        <li data-i18n="lab2.criteria.optional.05">A personal logo, monogram, or custom favicon</li>
-        <li data-i18n="lab2.criteria.optional.06">Dark mode or a theme toggle</li>
-        <li data-i18n="lab2.criteria.optional.07">Responsive design that looks great on phone and desktop</li>
-      </ul>
+    <div class="build-detail-steps">
+      <ol class="deploy-step-list">
+        <li data-i18n-html="lab2.build.phase01.step01_html">Open Cursor → <strong>Open Folder</strong> → create a new folder called <span class="deploy-mono">about-me</span></li>
+        <li data-i18n="lab2.build.phase01.step02">Fill in every [BRACKET] in the starter prompt below</li>
+        <li data-i18n="lab2.build.phase01.step03">Paste the full prompt in Cursor Chat and let the agent build</li>
+        <li data-i18n-html="lab2.build.phase01.step04_html">Run <span class="deploy-mono">npm run dev</span> and open <span class="deploy-mono">localhost:3000</span> — check every item in the requirements list</li>
+      </ol>
     </div>
-  </div>
 
-  <div class="prompt-example reveal" style="margin-top: 2px;">
-    <div class="prompt-eg-label" data-i18n="lab2.prompt.label">Starter prompt — copy &amp; customize the brackets</div>
-    <div class="prompt-eg-content">
-      <p class="prompt-note" data-i18n="lab2.prompt.note">Paste this in Cursor chat — copy in English for best results.</p>
-      <div class="prompt-eg-text" data-i18n-html="lab2.prompt.starter_html">
-      <strong>You are an expert Next.js developer.</strong> Create a multi-page personal about-me website using Next.js 14+ with the App Router and React. Pages: Home, About, and Projects. My name is <strong>[YOUR NAME]</strong>. I'm <strong>[ONE SENTENCE ABOUT YOU]</strong>. Style: <strong>[DESCRIBE YOUR VIBE — e.g. "minimal dark theme with lime accents"]</strong>. Use <strong>[FONT NAME]</strong> from Google Fonts. Home: hero with name, tagline, and a CTA button. About: bio paragraph and 3 things I'm passionate about. Projects: 3 project cards with title, description, and tech tags. Add a shared navigation bar and footer on every page. Use <strong>shadcn/ui</strong> for buttons and cards. Make it polished, responsive, and deployable to Vercel.
+    <div class="criteria-block dark">
+      <div class="criteria-heading" data-i18n="lab2.build.phase01.requirements_heading">Your first version must include</div>
+      <ul class="criteria-list">
+        <li data-i18n-html="lab2.requirements.01"><strong>3 pages</strong> — Home, About, and Projects (Next.js App Router)</li>
+        <li data-i18n-html="lab2.requirements.02"><strong>Home</strong> — your name, a tagline, and a hero section</li>
+        <li data-i18n-html="lab2.requirements.03"><strong>About</strong> — a short bio about who you are</li>
+        <li data-i18n-html="lab2.requirements.04"><strong>Projects</strong> — at least 3 project or interest cards</li>
+        <li data-i18n-html="lab2.requirements.05"><strong>Navigation</strong> — navbar links to every page on every page</li>
+        <li data-i18n-html="lab2.requirements.06"><strong>Contact</strong> — your email or a social link in the footer</li>
+      </ul>
+    </div>
+
+    <div class="prompt-example">
+      <div class="prompt-eg-label" data-i18n="lab2.prompt.label">Starter prompt — fill in the brackets, then paste once</div>
+      <div class="prompt-eg-content">
+        <p class="prompt-note" data-i18n="lab2.prompt.note">Paste this in Cursor chat — copy in English for best results.</p>
+        <div class="prompt-eg-text" data-i18n-html="lab2.prompt.starter_html">
+        <strong>You are an expert Next.js developer.</strong> Create a new Next.js project in this folder with App Router, TypeScript, and Tailwind CSS. Build a personal about-me website with exactly these pages: <strong>Home</strong> (/) — hero with my name <strong>[YOUR NAME]</strong>, tagline <strong>"[YOUR TAGLINE]"</strong>, and a CTA button. <strong>About</strong> (/about) — short bio <strong>[ONE PARAGRAPH ABOUT YOU]</strong> plus a list of 3 things I'm passionate about. <strong>Projects</strong> (/projects) — 3 cards with title, description, and tech tags. <strong>Must include:</strong> shadcn/ui for buttons, cards, and navigation; shared navbar and footer on every page with links to all pages; footer contact <strong>[YOUR EMAIL OR @SOCIAL]</strong>; style <strong>[e.g. minimal dark theme with lime accents]</strong>; font <strong>[FONT NAME]</strong> from Google Fonts; fully responsive on mobile and desktop. Install all dependencies and make sure <strong>npm run dev</strong> works.
+        </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- PUSH & DEPLOY -->
-<section id="deploy" class="page-section gray">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-tag" data-i18n="lab2.deploy.tag">Phase 03</div>
-      <h2 class="section-title" data-i18n-html="lab2.deploy.title_html">Push &amp; <em>deploy.</em></h2>
+  <div class="build-detail reveal">
+    <div class="build-detail-head">
+      <div class="section-tag" data-i18n="lab2.build.phase02.label">Phase 02</div>
+      <h2 class="build-detail-title" data-i18n-html="lab2.build.phase02.title_html">Make it <em>yours.</em></h2>
+      <p class="build-detail-subtitle" data-i18n="lab2.build.phase02.detail_intro">One change at a time. Copy a prompt below into Cursor, check the result, then move to the next.</p>
+      <p class="build-detail-tip" data-i18n="lab2.build.phase02.tip">Pick 2 or more adjustments — or write your own in the same style.</p>
+    </div>
+    <div class="flair-grid">
+    <div class="flair-card">
+      <div class="flair-name" data-i18n="lab2.adjust.colors.name">Colors &amp; fonts</div>
+      <div class="flair-prompt" data-i18n="lab2.adjust.colors.prompt">"Update the site to use [COLOR 1] and [COLOR 2] as my palette. Use [FONT NAME] from Google Fonts for headings and body text."</div>
+    </div>
+    <div class="flair-card">
+      <div class="flair-name" data-i18n="lab2.adjust.space.name">More breathing room</div>
+      <div class="flair-prompt" data-i18n="lab2.adjust.space.prompt">"Make the layout feel more spacious — increase padding, add more whitespace between sections, and widen the content area on desktop."</div>
+    </div>
+    <div class="flair-card">
+      <div class="flair-name" data-i18n="lab2.adjust.personality.name">Show personality</div>
+      <div class="flair-prompt" data-i18n="lab2.adjust.personality.prompt">"Add a hobbies or favorites section on the About page with 3 things that show who I am — music, sports, games, etc."</div>
+    </div>
+    <div class="flair-card">
+      <div class="flair-name" data-i18n="lab2.adjust.animations.name">Smooth animations</div>
+      <div class="flair-prompt" data-i18n="lab2.adjust.animations.prompt">"Add subtle fade-in on scroll and smooth hover effects on buttons and project cards."</div>
+    </div>
+    <div class="flair-card">
+      <div class="flair-name" data-i18n="lab2.adjust.dark.name">Dark mode</div>
+      <div class="flair-prompt" data-i18n="lab2.adjust.dark.prompt">"Switch the whole site to a dark theme with good contrast. Keep all text easy to read."</div>
+    </div>
+    <div class="flair-card flair-card--lime">
+      <div class="flair-name" data-i18n="lab2.adjust.mobile.name">Mobile polish</div>
+      <div class="flair-prompt" data-i18n="lab2.adjust.mobile.prompt">"Improve the mobile layout — stack sections cleanly, fix any overflowing text, and make the nav work well on small screens."</div>
+    </div>
     </div>
   </div>
 
-  <div class="deploy-steps reveal">
+  <div class="build-detail reveal" id="deploy">
+    <div class="build-detail-head">
+      <div class="section-tag" data-i18n="lab2.build.phase03.label">Phase 03</div>
+      <h2 class="build-detail-title" data-i18n-html="lab2.deploy.title_html">Push &amp; <em>deploy.</em></h2>
+      <p class="build-detail-subtitle" data-i18n="lab2.build.phase03.detail_intro">Push to GitHub, connect to Vercel, and get a live URL you can share.</p>
+    </div>
+    <div class="deploy-steps">
     <div class="deploy-step">
       <div class="deploy-step-title" data-i18n="lab2.deploy.step01.title">Push to GitHub</div>
       <ol class="deploy-step-list">
@@ -199,6 +231,7 @@
         <li data-i18n="lab2.deploy.step02.item04">Click Deploy — Vercel auto-detects Next.js. Leave the default settings.</li>
         <li data-i18n-html="lab2.deploy.step02.item05_html">When the build finishes, copy your live URL (e.g. <span class="deploy-mono">about-me.vercel.app</span>).</li>
       </ol>
+    </div>
     </div>
   </div>
 </section>

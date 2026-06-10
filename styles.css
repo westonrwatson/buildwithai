@@ -1034,7 +1034,7 @@ nav.scrolled .lang-btn.active {
 #build-02 .prompt-eg-text strong { color: var(--black); }
 
 /* ── BUILD LAB ─────────────────────────── */
-#build-01, #build-02, #deploy { padding: 80px 40px; }
+#build-01, #build-02 { padding: 80px 40px; }
 #build-02 { background: var(--gray); }
 
 .build-phases {
@@ -1076,6 +1076,63 @@ nav.scrolled .lang-btn.active {
   line-height: 1.7;
   font-weight: 400;
 }
+
+#build-01 > .section-header:first-child,
+#build-02 > .section-header:first-child {
+  margin-bottom: 32px;
+}
+.build-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--border);
+  margin-top: 48px;
+}
+#build-01 .build-phases + .build-detail,
+#build-02 .build-phases + .build-detail {
+  margin-top: 48px;
+}
+.build-detail-head {
+  background: var(--white);
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.build-detail-title {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--black);
+}
+.build-detail-subtitle {
+  font-size: var(--font-sm);
+  color: var(--text-body);
+  line-height: 1.7;
+  font-weight: 400;
+  max-width: 640px;
+}
+.build-detail-tip {
+  font-size: var(--font-sm);
+  color: var(--mid);
+  line-height: 1.6;
+  font-weight: 500;
+  max-width: 640px;
+}
+.build-detail-steps {
+  background: var(--white);
+  padding: 32px 40px;
+}
+#build-01 .prompt-example,
+#build-02 .prompt-example { margin: 0; }
+#build-01 .flair-grid,
+#build-02 .flair-grid { margin: 0; }
+#build-01 .deploy-steps,
+#build-02 .deploy-steps { margin: 0; }
+#build-02 .criteria-block.dark { margin: 0; }
+#build-02 .criteria-list li strong { color: var(--white); font-weight: 700; }
+
 .prompt-activity {
   background: var(--lime);
   margin-top: 0;
@@ -1619,7 +1676,7 @@ footer {
     opacity: 0.5;
   }
   .hero-grid-lines { background-size: 48px 48px; }
-  .page-section, #tools, #install, #prompting, #build-01, #design, #build-02, #deploy, #showcase, #tips, #resources, #agenda, #instructors { padding: 60px 24px; }
+  .page-section, #tools, #install, #prompting, #build-01, #design, #build-02, #showcase, #tips, #resources, #agenda, #instructors { padding: 60px 24px; }
   .page-hero { padding: 120px 24px 48px; }
   .instructors-grid { grid-template-columns: 1fr; }
   .agenda-grid { grid-template-columns: 1fr; }
@@ -1636,6 +1693,11 @@ footer {
   .formula-blocks { grid-template-columns: 1fr; }
   .ai-flow-stack { grid-template-columns: 1fr; }
   .ai-flow-card { padding: 28px 24px; }
+  .build-detail-head,
+  .build-detail-steps { padding: 28px 24px; }
+  .build-detail { margin-top: 32px; }
+  #build-01 .build-phases + .build-detail,
+  #build-02 .build-phases + .build-detail { margin-top: 32px; }
   .ai-pipeline { padding: 28px 24px; }
   .ai-pipeline-track {
     grid-template-columns: 1fr;

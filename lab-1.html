@@ -229,24 +229,31 @@
     </div>
   </div>
 
-  <div class="prompt-example reveal">
-    <div class="prompt-eg-label" data-i18n="lab1.prompt.label">Starter prompt — copy &amp; paste this first</div>
-    <div class="prompt-eg-content">
-      <p class="prompt-note" data-i18n="lab1.prompt.note">Copy this prompt in English — AI tools work best with English prompts.</p>
-      <div class="prompt-eg-text" data-i18n-html="lab1.prompt.starter_html">
-      <strong>You are an expert web developer.</strong> Build a fully playable Wordle clone as a single index.html file. Include: 6 guesses per game, 5-letter words only, a built-in word list of common English dictionary words (any standard 5-letter dictionary word should be a valid answer or guess), an on-screen keyboard, tile flip animations, color feedback (green = correct spot, yellow = wrong spot, gray = not in word), win and lose states with a Play Again button, and a clean modern UI. <strong>Vanilla HTML, CSS, and JavaScript only — no frameworks, no external libraries.</strong> Make it responsive and work on mobile.
+  <div class="build-detail reveal">
+    <div class="build-detail-head">
+      <div class="section-tag" data-i18n="lab1.build.phase01.label">Phase 01</div>
+      <h2 class="build-detail-title" data-i18n-html="lab1.build.phase01.title_html">Generate in <em>Claude.</em></h2>
+      <p class="build-detail-subtitle" data-i18n="lab1.build.phase01.detail_intro">Open claude.ai and paste the starter prompt below. Download your index.html when Claude finishes.</p>
+    </div>
+    <div class="prompt-example">
+      <div class="prompt-eg-label" data-i18n="lab1.prompt.label">Starter prompt — copy &amp; paste this first</div>
+      <div class="prompt-eg-content">
+        <p class="prompt-note" data-i18n="lab1.prompt.note">Copy this prompt in English — AI tools work best with English prompts.</p>
+        <div class="prompt-eg-text" data-i18n-html="lab1.prompt.starter_html">
+        <strong>You are an expert web developer.</strong> Build a fully playable Wordle clone as a single index.html file. Include: 6 guesses per game, 5-letter words only, a built-in word list of common English dictionary words (any standard 5-letter dictionary word should be a valid answer or guess), an on-screen keyboard, tile flip animations, color feedback (green = correct spot, yellow = wrong spot, gray = not in word), win and lose states with a Play Again button, and a clean modern UI. <strong>Vanilla HTML, CSS, and JavaScript only — no frameworks, no external libraries.</strong> Make it responsive and work on mobile.
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="section-header reveal" style="margin-top: 48px; margin-bottom: 32px; padding-bottom: 16px;">
-    <div>
-      <div class="section-tag" data-i18n="lab1.flair.tag">Phase 02</div>
-      <h2 class="section-title" style="font-size: clamp(22px, 3vw, 32px);" data-i18n-html="lab1.flair.title_html">Add your <em>flair.</em></h2>
+  <div class="build-detail reveal">
+    <div class="build-detail-head">
+      <div class="section-tag" data-i18n="lab1.build.phase02.label">Phase 02</div>
+      <h2 class="build-detail-title" data-i18n-html="lab1.build.phase02.title_html">Make it <em>yours.</em></h2>
+      <p class="build-detail-subtitle" data-i18n="lab1.build.phase02.detail_intro">Pick one customization below and prompt Claude to apply it.</p>
+      <p class="build-detail-tip" data-i18n="lab1.build.phase02.tip">Iterate one change at a time until it feels like your version.</p>
     </div>
-  </div>
-
-  <div class="flair-grid reveal">
+    <div class="flair-grid">
     <div class="flair-card">
       <div class="flair-name" data-i18n="lab1.flair.theme.name">Custom theme</div>
       <div class="flair-prompt" data-i18n="lab1.flair.theme.prompt">"Switch to a dark theme with [YOUR COLOR] as the accent. Update the keyboard and tiles to match."</div>
@@ -271,16 +278,16 @@
       <div class="flair-name" data-i18n="lab1.flair.background.name">Background</div>
       <div class="flair-prompt" data-i18n="lab1.flair.background.prompt">"Add a gradient or patterned background behind the game board. Keep the tiles and text readable."</div>
     </div>
-  </div>
-
-  <div class="section-header reveal" style="margin-top: 48px; margin-bottom: 32px; padding-bottom: 16px;">
-    <div>
-      <div class="section-tag" data-i18n="lab1.deploy.tag">Phase 03</div>
-      <h2 class="section-title" style="font-size: clamp(22px, 3vw, 32px);" data-i18n-html="lab1.deploy.title_html">Push &amp; <em>deploy.</em></h2>
     </div>
   </div>
 
-  <div class="deploy-steps reveal">
+  <div class="build-detail reveal" id="deploy">
+    <div class="build-detail-head">
+      <div class="section-tag" data-i18n="lab1.build.phase03.label">Phase 03</div>
+      <h2 class="build-detail-title" data-i18n-html="lab1.deploy.title_html">Push &amp; <em>deploy.</em></h2>
+      <p class="build-detail-subtitle" data-i18n="lab1.build.phase03.detail_intro">Upload your index.html to GitHub, connect to Vercel, and get a live URL you can share.</p>
+    </div>
+    <div class="deploy-steps">
     <div class="deploy-step">
       <div class="deploy-step-title" data-i18n="lab1.deploy.step01.title">Push to GitHub</div>
       <ol class="deploy-step-list">
@@ -300,6 +307,7 @@
         <li data-i18n="lab1.deploy.step02.item04">Click Deploy — leave the default settings as they are.</li>
         <li data-i18n-html="lab1.deploy.step02.item05_html">When the build finishes, copy your live URL (e.g. <span class="deploy-mono">my-wordle.vercel.app</span>).</li>
       </ol>
+    </div>
     </div>
   </div>
 </section>
