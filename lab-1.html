@@ -52,7 +52,7 @@
   <div class="page-hero-content">
     <div class="section-tag" data-i18n="lab1.hero.tag">Build Lab 01</div>
     <h1 data-i18n-html="lab1.hero.title_html">Ship your first <em>game.</em></h1>
-    <p data-i18n="lab1.hero.desc">Learn to prompt Claude, build a Wordle clone, upload it to GitHub, and deploy it live on Vercel.</p>
+    <p data-i18n="lab1.hero.desc">Learn to prompt your AI chat, build a Wordle clone, upload it to GitHub, and deploy it live on Vercel.</p>
   </div>
 </header>
 
@@ -61,7 +61,7 @@
   <div class="section-header reveal">
     <div>
       <div class="section-tag" data-i18n="lab1.ai.tag">Foundation</div>
-      <h2 class="section-title" data-i18n-html="lab1.ai.title_html">What is <em>AI &amp; Agents?</em></h2>
+      <h2 class="section-title" data-i18n-html="lab1.ai.title_html">What is <em>AI?</em></h2>
     </div>
   </div>
 
@@ -74,14 +74,24 @@
             <h3 class="ai-flow-name" data-i18n="lab1.ai.def01.name">Artificial intelligence</h3>
           </div>
         </div>
-        <ul class="ai-flow-bullets">
-          <li data-i18n="lab1.ai.def01.bullet01">Understands language and finds patterns in data</li>
-          <li data-i18n="lab1.ai.def01.bullet02">Solves problems and creates content</li>
-          <li data-i18n="lab1.ai.def01.bullet03">Learns from examples — not conscious or alive</li>
+        <p class="ai-flow-intro" data-i18n="lab1.ai.def01.intro">Artificial intelligence is software that learns from data. It recognizes patterns, understands language, reasons through problems, and tackles complex tasks — without being conscious or alive.</p>
+        <ul class="ai-flow-examples">
+          <li>
+            <span class="ai-flow-example-name" data-i18n="lab1.ai.def01.example01.name">Recommendations</span>
+            <span class="ai-flow-example-body" data-i18n="lab1.ai.def01.example01.body">Algorithms that suggest movies or products on platforms like Netflix.</span>
+          </li>
+          <li>
+            <span class="ai-flow-example-name" data-i18n="lab1.ai.def01.example02.name">Virtual assistants</span>
+            <span class="ai-flow-example-body" data-i18n="lab1.ai.def01.example02.body">Voice tools like Siri or Alexa that understand spoken commands and carry them out.</span>
+          </li>
+          <li>
+            <span class="ai-flow-example-name" data-i18n="lab1.ai.def01.example03.name">Generative AI</span>
+            <span class="ai-flow-example-body" data-i18n="lab1.ai.def01.example03.body">Systems that create original text, code, images, or audio — like ChatGPT or Google Gemini.</span>
+          </li>
         </ul>
       </article>
 
-      <article class="ai-flow-card">
+      <article class="ai-flow-card ai-flow-card--lime">
         <div class="ai-flow-card-top">
           <div>
             <div class="ai-flow-label" data-i18n="lab1.ai.def02.label">The model</div>
@@ -94,24 +104,10 @@
           <li data-i18n="lab1.ai.def02.bullet03">Claude, ChatGPT, and Gemini are all LLMs</li>
         </ul>
       </article>
-
-      <article class="ai-flow-card ai-flow-card--lime">
-        <div class="ai-flow-card-top">
-          <div>
-            <div class="ai-flow-label" data-i18n="lab1.ai.def03.label">Agents</div>
-            <h3 class="ai-flow-name" data-i18n="lab1.ai.def03.name">AI agents</h3>
-          </div>
-        </div>
-        <ul class="ai-flow-bullets">
-          <li data-i18n="lab1.ai.def03.bullet01">Uses an LLM as its brain, then takes action</li>
-          <li data-i18n="lab1.ai.def03.bullet02">Reads files, writes code, and uses tools over many steps</li>
-          <li data-i18n="lab1.ai.def03.bullet03">Cursor is an AI agent</li>
-        </ul>
-      </article>
     </div>
 
     <div class="ai-pipeline">
-      <div class="ai-pipeline-title" data-i18n="lab1.ai.pipeline.title">How an agent works</div>
+      <div class="ai-pipeline-title" data-i18n="lab1.ai.pipeline.title">How we'll use them today</div>
       <div class="ai-pipeline-track">
         <div class="ai-pipeline-step">
           <div class="ai-pipeline-box" data-i18n="lab1.ai.pipeline.step01">Your prompt</div>
@@ -122,22 +118,21 @@
         </div>
         <div class="ai-pipeline-arrow" aria-hidden="true">→</div>
         <div class="ai-pipeline-step">
-          <div class="ai-pipeline-box" data-i18n="lab1.ai.pipeline.step03">Tools</div>
-          <div class="ai-pipeline-tags">
-            <span data-i18n="lab1.ai.pipeline.tag01">Files</span>
-            <span data-i18n="lab1.ai.pipeline.tag02">Code</span>
-            <span data-i18n="lab1.ai.pipeline.tag03">Terminal</span>
-          </div>
+          <div class="ai-pipeline-box" data-i18n="lab1.ai.pipeline.step03">HTML file</div>
         </div>
         <div class="ai-pipeline-arrow" aria-hidden="true">→</div>
         <div class="ai-pipeline-step">
-          <div class="ai-pipeline-box ai-pipeline-box--done" data-i18n="lab1.ai.pipeline.step04">Goal done</div>
+          <div class="ai-pipeline-box" data-i18n="lab1.ai.pipeline.step04">GitHub</div>
+        </div>
+        <div class="ai-pipeline-arrow" aria-hidden="true">→</div>
+        <div class="ai-pipeline-step">
+          <div class="ai-pipeline-box ai-pipeline-box--done" data-i18n="lab1.ai.pipeline.step05">Live on Vercel</div>
         </div>
       </div>
     </div>
   </div>
 
-  <p class="ai-workshop-note reveal" data-i18n="lab1.ai.workshop_note">In Lab 01 you'll prompt Claude to build your game. In Lab 02 you'll use Cursor — an AI agent — to build a full site with a framework.</p>
+  <p class="ai-workshop-note reveal" data-i18n="lab1.ai.workshop_note">In both labs you'll prompt an LLM in your browser, save an index.html, upload it to GitHub, and deploy on Vercel.</p>
 </section>
 
 <!-- PROMPTING -->
@@ -180,7 +175,7 @@
 
   <div class="section-header reveal" style="margin-top: 48px; margin-bottom: 24px; padding-bottom: 0; border-bottom: none;">
     <div>
-      <h2 class="section-title" style="font-size: clamp(22px, 3vw, 32px);" data-i18n="lab1.prompting.activity.title">Try it in Claude</h2>
+      <h2 class="section-title" style="font-size: clamp(22px, 3vw, 32px);" data-i18n="lab1.prompting.activity.title">Try it in your AI chat</h2>
     </div>
   </div>
 
@@ -215,12 +210,12 @@
     <div class="build-phase">
       <div class="build-phase-label" data-i18n="lab1.build.phase01.label">Phase 01</div>
       <div class="build-phase-title" data-i18n="lab1.build.phase01.title">Generate it.</div>
-      <div class="build-phase-body" data-i18n-html="lab1.build.phase01.body_html">Open <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> and paste the starter prompt below. Claude will build a complete, playable Wordle clone as a single <span style="font-family:monospace;">index.html</span> file. Download or copy the file when it's ready.</div>
+      <div class="build-phase-body" data-i18n-html="lab1.build.phase01.body_html">Open <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a>, <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a>, or <a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini</a> and paste the starter prompt below. Your AI will build a complete, playable Wordle clone as a single <span style="font-family:monospace;">index.html</span> file. Preview or download the file when it's ready.</div>
     </div>
     <div class="build-phase">
       <div class="build-phase-label" data-i18n="lab1.build.phase02.label">Phase 02</div>
       <div class="build-phase-title" data-i18n="lab1.build.phase02.title">Make it yours.</div>
-      <div class="build-phase-body" data-i18n-html="lab1.build.phase02.body_html">Pick one customization below and prompt Claude to apply it. Iterate one change at a time until it feels like <em>your</em> version.</div>
+      <div class="build-phase-body" data-i18n-html="lab1.build.phase02.body_html">Pick a customization below — one change at a time, then prompt a new change.</div>
     </div>
     <div class="build-phase">
       <div class="build-phase-label" data-i18n="lab1.build.phase03.label">Phase 03</div>
@@ -232,8 +227,8 @@
   <div class="build-detail reveal">
     <div class="build-detail-head">
       <div class="section-tag" data-i18n="lab1.build.phase01.label">Phase 01</div>
-      <h2 class="build-detail-title" data-i18n-html="lab1.build.phase01.title_html">Generate in <em>Claude.</em></h2>
-      <p class="build-detail-subtitle" data-i18n="lab1.build.phase01.detail_intro">Open claude.ai and paste the starter prompt below. Download your index.html when Claude finishes.</p>
+      <h2 class="build-detail-title" data-i18n-html="lab1.build.phase01.title_html">Generate in your <em>AI chat.</em></h2>
+      <p class="build-detail-subtitle" data-i18n-html="lab1.build.phase01.detail_intro_html">Open <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a>, <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a>, or <a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini</a> and paste the starter prompt below. Preview or download your index.html, test it in your browser, then move on to Phase 02.</p>
       <p class="prompt-note build-detail-prompt-note" data-i18n="lab1.prompt.note">Copy this prompt in English — AI tools work best with English prompts.</p>
     </div>
     <div class="prompt-example prompt-example--solo">
@@ -249,8 +244,8 @@
     <div class="build-detail-head">
       <div class="section-tag" data-i18n="lab1.build.phase02.label">Phase 02</div>
       <h2 class="build-detail-title" data-i18n-html="lab1.build.phase02.title_html">Make it <em>yours.</em></h2>
-      <p class="build-detail-subtitle" data-i18n="lab1.build.phase02.detail_intro">Pick one customization below and prompt Claude to apply it.</p>
-      <p class="build-detail-tip" data-i18n="lab1.build.phase02.tip">Iterate one change at a time until it feels like your version.</p>
+      <p class="build-detail-subtitle" data-i18n="lab1.build.phase02.detail_intro">One change at a time. Paste or upload your current index.html only if the chat no longer has your latest version, then prompt a new change.</p>
+      <p class="build-detail-tip" data-i18n="lab1.build.phase02.tip">Make at least 1 adjustment.</p>
     </div>
     <div class="flair-grid">
     <div class="flair-card">
@@ -294,7 +289,7 @@
         <li data-i18n="lab1.deploy.step01.item02">Click New (or the + icon) → New repository.</li>
         <li data-i18n-html="lab1.deploy.step01.item03_html">Name it <span class="deploy-mono">my-wordle</span> and create the repo.</li>
         <li data-i18n="lab1.deploy.step01.item04">On the empty repo page, click uploading an existing file.</li>
-        <li data-i18n="lab1.deploy.step01.item05">Upload your index.html from Claude, then click Commit changes.</li>
+        <li data-i18n="lab1.deploy.step01.item05">Upload your index.html from your AI chat, then click Commit changes.</li>
       </ol>
     </div>
     <div class="deploy-step">
@@ -335,7 +330,7 @@
 <footer class="site-footer">
   <div class="site-footer-brand">
     <h2 data-i18n-html="footer.brand_title_html">Build <em>With AI</em></h2>
-    <p data-i18n="footer.brand_desc">Workshop hub for going from zero to live websites with Claude, Cursor, GitHub, and Vercel.</p>
+    <p data-i18n="footer.brand_desc">Workshop hub for going from zero to live websites with Claude, ChatGPT, Gemini, GitHub, and Vercel.</p>
   </div>
   <div class="site-footer-grid">
     <div class="site-footer-col">
@@ -351,7 +346,8 @@
       <h4 data-i18n="footer.col_tools">Tools</h4>
       <ul>
         <li><a href="https://claude.ai" target="_blank" rel="noopener">Claude</a></li>
-        <li><a href="https://cursor.com" target="_blank" rel="noopener">Cursor</a></li>
+        <li><a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a></li>
+        <li><a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini</a></li>
         <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
         <li><a href="https://vercel.com" target="_blank" rel="noopener">Vercel</a></li>
       </ul>
