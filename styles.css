@@ -2613,7 +2613,7 @@ body.focus-open { overflow: hidden; }
   .focus-panel,
   .focus-close,
   .design-specimen { transition: none; }
-  .design-specimen:hover { transform: none; }
+  .design-specimen:hover { transform: none; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1); }
   .focus-card:hover,
   .tool-block:hover,
   a.agenda-item:hover,
