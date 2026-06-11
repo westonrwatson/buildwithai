@@ -57,7 +57,7 @@
 </header>
 
 <!-- DESIGN KIT -->
-<section id="design" class="page-section gray">
+<section id="design" class="page-section">
   <div class="section-header reveal">
     <div>
       <div class="section-tag" data-i18n="lab2.design.tag">Before you build</div>
@@ -76,6 +76,7 @@
         <div class="design-specimen-content">
           <span class="design-specimen-name" data-i18n="lab2.design.bad.01.name">Berkshire Hathaway</span>
           <p class="design-specimen-note" data-i18n="lab2.design.bad.01.note">A wall of blue links. No hierarchy, no breathing room, no reason to stay.</p>
+          <span class="design-specimen-link" data-i18n="lab2.design.gallery.open">Open site →</span>
         </div>
       </a>
       <a class="design-specimen" href="https://www.greatdreams.com/" target="_blank" rel="noopener">
@@ -85,6 +86,7 @@
         <div class="design-specimen-content">
           <span class="design-specimen-name" data-i18n="lab2.design.bad.02.name">Dreams of the Great Earth Changes</span>
           <p class="design-specimen-note" data-i18n="lab2.design.bad.02.note">Clashing colors, drop shadows, and zero whitespace. Everything screams at once.</p>
+          <span class="design-specimen-link" data-i18n="lab2.design.gallery.open">Open site →</span>
         </div>
       </a>
       <a class="design-specimen" href="https://albany.craigslist.org/" target="_blank" rel="noopener">
@@ -94,6 +96,7 @@
         <div class="design-specimen-content">
           <span class="design-specimen-name" data-i18n="lab2.design.bad.03.name">Craigslist</span>
           <p class="design-specimen-note" data-i18n="lab2.design.bad.03.note">Dense columns of tiny links. Functional, but overwhelming and impossible to scan.</p>
+          <span class="design-specimen-link" data-i18n="lab2.design.gallery.open">Open site →</span>
         </div>
       </a>
     </div>
@@ -209,38 +212,35 @@
   </div>
 
   <div class="build-detail reveal">
-    <div class="build-detail-head">
-      <div class="section-tag" data-i18n="lab2.build.phase01.label">Phase 01</div>
-      <h2 class="build-detail-title" data-i18n-html="lab2.build.phase01.title_html">Start from the <em>template.</em></h2>
-    </div>
-    <div class="starter-downloads">
-      <a href="starters/about-me-starter.html" download="index.html" class="starter-download-btn" data-i18n="lab2.starter.download_starter">Download starter file</a>
-      <a href="https://docs.google.com/document/d/18dr1hG_g5KX4g_7t2wzr35NjamRPup5B/export?format=docx" target="_blank" rel="noopener" class="starter-download-btn starter-download-btn--outline" data-i18n="lab2.starter.download_prompt">Download prompt</a>
-      <a href="https://about-me-example.vercel.app/" target="_blank" rel="noopener" class="starter-download-btn starter-download-btn--outline" data-i18n="lab2.starter.view_example">See Example</a>
-    </div>
-    <div class="build-detail-steps">
-      <ol class="deploy-step-list">
-        <li data-i18n-html="lab2.build.phase01.step01_html">Download the starter file and prompt — save the starter as <span class="deploy-mono">index.html</span></li>
-        <li data-i18n-html="lab2.build.phase01.step02_html">Rename 4 photos as <span class="deploy-mono">photo1.jpg</span> (hero), <span class="deploy-mono">photo2.jpg</span>, <span class="deploy-mono">photo3.jpg</span>, and <span class="deploy-mono">photo4.jpg</span> — keep them in the same folder as <span class="deploy-mono">index.html</span></li>
-        <li data-i18n-html="lab2.build.phase01.step03_html">Open <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a>, <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a>, or <a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini</a> in your browser</li>
-        <li data-i18n="lab2.build.phase01.step04">Fill in every field in the prompt document, then copy the prompt section at the bottom</li>
-        <li data-i18n-html="lab2.build.phase01.step05_html">Upload <span class="deploy-mono">index.html</span> and all 4 photos to the chat, then paste your filled prompt</li>
-        <li data-i18n-html="lab2.build.phase01.step06_html">Preview or download the updated <span class="deploy-mono">index.html</span>, save it over your file, and open it in your browser</li>
-        <li data-i18n="lab2.build.phase01.step07">Check every item in the requirements list below</li>
-      </ol>
-    </div>
+    <div class="build-detail-panel">
+      <div class="build-detail-head">
+        <div class="section-tag" data-i18n="lab2.build.phase01.label">Phase 01</div>
+        <h2 class="build-detail-title" data-i18n-html="lab2.build.phase01.title_html">Start from the <em>template.</em></h2>
+        <p class="build-detail-subtitle" data-i18n="lab2.build.phase01.body">Download the template and prompt, add your photos, fill in the prompt, and send everything to your AI chat.</p>
+      </div>
 
-    <div class="criteria-block dark">
-      <div class="criteria-heading" data-i18n="lab2.build.phase01.requirements_heading">Your first vision will include</div>
-      <ul class="criteria-list">
-        <li data-i18n-html="lab2.requirements.01"><strong>4 sections</strong> — Home, About, Projects, and More on one page</li>
-        <li data-i18n-html="lab2.requirements.02"><strong>Hero</strong> — your name, tagline, portrait photo, and 3 stats</li>
-        <li data-i18n-html="lab2.requirements.03"><strong>About</strong> — a short bio, 3 interests, and a skills list</li>
-        <li data-i18n-html="lab2.requirements.04"><strong>Projects</strong> — 3 project cards with photos</li>
-        <li data-i18n-html="lab2.requirements.05"><strong>Values</strong> — 4 cards with facts, beliefs, or mottos</li>
-        <li data-i18n-html="lab2.requirements.06"><strong>Navigation</strong> — fixed nav that scrolls to each section</li>
-        <li data-i18n-html="lab2.requirements.07"><strong>Footer</strong> — your email, social links, and a contact message</li>
-      </ul>
+      <div class="build-detail-body">
+      <div class="build-detail-section">
+        <div class="build-detail-section-label" data-i18n="lab2.build.phase01.downloads_label">Get your files</div>
+        <div class="starter-downloads">
+          <a href="starters/about-me-starter.html" download="index.html" class="starter-download-btn" data-i18n="lab2.starter.download_starter">Download starter file</a>
+          <a href="https://docs.google.com/document/d/18dr1hG_g5KX4g_7t2wzr35NjamRPup5B/export?format=docx" target="_blank" rel="noopener" class="starter-download-btn starter-download-btn--lime" data-i18n="lab2.starter.download_prompt">Download prompt</a>
+          <a href="https://about-me-example.vercel.app/" target="_blank" rel="noopener" class="starter-download-btn starter-download-btn--outline" data-i18n="lab2.starter.view_example">See Example</a>
+        </div>
+      </div>
+
+      <div class="build-detail-section">
+        <div class="build-detail-section-label" data-i18n="lab2.build.phase01.steps_label">Follow these steps</div>
+        <ol class="deploy-step-list">
+          <li data-i18n-html="lab2.build.phase01.step01_html">Download the starter file and prompt — save the starter as <span class="deploy-mono">index.html</span></li>
+          <li data-i18n-html="lab2.build.phase01.step02_html">Rename 4 photos as <span class="deploy-mono">photo1.jpg</span> (hero), <span class="deploy-mono">photo2.jpg</span>, <span class="deploy-mono">photo3.jpg</span>, and <span class="deploy-mono">photo4.jpg</span> — keep them in the same folder as <span class="deploy-mono">index.html</span></li>
+          <li data-i18n-html="lab2.build.phase01.step03_html">Open <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a>, <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a>, or <a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini</a> in your browser</li>
+          <li data-i18n="lab2.build.phase01.step04">Fill in every field in the prompt document, then copy the prompt section at the bottom</li>
+          <li data-i18n-html="lab2.build.phase01.step05_html">Upload <span class="deploy-mono">index.html</span> and all 4 photos to the chat, then paste your filled prompt</li>
+          <li data-i18n-html="lab2.build.phase01.step06_html">Preview or download the updated <span class="deploy-mono">index.html</span>, save it over your file, and open it in your browser</li>
+        </ol>
+      </div>
+      </div>
     </div>
   </div>
 

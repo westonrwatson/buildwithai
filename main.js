@@ -292,6 +292,7 @@ if (hamburger && mobileMenu) {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('open');
       hamburger.classList.remove('open');
+      nav.classList.remove('menu-open');
       document.body.style.overflow = '';
     });
   });
