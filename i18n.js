@@ -99,10 +99,6 @@ window.BWA_I18N = {
     "index.install.step03.index": "Step 03",
     "index.install.step03.heading": "Create GitHub + Vercel accounts.",
     "index.install.step03.body": "You'll upload your sites to GitHub and deploy on Vercel — same flow for both labs.",
-    "index.install.step04.index": "Step 04",
-    "index.install.step04.heading": "You're ready.",
-    "index.install.step04.body_html": "Everything is free. No credit card required. If anything isn't working, raise your hand and we'll sort it out. Then head to <a href=\"lab-1.html\">Lab 01</a>.",
-
     // Index — instructors
     "index.instructors.tag": "Your guides",
     "index.instructors.title_html": "Meet your <em>instructors.</em>",
@@ -481,10 +477,6 @@ window.BWA_I18N = {
     "index.install.step03.index": "Pasul 03",
     "index.install.step03.heading": "Creează conturi GitHub + Vercel.",
     "index.install.step03.body": "Vei încărca site-urile pe GitHub și le vei lansa pe Vercel — același flux la ambele laboratoare.",
-    "index.install.step04.index": "Pasul 04",
-    "index.install.step04.heading": "Ești gata.",
-    "index.install.step04.body_html": "Totul e gratuit. Nu ai nevoie de card. Dacă ceva nu merge, ridică mâna și rezolvăm. Apoi mergi la <a href=\"lab-1.html\">Laborator 01</a>.",
-
     // Index — instructors
     "index.instructors.tag": "Ghidurile tale",
     "index.instructors.title_html": "Cunoaște-ți <em>instructorii.</em>",
@@ -863,10 +855,6 @@ window.BWA_I18N = {
     "index.install.step03.index": "Шаг 03",
     "index.install.step03.heading": "Создай аккаунты GitHub + Vercel.",
     "index.install.step03.body": "Ты загрузишь сайты на GitHub и задеploy на Vercel — тот же процесс для обеих лабораторий.",
-    "index.install.step04.index": "Шаг 04",
-    "index.install.step04.heading": "Ты готов.",
-    "index.install.step04.body_html": "Всё бесплатно. Карта не нужна. Если что-то не работает — подними руку, разберёмся. Затем переходи к <a href=\"lab-1.html\">Лаборатории 01</a>.",
-
     // Index — instructors
     "index.instructors.tag": "Твои гиды",
     "index.instructors.title_html": "Познакомься с <em>инструкторами.</em>",
