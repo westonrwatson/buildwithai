@@ -1657,7 +1657,7 @@ nav.scrolled .lang-btn.active {
   background: var(--white);
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .design-specimen:hover {
