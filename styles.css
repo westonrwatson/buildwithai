@@ -669,7 +669,10 @@ nav.scrolled .lang-btn.active {
   border-right: 1px solid #1a1a1a;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 8px;
+  text-align: center;
 }
 .stat-block:last-child { border-right: none; }
 
@@ -679,10 +682,14 @@ nav.scrolled .lang-btn.active {
   letter-spacing: -0.03em;
   color: var(--white);
   line-height: 1;
+  min-height: clamp(56px, 7vw, 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .stat-num.infinity {
-  font-size: clamp(56px, 7vw, 88px);
-  line-height: 0.85;
+  font-size: clamp(52px, 6.5vw, 84px);
+  line-height: 1;
 }
 .stat-label {
   font-size: var(--font-xs);
@@ -1677,9 +1684,6 @@ nav.scrolled .lang-btn.active {
   background: var(--gray);
   border: 2px solid var(--border);
 }
-#design .tip-block {
-  background: var(--gray);
-}
 .design-subhead {
   font-size: clamp(20px, 2.5vw, 28px);
   font-weight: 800;
@@ -1754,6 +1758,148 @@ nav.scrolled .lang-btn.active {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--mid);
+}
+
+/* ── DESIGN PRINCIPLES & TOOLS (Lab 02) ─ */
+#design-ideals .section-header {
+  align-items: flex-start;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 32px;
+}
+.design-ideals-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: var(--border);
+}
+.ideal-card {
+  background: var(--white);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 3px solid var(--lime);
+}
+.ideal-index {
+  font-size: var(--font-xs);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+.ideal-title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--black);
+}
+.ideal-body {
+  font-size: var(--font-sm);
+  color: var(--text-body);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.design-tools-section {
+  background: var(--black);
+  color: var(--white);
+  padding-top: clamp(48px, 7vh, 64px);
+  padding-bottom: clamp(48px, 7vh, 64px);
+}
+.design-tools-section .section-header {
+  align-items: flex-start;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+}
+.design-tools-section .section-title {
+  color: var(--white);
+}
+.design-tools-section .section-title em {
+  color: var(--lime);
+}
+.design-tools-section .section-intro {
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 440px;
+  margin-top: 6px;
+  font-size: 17px;
+  line-height: 1.55;
+}
+.design-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.1);
+}
+@media (min-width: 900px) {
+  .design-tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.design-tools-section .tool-kit-card {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 20px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0;
+}
+.design-tools-section .tool-kit-label {
+  font-size: var(--font-xs);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--lime);
+}
+.design-tools-section .tool-kit-desc {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+}
+.design-tools-section .tool-kit-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 4px;
+}
+.design-tools-section .tool-kit-link {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  text-decoration: none;
+  transition: padding-left 0.2s ease, color 0.2s ease;
+}
+.design-tools-section .tool-kit-link:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.design-tools-section .tool-kit-link:hover {
+  padding-left: 4px;
+}
+.design-tools-section .tool-kit-link:hover .tool-kit-name {
+  color: var(--lime);
+}
+.design-tools-section .tool-kit-name {
+  font-size: var(--font-base);
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  min-width: 0;
+}
+.design-tools-section .tool-kit-url {
+  font-size: var(--font-xs);
+  color: rgba(255, 255, 255, 0.42);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .tips-blocks {
@@ -2148,6 +2294,15 @@ footer {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+  .design-ideals-grid {
+    grid-template-columns: 1fr;
+  }
+  .ideal-card {
+    padding: 28px 24px;
+  }
+  .design-tools-section .tool-kit-card {
+    padding: 16px 14px 12px;
+  }
   .tips-blocks { grid-template-columns: 1fr; }
   .collection-mosaic { grid-template-columns: 1fr; }
   .res-block.dark { grid-column: auto; grid-row: auto; }
@@ -2246,6 +2401,11 @@ footer {
   background: var(--lime);
 }
 
+body:has(.page-hero:not(.page-hero--lime)) nav:not(.scrolled) {
+  background: rgba(10, 10, 10, 0.96);
+  backdrop-filter: blur(12px);
+  border-color: transparent;
+}
 body:has(.page-hero--lime) nav:not(.scrolled) {
   background: var(--lime);
   backdrop-filter: none;
@@ -2568,10 +2728,10 @@ body:has(.page-hero--lime) nav:not(.scrolled) .hamburger span {
 .focus-panel {
   position: relative;
   z-index: 1;
-  width: min(680px, 100%);
-  max-height: min(85vh, 880px);
+  width: min(800px, 100%);
+  max-height: min(90vh, 960px);
   overflow-y: auto;
-  transform: scale(0.88);
+  transform: scale(0.9);
   opacity: 0;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease;
   box-shadow: 0 32px 80px rgba(0, 0, 0, 0.45);
@@ -2582,14 +2742,14 @@ body:has(.page-hero--lime) nav:not(.scrolled) .hamburger span {
 }
 .focus-panel.prompt-example,
 .focus-panel.flair-card {
-  width: min(820px, 100%);
+  width: min(960px, 100%);
 }
 .focus-panel.prompt-example {
   display: grid;
   grid-template-columns: 160px 1fr;
-  gap: 40px;
+  gap: 44px;
   align-items: start;
-  padding: 48px 40px;
+  padding: 56px 48px;
 }
 .focus-panel.prompt-example.prompt-example--solo {
   grid-template-columns: 1fr;
@@ -2626,10 +2786,10 @@ body:has(.page-hero--lime) nav:not(.scrolled) .hamburger span {
 .focus-panel.ai-flow-card {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 40px 36px;
+  gap: 24px;
+  padding: 48px 44px;
   min-height: auto;
-  width: min(720px, 100%);
+  width: min(840px, 100%);
   background: var(--white);
 }
 .focus-panel.ai-flow-card--dark {
@@ -2666,6 +2826,43 @@ body:has(.page-hero--lime) nav:not(.scrolled) .hamburger span {
 .focus-panel.flair-card .prompt-copy-btn {
   margin-top: 16px;
 }
+.focus-panel.step-block,
+.focus-panel.formula-block {
+  width: min(760px, 100%);
+  padding: 56px 48px;
+}
+.focus-panel.deploy-step {
+  width: min(680px, 100%);
+  padding: 48px 44px;
+}
+.focus-panel.build-detail-panel {
+  width: min(880px, 100%);
+}
+.focus-panel.ideal-card {
+  width: min(680px, 100%);
+  padding: 48px 44px;
+  gap: 16px;
+}
+.focus-panel .ideal-title { font-size: 26px; }
+.focus-panel .ideal-body { font-size: 17px; }
+.focus-panel .ideal-index { font-size: 13px; }
+.focus-panel .step-heading { font-size: 26px; }
+.focus-panel .step-body { font-size: 17px; }
+.focus-panel .formula-name { font-size: 42px; }
+.focus-panel .formula-desc,
+.focus-panel .formula-eg { font-size: 17px; }
+.focus-panel .prompt-eg-text { font-size: 17px; line-height: 1.75; }
+.focus-panel .prompt-note,
+.focus-panel .build-detail-prompt-note { font-size: 15px; }
+.focus-panel .deploy-step-title { font-size: 26px; }
+.focus-panel .deploy-step-list li { font-size: 16px; }
+.focus-panel .ai-flow-name { font-size: clamp(24px, 2.8vw, 34px); }
+.focus-panel .ai-flow-intro,
+.focus-panel .ai-flow-bullets li,
+.focus-panel .ai-flow-example-body { font-size: 17px; }
+.focus-panel .build-detail-title { font-size: clamp(28px, 3.5vw, 40px); }
+.focus-panel .build-detail-subtitle,
+.focus-panel .build-detail-section-label { font-size: 17px; }
 
 /* Focus overlay — text selection by panel surface */
 .focus-panel.prompt-example--lime ::selection,
@@ -2758,13 +2955,21 @@ body.focus-open { overflow: hidden; }
 }
 @media (max-width: 860px) {
   .focus-panel.ai-flow-card {
-    padding: 32px 28px;
+    padding: 36px 28px;
   }
   .focus-panel.prompt-example {
     grid-template-columns: 1fr;
     gap: 16px;
-    padding: 32px 28px;
+    padding: 36px 28px;
   }
+  .focus-panel.step-block,
+  .focus-panel.formula-block,
+  .focus-panel.deploy-step,
+  .focus-panel.ideal-card {
+    padding: 36px 28px;
+  }
+  .focus-panel .formula-name { font-size: clamp(28px, 7vw, 36px); }
+  .focus-panel .deploy-step-title { font-size: 22px; }
   .focus-panel.prompt-example .prompt-eg-content { grid-column: 1; }
 
   /* Homepage section grids — defined above this block, so restack here */
@@ -2781,6 +2986,10 @@ body.focus-open { overflow: hidden; }
   }
   .step-block.full-width { flex-direction: column; gap: 20px; }
 
+  .design-ideals-grid,
+  .design-tools-grid {
+    grid-template-columns: 1fr;
+  }
   .tips-blocks { grid-template-columns: 1fr; }
   .tip-block { padding: 32px 24px; }
 }
@@ -2793,6 +3002,9 @@ body.focus-open { overflow: hidden; }
   .site-footer-grid { grid-template-columns: 1fr; }
   .step-block { padding: 32px 24px; }
   .stat-block { padding: 28px 20px; }
-  .stat-num { font-size: clamp(32px, 9vw, 44px); }
-  .stat-num.infinity { font-size: clamp(44px, 12vw, 64px); }
+  .stat-num {
+    font-size: clamp(32px, 9vw, 44px);
+    min-height: clamp(48px, 12vw, 64px);
+  }
+  .stat-num.infinity { font-size: clamp(44px, 11vw, 68px); }
 }

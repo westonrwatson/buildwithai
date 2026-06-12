@@ -174,24 +174,8 @@ async function copyPromptText(textEl, btn) {
 
 document.querySelectorAll('.prompt-example, .flair-card').forEach(attachPromptCopy);
 
-// Focus card — click to expand in center overlay
+// Focus card — click to expand in center overlay (opt-in via data-focus-card)
 (function initFocusCards() {
-  const FOCUS_SELECTOR = [
-    '.ai-flow-card',
-    '.build-phase',
-    '.flair-card',
-    '.formula-block',
-    '.tip-block',
-    '.step-block:not(.full-width)',
-    '.instructor-card',
-    '.prompt-topic',
-    '.prompt-example',
-    '.stat-block',
-    '.deploy-step',
-    '.res-block',
-    '.criteria-block',
-  ].join(', ');
-
   const overlay = document.createElement('div');
   overlay.className = 'focus-overlay';
   overlay.id = 'focusOverlay';
@@ -253,7 +237,7 @@ document.querySelectorAll('.prompt-example, .flair-card').forEach(attachPromptCo
     }, 400);
   }
 
-  document.querySelectorAll(FOCUS_SELECTOR).forEach(card => {
+  document.querySelectorAll('[data-focus-card]').forEach(card => {
     card.classList.add('focus-card');
     card.setAttribute('tabindex', '0');
     card.addEventListener('keydown', e => {

@@ -67,14 +67,14 @@
 
   <div class="ai-flow reveal">
     <div class="ai-flow-stack">
-      <article class="ai-flow-card ai-flow-card--dark">
+      <article class="ai-flow-card ai-flow-card--dark" data-focus-card>
         <div class="ai-flow-card-top">
           <div>
             <div class="ai-flow-label" data-i18n="lab1.ai.def01.label">Foundation</div>
             <h3 class="ai-flow-name" data-i18n="lab1.ai.def01.name">Artificial intelligence</h3>
           </div>
         </div>
-        <p class="ai-flow-intro" data-i18n="lab1.ai.def01.intro">Artificial intelligence is software that learns from data. It recognizes patterns, understands language, reasons through problems, and tackles complex tasks — without being conscious or alive.</p>
+        <p class="ai-flow-intro" data-i18n="lab1.ai.def01.intro">Artificial intelligence is software that learns from data. It recognizes patterns, understands language, reasons through problems, and tackles complex tasks.</p>
         <ul class="ai-flow-examples">
           <li>
             <span class="ai-flow-example-name" data-i18n="lab1.ai.def01.example01.name">Recommendations</span>
@@ -91,17 +91,23 @@
         </ul>
       </article>
 
-      <article class="ai-flow-card ai-flow-card--lime">
+      <article class="ai-flow-card ai-flow-card--lime" data-focus-card>
         <div class="ai-flow-card-top">
           <div>
             <div class="ai-flow-label" data-i18n="lab1.ai.def02.label">The model</div>
             <h3 class="ai-flow-name" data-i18n="lab1.ai.def02.name">Large language models</h3>
           </div>
         </div>
+        <p class="ai-flow-intro" data-i18n="lab1.ai.def02.intro">LLMs read your prompt and generate a response one word at a time — like autocomplete at a massive scale. That's how they write essays, code, and full websites.</p>
         <ul class="ai-flow-bullets">
-          <li data-i18n="lab1.ai.def02.bullet01">A type of AI trained on huge amounts of text</li>
-          <li data-i18n="lab1.ai.def02.bullet02">Predicts the next word → essays, code, conversation</li>
-          <li data-i18n="lab1.ai.def02.bullet03">Claude, ChatGPT, and Gemini are all LLMs</li>
+          <li data-i18n="lab1.ai.def02.bullet01">Trained on billions of words from books, websites, and code — so they spot patterns in how language works</li>
+          <li data-i18n="lab1.ai.def02.bullet02">They predict the next word based on everything before it — not by searching the web in real time</li>
+        </ul>
+        <ul class="ai-flow-examples">
+          <li>
+            <span class="ai-flow-example-name" data-i18n="lab1.ai.def02.example01.name">Everyday writing</span>
+            <span class="ai-flow-example-body" data-i18n="lab1.ai.def02.example01.body">Paste a rough email or text and ask "make this sound more professional" — you get a polished version back in seconds.</span>
+          </li>
         </ul>
       </article>
     </div>
@@ -144,7 +150,7 @@
     </div>
   </div>
   <div class="formula-blocks reveal">
-    <div class="formula-block">
+    <div class="formula-block" data-focus-card>
       <div class="formula-part-label" data-i18n="lab1.prompting.formula01.label">Part 01</div>
       <div class="formula-name" data-i18n="lab1.prompting.formula01.name">Role</div>
       <div class="formula-desc" data-i18n="lab1.prompting.formula01.desc">Tell the AI who it is. Give it a persona that fits the task.</div>
@@ -153,7 +159,7 @@
         <div class="formula-eg" data-i18n="lab1.prompting.formula01.eg02">"You are a patient coding tutor who explains things simply."</div>
       </div>
     </div>
-    <div class="formula-block">
+    <div class="formula-block" data-focus-card>
       <div class="formula-part-label" data-i18n="lab1.prompting.formula02.label">Part 02</div>
       <div class="formula-name" data-i18n="lab1.prompting.formula02.name">Task</div>
       <div class="formula-desc" data-i18n="lab1.prompting.formula02.desc">Tell it exactly what to build or do. Be direct and specific.</div>
@@ -162,7 +168,7 @@
         <div class="formula-eg" data-i18n="lab1.prompting.formula02.eg02">"Add a dark theme with purple accents to my game."</div>
       </div>
     </div>
-    <div class="formula-block">
+    <div class="formula-block" data-focus-card>
       <div class="formula-part-label" data-i18n="lab1.prompting.formula03.label">Part 03</div>
       <div class="formula-name" data-i18n="lab1.prompting.formula03.name">Context</div>
       <div class="formula-desc" data-i18n="lab1.prompting.formula03.desc">Give it the details, constraints, and requirements it needs.</div>
@@ -231,7 +237,7 @@
       <p class="build-detail-subtitle" data-i18n-html="lab1.build.phase01.detail_intro_html">Open <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a>, <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a>, or <a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini</a> and paste the starter prompt below. Preview or download your index.html, test it in your browser, then move on to Phase 02.</p>
       <p class="prompt-note build-detail-prompt-note" data-i18n="lab1.prompt.note">Copy this prompt in English — AI tools work best with English prompts.</p>
     </div>
-    <div class="prompt-example prompt-example--solo">
+    <div class="prompt-example prompt-example--solo" data-focus-card>
       <div class="prompt-eg-content">
         <div class="prompt-eg-text" data-i18n-html="lab1.prompt.starter_html">
         <strong>You are an expert web developer.</strong> Build a fully playable Wordle clone as a single index.html file. Include: 6 guesses per game, 5-letter words only, a built-in word list of common English dictionary words (any standard 5-letter dictionary word should be a valid answer or guess), an on-screen keyboard, tile flip animations, color feedback (green = correct spot, yellow = wrong spot, gray = not in word), win and lose states with a Play Again button, and a clean modern UI. <strong>Vanilla HTML, CSS, and JavaScript only — no frameworks, no external libraries.</strong> Make it responsive and work on mobile.
@@ -282,7 +288,7 @@
       <p class="build-detail-subtitle" data-i18n="lab1.build.phase03.detail_intro">Upload your index.html to GitHub, connect to Vercel, and get a live URL you can share.</p>
     </div>
     <div class="deploy-steps">
-    <div class="deploy-step">
+    <div class="deploy-step" data-focus-card>
       <div class="deploy-step-title" data-i18n="lab1.deploy.step01.title">Push to GitHub</div>
       <ol class="deploy-step-list">
         <li data-i18n-html="lab1.deploy.step01.item01_html">Go to <a href="https://github.com" target="_blank" rel="noopener">github.com</a> and sign in.</li>
@@ -292,7 +298,7 @@
         <li data-i18n="lab1.deploy.step01.item05">Upload your index.html from your AI chat, then click Commit changes.</li>
       </ol>
     </div>
-    <div class="deploy-step">
+    <div class="deploy-step" data-focus-card>
       <div class="deploy-step-title" data-i18n="lab1.deploy.step02.title">Deploy on Vercel</div>
       <ol class="deploy-step-list">
         <li data-i18n-html="lab1.deploy.step02.item01_html">Go to <a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a> and sign in with GitHub.</li>
